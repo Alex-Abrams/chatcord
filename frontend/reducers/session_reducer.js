@@ -6,7 +6,7 @@ import {
 import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
-  id: null,        // what we want to return if no current user
+  id: null,
 });
 
 const sessionReducer = (state = _nullUser, action) => {
