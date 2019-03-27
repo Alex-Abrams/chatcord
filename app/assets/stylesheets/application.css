@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.discord-server-icon {
+  height: 50px;
+  width: 50px;
+}

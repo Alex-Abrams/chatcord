@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import ServerIndexItem from './server_index_item';
+// can possibly have the loading come here
 
 class ServerIndex extends React.Component {
   constructor(props) {
@@ -13,14 +15,13 @@ class ServerIndex extends React.Component {
   render() {
     const { servers } = this.props;
 
-    const display = servers.map(server => (
-      <li key={server.id}>{server.title}</li>
-    ));
     return (
       <div>
         <ul>
-          { display }
+          {servers.map(server => <ServerIndexItem key={server.id} server={server} />)}
         </ul>
+        <br />
+        <Link to="/servers/new">+</Link>
       </div>
     ); // end return
   }// end render

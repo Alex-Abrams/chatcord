@@ -5,7 +5,7 @@ import configureStore from './store/store';
 //
 import { login, logout, signup } from './actions/session_actions';
 import { fetchAllServers } from './util/api_util';
-import { requestAllServers, requestSingleServer, removeServer, receiveAllServers } from './actions/server_actions';
+import { receiveSingleServer, requestAllServers, requestSingleServer, removeServer, receiveAllServers, createServer } from './actions/server_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveAllServers = receiveAllServers;
   window.requestSingleServer = requestSingleServer;
   window.removeServer = removeServer;
+  window.createServer = createServer;
+  window.receiveSingleServer = receiveSingleServer;
   //////////////////////
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);

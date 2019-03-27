@@ -15,6 +15,6 @@ user4 = User.create!(username: 'guest3', password: 'password', email: 'guest3@gu
 user5 = User.create!(username: 'guest4', password: 'password', email: 'guest4@guest.com')
 
 
-server1 = Server.create(title: "server1", image_url: "8awdja0whjd", admin_id: user2.id)
-server2 = Server.create(title: "server2", image_url: "8awdja0whjd", admin_id: user3.id)
-server3 = Server.create(title: "server3", image_url: "8awdja0whjd", admin_id: user4.id)
+server1 = Server.create(title: "server1", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id)
+server2 = Server.create(title: "server2", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id)
+server3 = Server.create(title: "server3", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id)

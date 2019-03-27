@@ -14,12 +14,12 @@ const serversReducer = (state = {}, action) => {
     case RECEIVE_ALL_SERVERS:
       return merge({}, state, action.servers);
     case RECEIVE_SINGLE_SERVER:
-      return Object.assign({}, state, {[action.server.id]: action.server});
+      server_payload = action.payload.server;
+      return merge({}, state, { [server_payload.id]: server_payload });
     case DELETE_SERVER:
       nextState = merge({}, state);
       delete nextState[action.server.id];
       return nextState;
-    case CREATE_SERVER:
     default:
       return state;
   }
