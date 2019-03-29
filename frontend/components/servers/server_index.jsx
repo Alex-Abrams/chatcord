@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
+import ProfileBar from './profile_bar';
 // can possibly have the loading come here
 
 class ServerIndex extends React.Component {
@@ -13,7 +14,12 @@ class ServerIndex extends React.Component {
   }
 
   render() {
-    const { servers } = this.props;
+    const { servers, logout, currentUser } = this.props;
+    const profileBar = currentUser ? (
+      <ProfileBar logout={logout} currentUser={currentUser} />
+    ) : (
+      <div>Not logged in</div>
+    );
 
     return (
       <div>
@@ -22,6 +28,9 @@ class ServerIndex extends React.Component {
         </ul>
         <br />
         <Link to="/servers/new">+</Link>
+        <div>
+          {profileBar}
+        </div>
       </div>
     ); // end return
   }// end render

@@ -87,7 +87,7 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}>
             </input>
           </label>
-          <button onClick={this.handleSubmit}>login</button>
+            <Link to="/servers" onClick={this.handleSubmit}>Login</Link>
         </form>
       </div>
     );

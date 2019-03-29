@@ -5,10 +5,7 @@
 #  id         :bigint(8)        not null, primary key
 #  title      :string           not null
 #  image_url  :string
-#  user_id    :integer          not null
-#  comment_id :integer          not null
 #  admin_id   :integer          not null
-#  channel_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

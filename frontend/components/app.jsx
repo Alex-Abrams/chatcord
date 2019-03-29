@@ -1,7 +1,6 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
-import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
 import ServerIndexContainer from './servers/server_index_container';
@@ -16,8 +15,8 @@ const App = () => (
     <AuthRoute path="/signup" component={SignUpFormContainer} />
     <AuthRoute path="/login" component={LoginFormContainer} />
     <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
-    <Route path="/" component={ServerIndexContainer} />
-    <Route path="/" component={GreetingContainer} />
+    <ProtectedRoute exact path="/" component={ServerIndexContainer} />
+    <ProtectedRoute path="/servers" component={ServerIndexContainer} />
   </div>
 );
 
