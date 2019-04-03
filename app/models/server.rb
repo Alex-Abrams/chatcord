@@ -23,6 +23,11 @@ class Server < ApplicationRecord
     foreign_key: :admin_id,
     class_name: :User
 
+  has_many :channels,
+    primary_key: :id,
+    foreign_key: :server_id,
+    class_name: :Channel
+
   def title_too_long
     if title.length > 20
       errors[:title] << "too long"

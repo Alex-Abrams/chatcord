@@ -10,4 +10,18 @@
 #
 
 class Channel < ApplicationRecord
-end 
+  validates :title, presence: true
+
+  # has_many :comment
+
+  belongs_to :server, optional: true,
+    primary_key: :id,
+    foreign_key: :server_id,
+    class_name: :Server
+
+  def title_too_long
+    if title.length > 20
+      errors[:title] << "too long"
+    end
+  end
+end

@@ -20,6 +20,8 @@ has_one :administrator,
   foreign_key: :admin_id,
   class_name: :Server
 
+
+
 validates :username, :password_digest, :session_token, presence: true
 validates :username, uniqueness: true
 validates :password, length: { minimum: 6 }, allow_nil: true
