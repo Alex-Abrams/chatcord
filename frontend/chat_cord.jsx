@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 //
-import { login, logout, signup } from './actions/session_actions';
-import { fetchAllServers } from './util/api_util';
-import { receiveSingleServer, requestAllServers, requestSingleServer, removeServer, receiveAllServers, createServer } from './actions/server_actions';
+import { requestServerChannels, requestSingleChannel, createChannel } from './actions/channel_actions';
+import { receiveServerChannels } from './actions/channel_actions';
+import { fetchServerChannels } from './util/channel_util';
+
+//
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -27,15 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
-  window.fetchAllServers = fetchAllServers;
-  window.requestAllServers = requestAllServers;
-  window.receiveAllServers = receiveAllServers;
-  window.requestSingleServer = requestSingleServer;
-  window.removeServer = removeServer;
-  window.createServer = createServer;
-  window.receiveSingleServer = receiveSingleServer;
+  window.requestSingleChannel = requestSingleChannel;
+  window.requestServerChannels = requestServerChannels;
+  window.createChannel = createChannel;
+  window.receiveServerChannels = receiveServerChannels;
+  window.fetchServerChannels = fetchServerChannels;
+  window.requestSingleChannel = requestSingleChannel;
+
   //////////////////////
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
