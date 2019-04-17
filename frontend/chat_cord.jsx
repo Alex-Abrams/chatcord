@@ -4,9 +4,9 @@ import Root from './components/root';
 import configureStore from './store/store';
 //
 import { requestServerChannels, requestSingleChannel, createChannel } from './actions/channel_actions';
-import { receiveServerChannels } from './actions/channel_actions';
+import { receiveServerChannels , receiveSingleChannel } from './actions/channel_actions';
 import { fetchServerChannels } from './util/channel_util';
-
+import { requestSingleServer, receiveSingleServer } from './actions/server_actions';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveServerChannels = receiveServerChannels;
   window.fetchServerChannels = fetchServerChannels;
   window.requestSingleChannel = requestSingleChannel;
-
+  window.requestSingleServer = requestSingleServer;
+  window.receiveSingleServer = receiveSingleServer;
+  window.receiveSingleChannel = receiveSingleChannel;
   //////////////////////
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);

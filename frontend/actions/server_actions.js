@@ -35,9 +35,10 @@ export const receiveAllServers = servers => ({
   servers
 });
 
-export const receiveSingleServer = server => ({
+export const receiveSingleServer = ({ server, channels }) => ({
   type: RECEIVE_SINGLE_SERVER,
-  server
+  server,
+  channels,
 });
 
 export const deleteServer = server => ({

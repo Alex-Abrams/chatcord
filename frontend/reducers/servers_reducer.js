@@ -5,6 +5,7 @@ import {
   DELETE_SERVER
 } from '../actions/server_actions';
 
+import { RECEIVE_SERVER_CHANNELS, RECEIVE_SINGLE_CHANNEL } from '../actions/channel_actions';
 import merge from 'lodash/merge';
 
 const serversReducer = (state = {}, action) => {
@@ -14,8 +15,22 @@ const serversReducer = (state = {}, action) => {
     case RECEIVE_ALL_SERVERS:
       return merge({}, state, action.servers);
     case RECEIVE_SINGLE_SERVER:
-      server_payload = action.payload.server;
-      return merge({}, state, { [server_payload.id]: server_payload });
+      const newServer = { [action.server.id]: action.server };
+      return merge({}, state, newServer);
+
+    case RECEIVE_SERVER_CHANNELS:
+      const { channels } = action;
+      const nextState = merge({}, state);
+      Object.values(action.channels).forEach(channel => {
+        nextState[channel.server_id].channelIds.push(channel.id);
+      });
+      return nextState;
+
+    case RECEIVE_SINGLE_CHANNEL:
+      const { channel } = action;
+      const newState = merge({}, state);
+      newState[channel.server_id].channelIds.push(channel.id);
+      return newState;
     case DELETE_SERVER:
       nextState = merge({}, state);
       delete nextState[action.server.id];
