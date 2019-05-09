@@ -25,7 +25,6 @@ const serversReducer = (state = {}, action) => {
         nextState[channel.server_id].channelIds.push(channel.id);
       });
       return nextState;
-
     case RECEIVE_SINGLE_CHANNEL:
       const { channel } = action;
       const newState = merge({}, state);
@@ -35,6 +34,7 @@ const serversReducer = (state = {}, action) => {
       nextState = merge({}, state);
       delete nextState[action.server.id];
       return nextState;
+
     default:
       return state;
   }

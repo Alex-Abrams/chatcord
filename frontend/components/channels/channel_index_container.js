@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
 import ChannelIndex from './channel_index';
 import { requestServerChannels } from '../../actions/channel_actions';
-import { selectServerChannelsIds, selectServerChannels } from '../../reducers/selectors';
+import { selectServerChannels, findActiveServer } from '../../reducers/selectors';
+
 
 const mapStateToProps = (state, { serverId }) => ({
   currentUser: state.entities.users[state.session.id],
   channels: selectServerChannels(state, serverId),
+  activeServerId: findActiveServer(state),
+  // channelIds: state.entities.servers[serverId].channelIds,
   // come back here
 });
 

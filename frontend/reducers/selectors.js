@@ -1,3 +1,5 @@
+export const findActiveServer = state => state.entities.activeServer.serverId;
+
 export const selectAllServers = state => Object.values(state.entities.servers);
 
 export const selectServerChannels = (state, serverId) => {
@@ -11,17 +13,3 @@ export const selectServerChannels = (state, serverId) => {
 export const selectServerId = ({ server }, serverId) => {
   return server[serverId].id;
 };
-
-///
-export const selectServerChannelsIds = ({ servers, channels }, server ) => {
-  return server.channelIds;
-};
-
-export const selectServer = ({ servers }, serverId) => {
-  return servers[serverId];
-};
-
-export const selectChannelsForServers = (state, serverId) => {
-  return state.entities.channels;
-};
-///

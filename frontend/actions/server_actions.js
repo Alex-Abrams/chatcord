@@ -9,6 +9,7 @@ export const CREATE_SERVER = 'CREATE_SERVER';
 
 //thunk action creators
 
+
 export const requestAllServers = () => dispatch => {
   APIUtil.fetchAllServers()
   .then(servers => {dispatch(receiveAllServers(servers))});
@@ -29,6 +30,9 @@ export const removeServer = id => dispatch => {
   .then(server => {dispatch(deleteServer(server))});
 }
 //action creators
+
+
+/////////////////////////////////
 
 export const receiveAllServers = servers => ({
   type: RECEIVE_ALL_SERVERS,

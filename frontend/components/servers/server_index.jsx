@@ -13,17 +13,22 @@ class ServerIndex extends React.Component {
 
   componentDidMount() {
     this.props.requestAllServers();
+
   }
 
+
   render() {
-    const { servers, logout, currentUser, serverId } = this.props;
+    const { servers, logout, currentUser, serverId, requestServerChannels, channelIds, toggleServer, unToggleServer } = this.props;
+
     const profileBar = currentUser ? (
       <ProfileBar logout={logout} currentUser={currentUser} />
     ) : (
       <div>Not logged in</div>
     );
 
-    // <Route to="servers/:serverId/channels/:channelId" component={ChannelIndexContainer} />
+
+    // <Route exact path="/servers/:serverId/channels"
+    //   render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
     return (
       <div>
         <ul>
@@ -31,11 +36,18 @@ class ServerIndex extends React.Component {
             <ServerIndexItem
             key={server.id}
             server={server}
-            serverId={serverId} />)}
+            serverId={server.id}
+            channelIds={channelIds}
+            requestServerChannels={requestServerChannels}
+            toggleServer={toggleServer}
+            unToggleServer={unToggleServer} />)}
         </ul>
         <br />
+
+
         <Link to="/servers/new">+</Link>
-        <div>
+
+          <div className="profile-bar">
           {profileBar}
         </div>
         <div>

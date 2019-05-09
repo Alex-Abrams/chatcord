@@ -1,41 +1,45 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import ChannelIndexContainer from './channel_index_container';
+import ChannelShow from './channel_show';
+
+//
+import TestRoute from '../test_components/test_route';
 
 class ChannelIndex extends React.Component {
   constructor(props) {
     super(props);
-  } // end constructor
-
-  componentDidMount() {
-    // a new server should always create a default channel
-    // this.props.requestServerChannels(channels[0].server_id);
-    // console.log(serverId);
-    this.props.requestServerChannels(this.props.serverId);
-    // console.log('HEEELELLO');
   }
 
+  componentDidMount() {
+    this.props.requestServerChannels(this.props.serverId);
+  }
+
+
   render() {
-    const { channels, currentUser, serverId } = this.props;
+    const { channels, serverId, channelIds, activeServerId } = this.props;
 
     const channelFilter = channels.filter(channel => {
       return channel.server_id === serverId;
     });
 
-    const channelList = channelFilter.map(channel => (
-      <li key={channel.id}>
-        {channel.title} ---> {channel.server_id}
-      </li>
-    ));
+    // console.log(this.props.match.params.id); //undefined
 
-
-    return (
+    return(
       <div>
         <ul>
-          { channelList }
+          {channelFilter.map(channel =>
+            <ChannelShow
+              key={channel.id}
+              channel={channel}
+              serverId={serverId}
+              activeServerId={activeServerId} />)}
         </ul>
       </div>
-    ); // end return
-  } // end render
+    );
+
+
+  }
 }
 
 export default ChannelIndex;

@@ -7,6 +7,7 @@ import { requestServerChannels, requestSingleChannel, createChannel } from './ac
 import { receiveServerChannels , receiveSingleChannel } from './actions/channel_actions';
 import { fetchServerChannels } from './util/channel_util';
 import { requestSingleServer, receiveSingleServer } from './actions/server_actions';
+import { toggleServer, unToggleServer } from './actions/toggle_actions';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.requestSingleServer = requestSingleServer;
   window.receiveSingleServer = receiveSingleServer;
   window.receiveSingleChannel = receiveSingleChannel;
+
+
+  window.toggleServer = toggleServer;
+  window.unToggleServer = unToggleServer;
   //////////////////////
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
