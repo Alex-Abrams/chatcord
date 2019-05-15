@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
+
 
 class ServerForm extends React.Component {
   constructor(props) {
@@ -8,22 +10,36 @@ class ServerForm extends React.Component {
 
     this.state = {
       title: '',
-      image_url: ''
+      image_url: '',
+      redirect: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleClick = this.handleClick.bind(this);   ////////////////
   } // end constructor
+
+  // handleClick() {
+  //   this.setState({ redirect: true });
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.createServer(this.state)
-      .then(data => this.props.history.push(`/server/${data.server.id}`));
+    .then(data => this.props.history.push(`/servers/${data.server.id}`));   //this was server instead of servers.. iono `/servers/${data.server.id}`
+    // .then(() => this.setState(() => ({
+    //   redirect: true
+    // })))
   }
+
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
   }
 
   render () {
+    if (this.state.redirect === true) {
+      return <Redirect to='/servers' />
+    }
+
 
     return(
       <section className="server-detail">
@@ -45,10 +61,11 @@ class ServerForm extends React.Component {
             </input>
           </label>
           <button>Create</button>
+
         </form>
       </section>
     ); // end return
   } // end render
 } // end class
 
-export default withRouter(ServerForm);
+export default ServerForm;    //withRouter

@@ -8,6 +8,7 @@ import { receiveServerChannels , receiveSingleChannel } from './actions/channel_
 import { fetchServerChannels } from './util/channel_util';
 import { requestSingleServer, receiveSingleServer } from './actions/server_actions';
 import { toggleServer, unToggleServer } from './actions/toggle_actions';
+import { fetchSingleServer, createServer } from './util/api_util';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,9 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchServerChannels = fetchServerChannels;
   window.requestSingleChannel = requestSingleChannel;
   window.requestSingleServer = requestSingleServer;
-  window.receiveSingleServer = receiveSingleServer;
   window.receiveSingleChannel = receiveSingleChannel;
 
+  window.receiveSingleServer = receiveSingleServer;
+  window.fetchSingleServer = fetchSingleServer;
+  window.createServer = createServer;
 
   window.toggleServer = toggleServer;
   window.unToggleServer = unToggleServer;

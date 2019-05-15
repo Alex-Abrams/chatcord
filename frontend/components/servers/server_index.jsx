@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
 import ProfileBar from './profile_bar';
 // can possibly have the loading come here
@@ -57,4 +57,4 @@ class ServerIndex extends React.Component {
   }// end render
 }// end class
 
-export default ServerIndex;
+export default withRouter(ServerIndex);

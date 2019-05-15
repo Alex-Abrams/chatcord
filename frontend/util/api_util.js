@@ -13,7 +13,7 @@ export const fetchSingleServer = (id) => (
 );
 
 export const createServer = (server) => {
-  $.ajax({
+  return $.ajax({
     method: 'POST',
     url: 'api/servers',
     data: { server }

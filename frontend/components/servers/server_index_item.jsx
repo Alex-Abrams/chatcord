@@ -36,6 +36,7 @@ class ServerIndexItem extends React.Component {
         <li className="server-index-item">
           <NavLink to={`/servers/${server.id}/channels`}>
             <span>{server.id}</span>
+            <span>{server.title}</span>
             <img className="discord-server-icon"
               src={server.image_url}
               alt={server.title} />
@@ -52,4 +53,4 @@ class ServerIndexItem extends React.Component {
 }
 
 
-export default ServerIndexItem;
+export default withRouter(ServerIndexItem);

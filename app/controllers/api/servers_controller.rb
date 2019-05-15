@@ -12,7 +12,9 @@ class Api::ServersController < ApplicationController
     @server.admin_id = current_user.id
 
     if @server.save
+      # create_general_channel(@server.id)
       render :show
+      # redirect_to servers_url
     else
       render json: @server.errors.full_messages, status: 422
     end
@@ -41,6 +43,10 @@ class Api::ServersController < ApplicationController
   end
 
   private
+
+  # def create_general_channel(serverId)
+  #   Channel.new(title: 'general', server_id: serverId)
+  # end
 
   def server_params
     params.require(:server).permit(:title, :image_url)

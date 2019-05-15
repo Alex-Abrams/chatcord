@@ -1,7 +1,23 @@
 class Api::ChannelsController < ApplicationController
 
   def index
-    @channels = Channel.where("server_id = ?", params[:server_id])
+    # byebug
+    # @channels = Channel.where("server_id = ?", params[:server_id]) #Bug 1
+    # @channels = Channel.all
+    # @channels = defined?(params[:server_id]) != nil ? Channel.where("server_id = ?", params[:server_id]) : Channel.where("server_id = ?", 1)
+    ################
+    # id_for_server = defined?(params[:server_id]) ? params[:server_id] : 1
+    # @channels = Channel.where("server_id = ?", id_for_server)
+
+    if params[:server_id]
+      # debugger
+      @channels = Channel.where("server_id = ?", params[:server_id])
+      # render "api/servers"
+    else
+      redirect_to :back
+    end
+
+
   end
 
   def new
@@ -23,6 +39,10 @@ class Api::ChannelsController < ApplicationController
   end
 
   private
+
+  def index_params
+
+  end
 
   def channel_params
     params.require(:channel).permit(:title);

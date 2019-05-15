@@ -1,5 +1,6 @@
 import ServerForm from './server_form';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { createServer } from '../../actions/server_actions';
 
@@ -12,7 +13,9 @@ const mapDispatchToProps = dispatch => ({
   createServer: (server) => dispatch(createServer(server))
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(ServerForm);
+// export default connect(
+//   null,
+//   mapDispatchToProps
+// )(ServerForm);
+
+export default withRouter(connect(null, mapDispatchToProps)(ServerForm));
