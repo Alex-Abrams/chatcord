@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Link } from 'react-router-dom';
 
 
 class ChannelShow extends React.Component {
@@ -20,7 +20,7 @@ class ChannelShow extends React.Component {
 
     return(
       <div>
-        {channelDisplay}
+          {channelDisplay}
       </div>
     )
   }

@@ -4,6 +4,7 @@ import ServerIndexItem from './server_index_item';
 import ProfileBar from './profile_bar';
 // can possibly have the loading come here
 import ChannelIndexContainer from '../channels/channel_index_container';
+import ChannelFormContainer from '../channels/channel_form_container';
 //
 
 class ServerIndex extends React.Component {
@@ -44,8 +45,14 @@ class ServerIndex extends React.Component {
         </ul>
         <br />
 
+          <span>
+              <Route path="/servers/:serverId/channels/new" component={ChannelFormContainer} />
+          </span>
 
-        <Link to="/servers/new">+</Link>
+        <div className="new-server-widget">
+          <Link className="plus" to="/servers/new">+</Link>
+          <span className="new-server-widget-tooltip">Add a Server</span>
+        </div>
 
           <div className="profile-bar">
           {profileBar}

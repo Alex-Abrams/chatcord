@@ -11,23 +11,16 @@ class ServerForm extends React.Component {
     this.state = {
       title: '',
       image_url: '',
-      redirect: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleClick = this.handleClick.bind(this);   ////////////////
   } // end constructor
 
-  // handleClick() {
-  //   this.setState({ redirect: true });
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createServer(this.state)
-    .then(data => this.props.history.push(`/servers/${data.server.id}`));   //this was server instead of servers.. iono `/servers/${data.server.id}`
-    // .then(() => this.setState(() => ({
-    //   redirect: true
-    // })))
+    this.props.createServer(this.state);
+    // .then(() => this.props.history.push('/servers/'));   //this was server instead of servers.. iono `/servers/${data.server.id}`
+    this.props.history.push('/servers/');
   }
 
 
@@ -36,9 +29,6 @@ class ServerForm extends React.Component {
   }
 
   render () {
-    if (this.state.redirect === true) {
-      return <Redirect to='/servers' />
-    }
 
 
     return(
@@ -68,4 +58,4 @@ class ServerForm extends React.Component {
   } // end render
 } // end class
 
-export default ServerForm;    //withRouter
+export default withRouter(ServerForm);    //withRouter

@@ -14,7 +14,76 @@
  *= require_self
  */
 
+/* thier circle icons appear to be 24 by 24 */
+
+/* Chatcord server Icon and Tool tip  */
 .discord-server-icon {
   height: 50px;
   width: 50px;
+}
+
+.server-tooltip .server-tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 7px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.server-tooltip:hover .server-tooltip-text {
+  visibility: visible;
+}
+
+
+/* Add a Server Widget */
+
+.new-server-widget .plus {
+
+  height: 46px;
+  width: 46px;
+  font-size: 40px;
+  color: #43b581;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: #292b2f;
+  padding: 5px;
+
+  position: relative;
+  display: inline-block;
+  text-align: center;
+
+  /* border: 4px solid yellow; */
+}
+
+.new-server-widget .new-server-widget-tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 7px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.new-server-widget:hover .plus {
+  background-color: #43b581;
+  color: white;
+  /* transition-timing-function: ease-in; */
+  transition: color .15s ease-out,background-color .15s ease-out;
+  transition: border-radius .15s;
+  border-radius: 16px;
+}
+
+.new-server-widget:hover .new-server-widget-tooltip  {
+  visibility: visible;
+}
+
+#server-index-item {
+  list-style-type: none;
 }

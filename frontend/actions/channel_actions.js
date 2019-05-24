@@ -3,7 +3,7 @@ import * as APIUtil from '../util/channel_util';
 export const RECEIVE_SINGLE_CHANNEL = 'RECEIVE_SINGLE_CHANNEL';
 export const RECEIVE_SERVER_CHANNELS = 'RECEIVE_SERVER_CHANNELS';
 export const RECEIVE_CHANNEL_ERRORS = 'RECEIVE_CHANNEL_ERRORS';
-export const CREATE_CHANNEL ='CREATE_CHANNEL';
+export const CREATE_CHANNEL = 'CREATE_CHANNEL';
 
 
 // thunk action creators

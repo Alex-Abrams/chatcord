@@ -21,8 +21,9 @@ class ChannelForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createChannel(this.state, serverId)
-      .then(data => this.props.history.push(`/servers/${serverId}/channels`));
+    this.props.createChannel(this.state, this.props.activeServerId) // second argument is all wrong
+      .then(data => this.props.history.push(`/servers/${this.props.activeServerId}/channels`));
+      // console.log(this.props.activeServerId);
   }
 
   render() {
@@ -37,7 +38,7 @@ class ChannelForm extends React.Component {
               onChange={this.update('title')}>
             </input>
           </label>
-          <button>Canecel</button>
+          <button>Cancel</button>
           <button>Create Channel</button>
         </form>
       </section>

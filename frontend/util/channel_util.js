@@ -16,10 +16,10 @@ export const fetchSingleChannel = (id) => (
 );
 
 // http://localhost:3000/api/servers/server_id/channels
-export const createChannel = (channel, server_id) => (
-  $.ajax({
+export const createChannel = (channel, server_id) => {
+  return $.ajax({
     method: 'POST',
     url: `api/servers/${server_id}/channels`,
     data: { channel }
   })
-);
+};

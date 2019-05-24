@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 //
-import { requestServerChannels, requestSingleChannel, createChannel } from './actions/channel_actions';
-import { receiveServerChannels , receiveSingleChannel } from './actions/channel_actions';
+import { requestServerChannels, requestSingleChannel } from './actions/channel_actions';
+import { receiveServerChannels , receiveSingleChannel, createChannel } from './actions/channel_actions';
 import { fetchServerChannels } from './util/channel_util';
-import { requestSingleServer, receiveSingleServer } from './actions/server_actions';
+import { requestSingleServer, receiveSingleServer, requestAllServers, createServer } from './actions/server_actions';
 import { toggleServer, unToggleServer } from './actions/toggle_actions';
-import { fetchSingleServer, createServer } from './util/api_util';
+import { fetchSingleServer } from './util/api_util';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveSingleServer = receiveSingleServer;
   window.fetchSingleServer = fetchSingleServer;
   window.createServer = createServer;
+  window.requestAllServers = requestAllServers;
 
   window.toggleServer = toggleServer;
   window.unToggleServer = unToggleServer;

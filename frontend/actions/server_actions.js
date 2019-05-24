@@ -34,15 +34,22 @@ export const requestSingleServer = id => dispatch => {
 //   }).fail(err => dispatch(receiveServerErrors(err.responseJSON)))
 // );
 
-export const createServer = server => dispatch => {
-  APIUtil.createServer(server).then(server => (
-    dispatch(receiveSingleServer(server))
-  ))
-};
+// export const createServer = server => dispatch => {
+//   APIUtil.createServer(server).then(server => (
+//     dispatch(receiveSingleServer(server))
+//   ))
+// };
 
 // export const createServer = server => dispatch => {
-//     APIUtil.createServer(server)
+//   APIUtil.createServer(server)
+//   .then(server => {dispatch(receiveSingleServer(server))});
 // }
+
+export const createServer = server => dispatch => {
+  APIUtil.createServer(server)
+  .then(() => APIUtil.fetchAllServers())
+  .then(servers => {dispatch(receiveAllServers(servers))});
+}
 
 
 
@@ -60,10 +67,9 @@ export const receiveAllServers = servers => ({
 });
 
 //////////////quarentined
-// export const receiveSingleServer = ({ server, channels }) => ({
+// export const receiveSingleServer = server => ({
 //   type: RECEIVE_SINGLE_SERVER,
-//   server,
-//   channels,
+//   server
 // });
 //////////////////////////////
 export const receiveSingleServer = server => {

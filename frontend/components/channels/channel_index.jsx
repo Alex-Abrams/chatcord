@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ChannelIndexContainer from './channel_index_container';
 import ChannelShow from './channel_show';
+//
+import ChannelFormContainer from './channel_form_container';
 
 //
 import TestRoute from '../test_components/test_route';
@@ -12,8 +14,15 @@ class ChannelIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.requestServerChannels(this.props.serverId);
+    if (this.props.serverId !== undefined) {
+      this.props.requestServerChannels(this.props.serverId);
+    }
+    // console.log(this.props.serverId); //totally works
+    //  OR somethign elese if no channels yet?
   }
+
+  // <Route path="/servers/:serverId/channels"
+  //   render={(props) => <ChannelFormContainer {...props} serverId={serverId} />}></Route>
 
 
   render() {
@@ -23,10 +32,15 @@ class ChannelIndex extends React.Component {
       return channel.server_id === serverId;
     });
 
-    // console.log(this.props.match.params.id); //undefined
+    const channelFormDisplay = (activeServerId === this.props.serverId) ? (
+      <Link to={`/servers/${activeServerId}/channels/new`}>+</Link>
+    ) : (
+      <div></div>
+    );
+
 
     return(
-      <div>
+      <div className="channel-bar">
         <ul>
           {channelFilter.map(channel =>
             <ChannelShow
@@ -35,6 +49,10 @@ class ChannelIndex extends React.Component {
               serverId={serverId}
               activeServerId={activeServerId} />)}
         </ul>
+        <div id="new-channel">
+          {channelFormDisplay}
+        </div>
+
       </div>
     );
 

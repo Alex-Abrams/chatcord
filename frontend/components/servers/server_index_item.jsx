@@ -5,6 +5,7 @@ import { withRouter } from 'react-router';
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelIndex from '../channels/channel_index';
 import TestRoute from '../test_components/test_route';
+import ChannelFormContainer from '../channels/channel_form_container';
 ///
 
 class ServerIndexItem extends React.Component {
@@ -17,6 +18,7 @@ class ServerIndexItem extends React.Component {
       this.props.unToggleServer();
       this.props.toggleServer(server_id);
     }
+
 
     // <Route path="/servers/:serverId/channels"
     //   render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
@@ -32,19 +34,16 @@ class ServerIndexItem extends React.Component {
 
     return (
       <div>
-
-        <li className="server-index-item">
-          <NavLink to={`/servers/${server.id}/channels`}>
-            <span>{server.id}</span>
-            <span>{server.title}</span>
+        <li id="server-index-item">
+          <NavLink to={`/servers/${server.id}/channels`} onClick={() => this.handleClick(server.id)} className="server-tooltip">
             <img className="discord-server-icon"
               src={server.image_url}
-              alt={server.title} />
+              alt={server.title}>
+            </img>
+            <span className="server-tooltip-text">{server.title}</span>
           </NavLink>
 
-          <button onClick={() => this.handleClick(server.id)}>toggleTest</button>
           <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />
-
         </li>
       </div>
     );

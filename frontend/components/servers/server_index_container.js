@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ServerIndex from './server_index';
 import { requestAllServers } from '../../actions/server_actions';
-import { selectAllServers, findActiveChannels } from '../../reducers/selectors';
+import { selectAllServers, findActiveChannels, findActiveServer } from '../../reducers/selectors';
 import { logout } from '../../actions/session_actions';
 import { requestServerChannels } from '../../actions/channel_actions';
 import { toggleServer, unToggleServer } from '../../actions/toggle_actions';
@@ -14,6 +14,7 @@ const mapStateToProps = (state, { match }) => ({     //there was an (   and befo
   //////////////////
   serverId: parseInt(match.params.serverId),
   ////////////////
+  activeServerId: findActiveServer(state),
 });
 
 
