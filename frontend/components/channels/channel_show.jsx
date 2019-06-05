@@ -10,8 +10,8 @@ class ChannelShow extends React.Component {
 
 
     const channelDisplay = (channel.server_id === activeServerId) ? (
-      <li className="channel-item">
-        {channel.title} -----> {channel.server_id}
+      <li id="channel-item">
+        # {channel.title}
       </li>
     ) : (
       <div className="not-active-channel"></div>

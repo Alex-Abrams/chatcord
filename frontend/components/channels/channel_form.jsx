@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 
 class ChannelForm extends React.Component {
@@ -13,6 +13,7 @@ class ChannelForm extends React.Component {
 
     //handle submit bind
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   } // end constrcu
 
   update(property) {
@@ -21,26 +22,40 @@ class ChannelForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createChannel(this.state, this.props.activeServerId) // second argument is all wrong
-      .then(data => this.props.history.push(`/servers/${this.props.activeServerId}/channels`));
-      // console.log(this.props.activeServerId);
+    let serverId = parseInt(this.props.match.params.serverId);
+    this.props.createChannel(this.state, serverId);
+      // .then(data => this.props.history.push(`/servers/${serverId}/channels`));
+    this.props.history.push(`/servers/${serverId}/channels`);
+  }
+
+  handleClick() {
+    const fullApp = document.getElementById('fullApp');
+    // fullApp.classList.toggle('active');
+    fullApp.style.transition = "background-color 0.2s ease";
+    fullApp.style.backgroundColor = "white";
+    // fullApp.style.opacity = "1";
   }
 
   render() {
+    const {activeId} = this.props; ///meh
 
     return(
-      <section className="channel-form-detail">
-        <form className="channel-form" onSubmit={this.handleSubmit}>
-          <label>CHANNEL NAME
-            <input
-              type="text"
-              value={this.state.title}
-              onChange={this.update('title')}>
-            </input>
-          </label>
-          <button>Cancel</button>
-          <button>Create Channel</button>
-        </form>
+      <section class="modal" id="channelModal">
+        <div class="modal-content">
+          <form onSubmit={this.handleSubmit}>
+            <span id="modalLabel">CHANNEL NAME</span>
+              <input
+                class="modal-input"
+                type="text"
+                value={this.state.title}
+                onChange={this.update('title')}>
+              </input>
+              <div class="modal-buttons">
+                <Link class="modal-cancel" to="/servers" id="cancel" onClick={this.handleClick}>Cancel</Link>
+                <button class="modal-create" id="create" onClick={this.handleClick}>Create Channel</button>
+              </div>
+          </form>
+        </div>
       </section>
 
     );// end return

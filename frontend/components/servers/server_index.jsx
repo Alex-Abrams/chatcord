@@ -31,8 +31,8 @@ class ServerIndex extends React.Component {
     // <Route exact path="/servers/:serverId/channels"
     //   render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
     return (
-      <div>
-        <ul>
+      <div class="servers">
+        <ul id="serversPosition">
           {servers.map(server =>
             <ServerIndexItem
             key={server.id}
@@ -53,6 +53,8 @@ class ServerIndex extends React.Component {
           <Link className="plus" to="/servers/new">+</Link>
           <span className="new-server-widget-tooltip">Add a Server</span>
         </div>
+
+        
 
           <div className="profile-bar">
           {profileBar}

@@ -11,10 +11,6 @@ import ChannelIndexContainer from './channels/channel_index_container';
 
 const App = () => (
   <div>
-    <header>
-      <h1>ChatCord from app.jsx</h1>
-
-    </header>
 
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
@@ -22,7 +18,7 @@ const App = () => (
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
 
-      
+
   </div>
 );
 

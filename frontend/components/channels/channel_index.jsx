@@ -11,14 +11,28 @@ import TestRoute from '../test_components/test_route';
 class ChannelIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleNew = this.handleNew.bind(this);
   }
 
   componentDidMount() {
     if (this.props.serverId !== undefined) {
       this.props.requestServerChannels(this.props.serverId);
     }
-    // console.log(this.props.serverId); //totally works
-    //  OR somethign elese if no channels yet?
+  }
+
+  // handleNew() {     //click handler for fad in background on new channel click
+  //   let newChannelClick = this.ownerDocument.firstElementChild;
+  //   newChannelClick.onClick = () => newChannelClick.classList.toggle("active");
+  // }
+
+  handleNew() {
+    const fullApp = document.getElementById('fullApp');
+    // fullApp.classList.toggle('active');
+    fullApp.style.transition = "background-color 0.2s ease";
+    fullApp.style.backgroundColor = "rgb(0, 0, 0)";
+    // fullApp.style.opacity = "0.5";
+    fullApp.style.zIndex = "1";
   }
 
   // <Route path="/servers/:serverId/channels"
@@ -33,14 +47,21 @@ class ChannelIndex extends React.Component {
     });
 
     const channelFormDisplay = (activeServerId === this.props.serverId) ? (
-      <Link to={`/servers/${activeServerId}/channels/new`}>+</Link>
+      <div className="textChannel" id="textChannelLabel">TEXT CHANNEL
+          <Link
+            className="textChannel-plus"
+            to={`/servers/${activeServerId}/channels/new`}
+            id="newChannel"
+            onClick={this.handleNew}>+</Link>
+          <span className="textChannel-tooltip">Create Channel</span>
+        </div>
     ) : (
       <div></div>
     );
 
-
     return(
-      <div className="channel-bar">
+      <div class="channels">
+          {channelFormDisplay}
         <ul>
           {channelFilter.map(channel =>
             <ChannelShow
@@ -49,9 +70,6 @@ class ChannelIndex extends React.Component {
               serverId={serverId}
               activeServerId={activeServerId} />)}
         </ul>
-        <div id="new-channel">
-          {channelFormDisplay}
-        </div>
 
       </div>
     );

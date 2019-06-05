@@ -20,30 +20,6 @@ export const requestSingleServer = id => dispatch => {
   .then(server => {dispatch(receiveSingleServer(server))});
 }
 
-////
-// export const createServer = server => dispatch => (           // try 2
-//   APIUtil.createServer(server).then(server => (
-//     dispatch(receiveSingleServer(server))
-//   ))
-// );
-//
-// export const createServer = server => dispatch => (
-//   APIUtil.createServer(server).then(server => {
-//     dispatch(receiveSingleServer(server));
-//     return server;
-//   }).fail(err => dispatch(receiveServerErrors(err.responseJSON)))
-// );
-
-// export const createServer = server => dispatch => {
-//   APIUtil.createServer(server).then(server => (
-//     dispatch(receiveSingleServer(server))
-//   ))
-// };
-
-// export const createServer = server => dispatch => {
-//   APIUtil.createServer(server)
-//   .then(server => {dispatch(receiveSingleServer(server))});
-// }
 
 export const createServer = server => dispatch => {
   APIUtil.createServer(server)
@@ -66,12 +42,7 @@ export const receiveAllServers = servers => ({
   servers
 });
 
-//////////////quarentined
-// export const receiveSingleServer = server => ({
-//   type: RECEIVE_SINGLE_SERVER,
-//   server
-// });
-//////////////////////////////
+
 export const receiveSingleServer = server => {
   return {
     type: RECEIVE_SINGLE_SERVER,

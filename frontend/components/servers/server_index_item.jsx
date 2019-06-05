@@ -28,23 +28,28 @@ class ServerIndexItem extends React.Component {
     // <button onClick={this.toggleHidden.bind(this)}>testyboy</button>
     // {!this.state.isHidden && <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />}
 
+    // <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />
   render() {
     const { server, serverId, channelIds } = this.props;
 
 
     return (
-      <div>
-        <li id="server-index-item">
-          <NavLink to={`/servers/${server.id}/channels`} onClick={() => this.handleClick(server.id)} className="server-tooltip">
-            <img className="discord-server-icon"
-              src={server.image_url}
-              alt={server.title}>
-            </img>
-            <span className="server-tooltip-text">{server.title}</span>
-          </NavLink>
+      <div class="server">
+        <span id="s-list">
+          <li class="server-list">
+            <NavLink to={`/servers/${server.id}/channels`} onClick={() => this.handleClick(server.id)} className="server-tooltip">
+              <img className="discord-server-icon"
+                src={server.image_url}
+                alt={server.title}>
+              </img>
+              <span className="server-tooltip-text">{server.title}</span>
+            </NavLink>
 
-          <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />
-        </li>
+
+              <Route path="/servers/:serverId/channels"
+                render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
+          </li>
+        </span>
       </div>
     );
   }
