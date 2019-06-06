@@ -40,20 +40,44 @@
 
 .server-tooltip .server-tooltip-text {
   visibility: hidden;
+  font-size: 14px;
   background-color: black;
   color: white;
   text-align: center;
   border-radius: 6px;
   padding: 6px 10px 0px 10px;
   position: relative;
-  top: 5px;
-  left: 5px;
+  /* top: 5px;
+  left: 5px; */
   z-index: 1;
   float: left;
   justify-content: flex-start;
   height: 30px;
 
+}
 
+.server-tooltip-text:after, .server-tooltip-text:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.server-tooltip-text:after {
+	border-color: rgba(2, 2, 3, 0);
+	border-right-color: #020203;
+	border-width: 6px;
+	margin-top: -6px;
+}
+.server-tooltip-text:before {
+	border-color: rgba(8, 9, 10, 0);
+	border-right-color: #08090a;
+	border-width: 5px;
+	margin-top: -5px;
 }
 
 .server-tooltip:hover .server-tooltip-text {

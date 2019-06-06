@@ -1,0 +1,25 @@
+/* arrow box for new channel tooltip */
+/* .newChannel-widget-tooltip:after, .newChannel-widget-tooltip:before {
+  top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.newChannel-widget-tooltip:after {
+  border-color: rgba(8, 3, 1, 0);
+	border-top-color: #080301;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.newChannel-widget-tooltip:before {
+  border-color: rgba(5, 0, 0, 0);
+	border-top-color: #050000;
+	border-width: 5px;
+	margin-left: -5px;
+} */
