@@ -47,13 +47,18 @@ class ChannelIndex extends React.Component {
     });
 
     const channelFormDisplay = (activeServerId === this.props.serverId) ? (
-      <div className="textChannel" id="textChannelLabel">TEXT CHANNEL
+      <div className="textChannel">
+        <div id="textChannelLabel">TEXT CHANNEL</div>
+
+        <div className="newChannel-widget">
           <Link
             className="textChannel-plus"
             to={`/servers/${activeServerId}/channels/new`}
             id="newChannel"
             onClick={this.handleNew}>+</Link>
-          <span className="textChannel-tooltip">Create Channel</span>
+          <span className="newChannel-widget-tooltip">Create Channel</span>
+        </div>
+
         </div>
     ) : (
       <div></div>

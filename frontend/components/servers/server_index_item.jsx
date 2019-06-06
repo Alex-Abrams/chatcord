@@ -36,14 +36,19 @@ class ServerIndexItem extends React.Component {
     return (
       <div class="server">
         <span id="s-list">
-          <li class="server-list">
-            <NavLink to={`/servers/${server.id}/channels`} onClick={() => this.handleClick(server.id)} className="server-tooltip">
-              <img className="discord-server-icon"
-                src={server.image_url}
-                alt={server.title}>
-              </img>
-              <span className="server-tooltip-text">{server.title}</span>
-            </NavLink>
+          <li>
+            <div className="server-list">
+              <NavLink
+                className="server-tooltip"
+                to={`/servers/${server.id}/channels`}
+                onClick={() => this.handleClick(server.id)}>
+                <img className="discord-server-icon"
+                  src={server.image_url}
+                  alt={server.title}>
+                </img>
+                <span className="server-tooltip-text">{server.title}</span>
+              </NavLink>
+            </div>
 
 
               <Route path="/servers/:serverId/channels"

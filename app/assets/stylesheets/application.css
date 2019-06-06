@@ -30,7 +30,13 @@
 }
 
 
-/* Chatcord server Icon and Tool tip  */
+/* Chatcord server Icons and Tool tip  */
+.server-tooltip {
+  display: flex;
+  margin-bottom: 8px;
+  text-decoration: none;
+  text-align: center;
+}
 
 .server-tooltip .server-tooltip-text {
   visibility: hidden;
@@ -38,10 +44,16 @@
   color: white;
   text-align: center;
   border-radius: 6px;
-  padding: 3px 7px;
-
-  position: absolute;
+  padding: 6px 10px 0px 10px;
+  position: relative;
+  top: 5px;
+  left: 5px;
   z-index: 1;
+  float: left;
+  justify-content: flex-start;
+  height: 30px;
+
+
 }
 
 .server-tooltip:hover .server-tooltip-text {
@@ -256,44 +268,48 @@
   color: #5e5d5a;
 }
 
-.textChannel .textChannel-tooltip {
+.newChannel-widget .newChannel-widget-tooltip {
   visibility: hidden;
   background-color: black;
+  border: 3px solid black;
   color: white;
   text-align: center;
   border-radius: 6px;
-  padding: 3px 7px;
-
-  position: absolute;
+  padding: 5px 7px;
+  font-family: Arial;
+  /* position: absolute; */
+  position: fixed;
+  left: 185px;
+  top: 88px;
   z-index: 1;
 }
 
-.textChannel .textChannel-tooltip {
+.newChannel-widget:hover .newChannel-widget-tooltip {
   visibility: visible;
 }
 
-
-
-/* .new-server-widget .new-server-widget-tooltip {
-  visibility: hidden;
-  background-color: black;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 3px 7px;
-
-  position: absolute;
-  z-index: 1;
+/* arrow box for new channel tooltip */
+.newChannel-widget-tooltip:after, .newChannel-widget-tooltip:before {
+  top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
 
-.new-server-widget:hover .plus {
-  background-color: #43b581;
-  color: white;
-  transition: color .15s ease-out,background-color .15s ease-out;
-  transition: border-radius .15s;
-  border-radius: 16px;
+.newChannel-widget-tooltip:after {
+  border-color: rgba(8, 3, 1, 0);
+	border-top-color: #080301;
+	border-width: 8px;
+	margin-left: -8px;
 }
 
-.new-server-widget:hover .new-server-widget-tooltip  {
-  visibility: visible;
-} */
+.newChannel-widget-tooltip:before {
+  border-color: rgba(5, 0, 0, 0);
+	border-top-color: #050000;
+	border-width: 5px;
+	margin-left: -5px;
+}
