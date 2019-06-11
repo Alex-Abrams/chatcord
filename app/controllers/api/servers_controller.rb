@@ -11,6 +11,10 @@ class Api::ServersController < ApplicationController
     @server = Server.new(server_params)
     @server.admin_id = current_user.id
 
+    if @server.image_url.length == 0
+        @server.image_url = "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"
+    end
+
     if @server.save
       # create_general_channel(@server.id)
       render :show
@@ -43,10 +47,6 @@ class Api::ServersController < ApplicationController
   end
 
   private
-
-  # def create_general_channel(serverId)
-  #   Channel.new(title: 'general', server_id: serverId)
-  # end
 
   def server_params
     params.require(:server).permit(:title, :image_url)

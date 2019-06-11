@@ -10,10 +10,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
+        test: /\.jsx?$/,                //c
+        exclude: /(node_modules)/,      //c
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader',   //c
           query: {
             presets: ['@babel/env', '@babel/react']
           }
@@ -26,3 +26,6 @@ module.exports = {
     extensions: [".js", ".jsx", "*"]
   }
 };
+
+
+////////////////////////

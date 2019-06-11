@@ -19,6 +19,11 @@ class Channel < ApplicationRecord
     foreign_key: :server_id,
     class_name: :Server
 
+  has_one :message_board,
+    primary_key: :id,
+    foreign_key: :channel_id,
+    class_name: :MessageBoard
+
   def title_too_long
     if title.length > 20
       errors[:title] << "too long"

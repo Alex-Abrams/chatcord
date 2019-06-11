@@ -7,7 +7,7 @@ export const fetchAllServers = () => (
 
 export const fetchSingleServer = (id) => (
   $.ajax({
-    methood: 'GET',
+    method: 'GET',
     url: `api/servers/${id}`
   })
 );

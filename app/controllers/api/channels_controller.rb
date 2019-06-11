@@ -1,7 +1,6 @@
 class Api::ChannelsController < ApplicationController
 
   def index
-    # @channels = Channel.where("server_id = ?", testy)
     @channels = Channel.where("server_id = ?", params[:server_id])
   end
 
@@ -25,9 +24,6 @@ class Api::ChannelsController < ApplicationController
 
   private
 
-  def index_params
-
-  end
 
   def channel_params
     params.require(:channel).permit(:title);
