@@ -7,6 +7,8 @@ import ServerIndexContainer from './servers/server_index_container';
 import ServerFormContainer from './servers/server_form_container';
 //
 import ChannelIndexContainer from './channels/channel_index_container';
+import MessageBoard from './msg_board/message_board';
+import MessageBoardContainer from './msg_board/message_board_container';
 //
 
 const App = () => (
@@ -17,6 +19,8 @@ const App = () => (
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
+
+      <Route path="/servers/:serverId/channels/:channel_id" component={MessageBoardContainer} />
 
 
   </div>

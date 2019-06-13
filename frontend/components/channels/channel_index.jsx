@@ -7,7 +7,7 @@ import MessageBoardContainer from '../msg_board/message_board_container';
 import ChannelFormContainer from './channel_form_container';
 
 //
-import TestRoute from '../test_components/test_route';
+
 
 class ChannelIndex extends React.Component {
   constructor(props) {
@@ -16,16 +16,13 @@ class ChannelIndex extends React.Component {
     this.handleNew = this.handleNew.bind(this);
   }
 
+
   componentDidMount() {
     if (this.props.serverId !== undefined) {
       this.props.requestServerChannels(this.props.serverId);
     }
   }
 
-  // handleNew() {     //click handler for fad in background on new channel click
-  //   let newChannelClick = this.ownerDocument.firstElementChild;
-  //   newChannelClick.onClick = () => newChannelClick.classList.toggle("active");
-  // }
 
   handleNew() {
     const fullApp = document.getElementById('fullApp');
@@ -36,8 +33,8 @@ class ChannelIndex extends React.Component {
     fullApp.style.zIndex = "1";
   }
 
-  // <Route path="/servers/:serverId/channels"
-  //   render={(props) => <ChannelFormContainer {...props} serverId={serverId} />}></Route>
+  // <Route path="/servers/:serverId/channels/:channel_id"
+  //   render={(props) => <MessageBoardContainer {...props} />}></Route>
 
 
   render() {
@@ -77,8 +74,6 @@ class ChannelIndex extends React.Component {
               activeServerId={activeServerId} />)}
         </ul>
 
-        <Route path="/servers/:serverId/channels/:channel_id"
-          render={(props) => <MessageBoardContainer {...props} />}></Route>
 
       </div>
     );

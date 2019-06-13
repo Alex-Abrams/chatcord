@@ -1,1 +1,21 @@
-i
+import React from 'react';
+
+
+class TesterComp extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+
+  render() {
+
+    return(
+      <div>
+        Hello
+      </div>
+    )
+  }
+
+};
+
+export default TesterComp;

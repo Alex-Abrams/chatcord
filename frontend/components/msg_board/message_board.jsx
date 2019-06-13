@@ -1,28 +1,27 @@
 import React from 'react';
 
-class MessageBoard extends React.Component {
+class MessageBoard extends React.PureComponent {
   constructor(props) {
     super(props);
   } // end constructor
 
+
   render() {
-    const { channelId, title } = this.props;
+    const { title } = this.props;
 
     return (
         <div class="messageBoard">
-          <header class="messageBoard-header">{title}</header>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <header>{title}</header>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
         </div>
-    ) //end return
+    ); //end return
   } // end render
 }; //end class
 

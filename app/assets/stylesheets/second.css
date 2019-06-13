@@ -33,11 +33,14 @@
   position: fixed;
   top: 150px;
   left: 40px;
-  display: flex;
+  /* display: flex; */
 
 }
 .messageBoard {
-  color: green;
-  border: 1px solid black;
-  display: flex;
+  /* color: green; */
+  /* border: 1px solid black; */
+  /* display: flex; */
+  position: fixed;
+  right: 500px;
+  top: 200px;
 }
