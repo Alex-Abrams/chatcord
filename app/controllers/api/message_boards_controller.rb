@@ -6,10 +6,10 @@ class Api::MessageBoardsController < ApplicationController
 
   def create
     @message_board = MessageBoard.new(message_board_params)
-    @message_board.channel_id = params[:channel_id]
+    # @message_board.channel_id = params[:channel_id]
 
     if @message_board.save
-      render :new
+      render :show
     else
       render json: @channel.errors.full_messages, status: 422
     end

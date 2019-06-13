@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ChannelIndexContainer from './channel_index_container';
 import ChannelShow from './channel_show';
+import MessageBoardContainer from '../msg_board/message_board_container';
 //
 import ChannelFormContainer from './channel_form_container';
 
@@ -75,6 +76,9 @@ class ChannelIndex extends React.Component {
               serverId={serverId}
               activeServerId={activeServerId} />)}
         </ul>
+
+        <Route path="/servers/:serverId/channels/:channel_id"
+          render={(props) => <MessageBoardContainer {...props} />}></Route>
 
       </div>
     );

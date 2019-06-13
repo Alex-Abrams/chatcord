@@ -1,0 +1,77 @@
+/* https://codepen.io/chriscoyier/pen/vWEMWw */
+/* above is the site I worked this through so it should be  */
+
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+/*   padding: 10px; */
+  flex: 1 100%;
+}
+
+.header {
+  background: tomato;
+  padding: 10px;
+}
+
+.footer {
+  background: purple;
+  padding: 10px;
+}
+
+.main {
+  text-align: left;
+  background: deepskyblue;
+  padding: 10px;
+}
+
+.aside-0 {
+  background: green;
+  padding: 10px;
+
+}
+
+.aside-1 {
+  background: gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+     /* height: 1250px; */
+}
+
+.aside-footer {
+  background: black;
+  height: 10%;
+}
+
+.aside-2 {
+  background: hotpink;
+  padding: 10px;
+   height: 1250px;
+}
+
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 4 0px; }
+  .aside-0 { flex: 0.3;}
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+
+body {
+/*   padding: 2em;  */
+height: 100%;
+width: 100%;
+}

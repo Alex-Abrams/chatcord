@@ -23,3 +23,21 @@
 	border-width: 5px;
 	margin-left: -5px;
 } */
+
+.channels {
+  display: inline;
+  top: 0;
+  z-index: 1;
+  color: red;
+
+  position: fixed;
+  top: 150px;
+  left: 40px;
+  display: flex;
+
+}
+.messageBoard {
+  color: green;
+  border: 1px solid black;
+  display: flex;
+}

@@ -13,3 +13,9 @@ export const selectServerChannels = (state, serverId) => {
 export const selectServerId = ({ server }, serverId) => {
   return server[serverId].id;
 };
+
+// find the channel title for the message_board
+
+export const findChannelTitle = (state, channelId) => {
+  return state.entities.channels[channelId].title;
+};
