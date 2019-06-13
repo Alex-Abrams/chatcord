@@ -15,10 +15,10 @@ class MessageBoard < ApplicationRecord
     foreign_key: :channel_id,
     class_name: :Channel
 
-  # has_many :messages,
-  #   primary_key: :id,
-  #   foreign_key: :message_board_id,
-  #   class_name: :Message
+  has_many :comments,
+    primary_key: :id,
+    foreign_key: :msg_board_id,
+    class_name: :Comment
 
 
 end

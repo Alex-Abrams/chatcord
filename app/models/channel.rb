@@ -12,8 +12,6 @@
 class Channel < ApplicationRecord
   validates :title, presence: true
 
-  # has_many :comment
-
   belongs_to :server, optional: true,
     primary_key: :id,
     foreign_key: :server_id,
