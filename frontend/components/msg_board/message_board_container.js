@@ -5,7 +5,7 @@ import MessageBoard from './message_board';
 
 
 const mapStateToProps = (state, {match}) => {
-  const channelId = match.params.channel_id;
+  const channelId = parseInt(match.params.channel_id);
   const title = findChannelTitle(state, channelId);
   return {
     title,

@@ -9,6 +9,7 @@ User.delete_all
 Server.delete_all
 Channel.delete_all
 MessageBoard.delete_all
+Comment.delete_all
 
 user1 = User.create!(username: 'guest', password: 'password', email: 'guest@guest.com')
 user2 = User.create!(username: 'guest1', password: 'password', email: 'guest1@guest.com')
@@ -41,3 +42,20 @@ message_board6 = MessageBoard.create(channel_id: channel6.id)
 message_board7 = MessageBoard.create(channel_id: channel7.id)
 message_board9 = MessageBoard.create(channel_id: channel9.id)
 message_board10 = MessageBoard.create(channel_id: channel10.id)
+
+comment1 = Comment.create(msg_board_id: message_board1.id, user_id: user1.id, body: 'POGCHAMPS')
+comment1 = Comment.create(msg_board_id: message_board1.id, user_id: user1.id, body: 'chardie')
+comment1 = Comment.create(msg_board_id: message_board1.id, user_id: user2.id, body: 'where the boys at??')
+comment1 = Comment.create(msg_board_id: message_board2.id, user_id: user2.id, body: 'gg ex game 5v1')
+comment1 = Comment.create(msg_board_id: message_board2.id, user_id: user2.id, body: 'i aint hearing no fish')
+comment1 = Comment.create(msg_board_id: message_board2.id, user_id: user2.id, body: 'pitter patter')
+comment1 = Comment.create(msg_board_id: message_board3.id, user_id: user2.id, body: 'say a man eat his own head')
+comment1 = Comment.create(msg_board_id: message_board3.id, user_id: user3.id, body: 'i dream of a pruple tiger')
+comment1 = Comment.create(msg_board_id: message_board4.id, user_id: user3.id, body: 'where the money at?')
+comment1 = Comment.create(msg_board_id: message_board4.id, user_id: user3.id, body: 'hire me pls')
+comment1 = Comment.create(msg_board_id: message_board5.id, user_id: user3.id, body: 'godzilla was prewtty cool')
+comment1 = Comment.create(msg_board_id: message_board6.id, user_id: user3.id, body: 'the expanse is the best show')
+comment1 = Comment.create(msg_board_id: message_board6.id, user_id: user4.id, body: 'game of thrones season 7 and 8 sucked donkey balls')
+comment1 = Comment.create(msg_board_id: message_board6.id, user_id: user4.id, body: 'fire the thrusters to get me the hell out of here')
+comment1 = Comment.create(msg_board_id: message_board6.id, user_id: user4.id, body: 'wankers')
+comment1 = Comment.create(msg_board_id: message_board6.id, user_id: user4.id, body: 'POGCHAMPS')

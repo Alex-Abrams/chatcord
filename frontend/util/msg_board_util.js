@@ -6,13 +6,14 @@ export const fetchMessageBoard = (id) => (
 );
 
 
-export const createMessageBoard = (message_board) => (
-  $.ajax({
+export const createMessageBoard = (message_board) => {
+  return $.ajax({
     method: 'POST',
     url: 'api/message_boards',
     data: { message_board }
   })
-);
+};
+
 
 
 // TODO delete is for later when I actually can delete stuff

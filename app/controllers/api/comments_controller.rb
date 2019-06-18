@@ -1,8 +1,9 @@
 class Api::CommentsController < ApplicationController
 
   def index
-    @comments = @Comment.where("msg_board_id = ?", params[:msg_board_id])
+    @comments = Comment.where("msg_board_id= ?", params[:message_board_id])
     # might need to be message_board_id
+
   end
 
   def new
@@ -16,7 +17,7 @@ class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.msg_board_id = params[:msg_board_id]  #might need to be :message_board_id
+    @comment.msg_board_id = params[:mesage_board_id]  #might need to be :message_board_id
 
     if @comment.save
       render :show
@@ -28,6 +29,6 @@ class Api::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body);
+    params.require(:comment).permit(:body, :msg_board_id, :user_id)
   end
 end

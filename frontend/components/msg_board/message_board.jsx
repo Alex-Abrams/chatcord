@@ -1,4 +1,5 @@
 import React from 'react';
+import { findChannelTitle } from '../../reducers/selectors';
 
 class MessageBoard extends React.PureComponent {
   constructor(props) {
@@ -6,12 +7,18 @@ class MessageBoard extends React.PureComponent {
   } // end constructor
 
 
+  componentDidMount() {
+
+  }
+
+
   render() {
-    const { title } = this.props;
+    const { channelId, title } = this.props;
+
 
     return (
         <div class="messageBoard">
-          <header>{title}</header>
+          <header class="messageBoard-header">{title}</header>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>

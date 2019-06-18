@@ -20,8 +20,10 @@ class ChannelShow extends React.Component {
     );
 
     return(
-      <div>
+      <div class="channelsList">
+        <div>
           {channelDisplay}
+        </div>
       </div>
     )
   }

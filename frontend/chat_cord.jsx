@@ -9,7 +9,7 @@ import { fetchServerChannels } from './util/channel_util';
 import { requestSingleServer, receiveSingleServer, requestAllServers, createServer } from './actions/server_actions';
 import { toggleServer, unToggleServer } from './actions/toggle_actions';
 import { fetchSingleServer } from './util/api_util';
-import { fetchMessageBoard } from './util/msg_board_util';
+import { fetchMessageBoard, createMessageBoard } from './util/msg_board_util';
 import { requestMessageBoard } from './actions/msg_board_actions';
 //
 
@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.fetchMessageBoard = fetchMessageBoard;
   window.requestMessageBoard = requestMessageBoard;
+  window.createMessageBoard = createMessageBoard;
   // window.requestSingleChannel = requestSingleChannel;
   // window.requestServerChannels = requestServerChannels;
   // window.createChannel = createChannel;
