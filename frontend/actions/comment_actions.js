@@ -21,6 +21,7 @@ export const createComment = (comment) => dispatch => {
   .then(comment => {dispatch(receiveSingleComment(comment))});
 }
 
+
 export const requestSingleComment = (id) => dispatch => {
   APIUtil.fetchComment(id)
   .then(comment => {dispatch(receiveSingleComment(comment))});

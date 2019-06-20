@@ -6,15 +6,16 @@ import MessageBoard from './message_board';
 
 const mapStateToProps = (state, {match}) => {
   const channelId = parseInt(match.params.channel_id);
-  const title = findChannelTitle(state, channelId);
+  // const title = findChannelTitle(state, channelId);
+  // const title = match.params;
   return {
-    title,
+    // title,
     channelId,
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  requestMessageBoard: () => dispatch(requestMessageBoard)
+  requestMessageBoard: (id) => dispatch(requestMessageBoard(id))
 });
 
 export default connect(

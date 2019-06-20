@@ -17,5 +17,8 @@ export const selectServerId = ({ server }, serverId) => {
 // find the channel title for the message_board
 
 export const findChannelTitle = (state, channelId) => {
-  return state.entities.channels[channelId].title;
+  // return state.entities.channels[channelId].title;
+
+  return 'hello';
+  // return isNaN(state.entities.channels[channelId].title);
 };

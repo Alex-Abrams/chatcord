@@ -24,7 +24,7 @@ server3 = Server.create(title: "server3", image_url: "https://cdn0.iconfinder.co
 server4 = Server.create(title: "server4", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id)
 
 channel1 = Channel.create(title: "channel1", server_id: user2.id)
-channel2 = Channel.create(title: "channel2", server_id: user2.id)
+channel2 = Channel.create(title: "piddle", server_id: user2.id)
 channel3 = Channel.create(title: "channel3", server_id: user3.id)
 channel4 = Channel.create(title: "channel4", server_id: user3.id)
 channel5 = Channel.create(title: "channel5", server_id: user3.id)

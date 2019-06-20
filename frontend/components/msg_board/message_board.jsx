@@ -8,17 +8,18 @@ class MessageBoard extends React.PureComponent {
 
 
   componentDidMount() {
-
+    this.props.requestMessageBoard(this.props.channelId);
   }
 
 
   render() {
     const { channelId, title } = this.props;
 
+    console.log(this.props);
 
     return (
         <div class="messageBoard">
-          <header class="messageBoard-header">{title}</header>
+          <header class="messageBoard-header">{channelId}</header>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
           <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>

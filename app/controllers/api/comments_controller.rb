@@ -17,7 +17,7 @@ class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.msg_board_id = params[:mesage_board_id]  #might need to be :message_board_id
+    # @comment.msg_board_id = params[:mesage_board_id]  #might need to be :message_board_id
 
     if @comment.save
       render :show
