@@ -1,5 +1,6 @@
 import React from 'react';
 import { findChannelTitle } from '../../reducers/selectors';
+import CommentsIndexContainer from '../comments/comments_index_container';
 
 class MessageBoard extends React.PureComponent {
   constructor(props) {
@@ -9,25 +10,18 @@ class MessageBoard extends React.PureComponent {
 
   componentDidMount() {
     this.props.requestMessageBoard(this.props.channelId);
+    this.props.requestAllComments(this.props.channelId);
   }
 
 
   render() {
     const { channelId, title } = this.props;
 
-    console.log(this.props);
 
     return (
         <div class="messageBoard">
           <header class="messageBoard-header">{channelId}</header>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-          <p>REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+          <CommentsIndexContainer messageBoardId={channelId} />
         </div>
     ); //end return
   } // end render

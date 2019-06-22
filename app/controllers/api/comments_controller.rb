@@ -2,7 +2,6 @@ class Api::CommentsController < ApplicationController
 
   def index
     @comments = Comment.where("msg_board_id= ?", params[:message_board_id])
-    # might need to be message_board_id
 
   end
 

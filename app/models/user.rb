@@ -20,6 +20,10 @@ has_one :administrator,
   foreign_key: :admin_id,
   class_name: :Server
 
+has_many :comments,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :Comment
 
 
 validates :username, :password_digest, :session_token, presence: true

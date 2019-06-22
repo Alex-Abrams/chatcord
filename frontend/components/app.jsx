@@ -9,6 +9,7 @@ import ServerFormContainer from './servers/server_form_container';
 import ChannelIndexContainer from './channels/channel_index_container';
 import MessageBoard from './msg_board/message_board';
 import MessageBoardContainer from './msg_board/message_board_container';
+import CommentsIndexContainer from './comments/comments_index_container';
 //
 
 const App = () => (
