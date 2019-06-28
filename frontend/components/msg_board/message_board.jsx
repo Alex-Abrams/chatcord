@@ -13,15 +13,26 @@ class MessageBoard extends React.PureComponent {
     this.props.requestAllComments(this.props.channelId);
   }
 
+  componentDidUpdate(prevProps) {     // when switching channels within the same channel index
+    if (this.props.channelId !== prevProps.channelId) {
+      this.props.requestAllComments(this.props.channelId);
+    }
+  }
+
 
   render() {
-    const { channelId, title } = this.props;
+    const { channelId, messageBoards } = this.props;
 
+    // console.log(messageBoards[channelId] === undefined ? null : messageBoards[channelId].title);
+
+    // let title = messageBoards[channelId] === undefined ? null : messageBoards[channelId].title;
+    //
+    // console.log(title);
 
     return (
         <div class="messageBoard">
           <header class="messageBoard-header">{channelId}</header>
-          <CommentsIndexContainer messageBoardId={channelId} />
+          <CommentsIndexContainer messageBoardId={channelId} messageBoards={messageBoards} />
         </div>
     ); //end return
   } // end render

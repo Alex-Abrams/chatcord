@@ -1,19 +1,16 @@
 import { connect } from 'react-redux';
 import { requestMessageBoard } from '../../actions/msg_board_actions';
-import { findChannelTitle } from '../../reducers/selectors';
+import { findMessageBoard, selectMessageBoards } from '../../reducers/selectors';
 import MessageBoard from './message_board';
 import {requestAllComments} from '../../actions/comment_actions';
 
 
 const mapStateToProps = (state, {match}) => {
-  const channelId = parseInt(match.params.channel_id);
-  // const title = findChannelTitle(state, channelId);
-  // const messageBoardId = parseInt(match.params.msg_board_id);
-  // const title = match.params;
+  const channel_id = parseInt(match.params.channel_id);
+  const messageBoards = selectMessageBoards(state);
   return {
-    // title,
     channelId,
-    // messageBoardId,
+    messageBoards,
   };
 };
 

@@ -15,10 +15,10 @@ class Comment < ApplicationRecord
 
   validates :body, presence: true
 
-  belongs_to :message_board,
+  belongs_to :channel,
     primary_key: :id,
-    foreign_key: :msg_board_id,
-    class_name: :MessageBoard
+    foreign_key: :channel_id,
+    class_name: :Channel
 
   belongs_to :user,
     primary_key: :id,

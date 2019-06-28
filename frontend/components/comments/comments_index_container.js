@@ -6,13 +6,22 @@ import {
 
 import { connect } from 'react-redux';
 import CommentsIndex from './comments_index';
-import { selectAllComments } from '../../reducers/selectors';
+import { selectAllComments, selectTitle } from '../../reducers/selectors';
 
-const mapStateToProps = (state, {match}) => ({ // ({})
-  currentUser: state.entities.users[state.session.id],
-  comments: selectAllComments(state),
-  currentUserName: (state.entities.users[state.session.id]).username
-});
+const mapStateToProps = (state, {match}) => {
+  const currentUser = state.entities.users[state.session.id];
+  const comments = selectAllComments(state);
+  const currentUserName = (state.entities.users[state.session.id]).username;
+  const channel_id = parseInt(match.params.channel_id);
+  const title = selectTitle(state, channel_id);
+  return {
+    currentUser,
+    comments,
+    currentUserName,
+    channel_id,
+    title,
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   createComment: (comment) => dispatch(createComment(comment)),

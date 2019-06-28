@@ -16,11 +16,22 @@ export const selectServerId = ({ server }, serverId) => {
   return server[serverId].id;
 };
 
-// find the channel title for the message_board
 
-// export const findChannelTitle = (state, channelId) => {
-//   // return state.entities.channels[channelId].title;
-//
-//   return 'hello';
-//   // return isNaN(state.entities.channels[channelId].title);
-// };
+/// fuuuuuuuu cant get this to work
+export const findChannelTitle = (state, channelId) => {
+  let title = state.entities.messageBoards[channelId] === undefined ? null : state.entities.messageBoards[channelId].title;
+  return title;
+};
+
+// export const findMessageBoard = ({ messageBoards }, id) => {
+//   let x = messageBoards[id] === undefined ? null : messageBoard[id];
+//   return x;
+// }
+
+export const selectTitle = (state, channel_id) => {
+  return state.entities.channels[channel_id].title;
+};
+
+export const asArray = ({ messageBoards }) => (
+  Object.keys(messageBoards).map(key => messageBoards[key])
+);

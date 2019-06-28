@@ -10,11 +10,14 @@ namespace :api, defaults: {format: :json} do
     resources :channels, only: [:index, :create]
   end
 
-  resources :channels, only: [:show, :new]
-
-  resources :message_boards, only: [:create, :new, :show] do
-      resources :comments, only: [:index]
+  resources :channels, only: [:show, :new] do
+    resources :comments, only: [:index]
   end
+
+  #getting rid of message_boards....
+  # resources :message_boards, only: [:create, :new, :show] do
+  #     resources :comments, only: [:index]
+  # end
 
   resources :comments, only: [:new, :show, :create]
 

@@ -9,11 +9,12 @@ class CommentShow extends React.Component {
   render() {
     const { comment, messageBoardId, currentUserName } = this.props;
 
-    console.log(this.props);
+
     return(
       <div>
         <span>{comment.username}</span>
-        <div>{comment.body}--->{comment.id}</div>
+        <div>${messageBoardId}$</div>
+        <div>{comment.body}--->{comment.msg_board_id}</div>
         <di>------</di>
       </div>
     ); //r

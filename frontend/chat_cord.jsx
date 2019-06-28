@@ -6,7 +6,7 @@ import configureStore from './store/store';
 
 // import { fetchMessageBoard } from './util/msg_board_util';
 // import { requestMessageBoard, receiveMessageBoard, createMessageBoard } from './actions/msg_board_actions';
-// import { requestAllComments, requestSingleComment, createComment } from './actions/comment_actions';
+import { requestAllComments, requestSingleComment, createComment } from './actions/comment_actions';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /////////////////////////
-  // window.store = store;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
+  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
 
   // window.fetchMessageBoard = fetchMessageBoard;
   // window.requestMessageBoard = requestMessageBoard;
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.receiveMessageBoard = receiveMessageBoard;
   //
   // window.requestSingleComment = requestSingleComment;
-  // window.requestAllComments = requestAllComments;
-  // window.createComment = createComment;
+  window.requestAllComments = requestAllComments;
+  window.createComment = createComment;
 
   //////////////////////
   const root = document.getElementById('root');

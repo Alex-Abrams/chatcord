@@ -13,9 +13,9 @@ export const fetchComment = (id) => (
   })
 );
 
-export const fetchAllComments = (msg_board_id) => (
+export const fetchAllComments = (channel_id) => (
   $.ajax({
     method:'GET',
-    url: `api/message_boards/${msg_board_id}/comments`
+    url: `api/channels/${channel_id}/comments`
   })
 );

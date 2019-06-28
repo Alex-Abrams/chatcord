@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_21_215936) do
+ActiveRecord::Schema.define(version: 2019_06_26_225008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,13 +24,12 @@ ActiveRecord::Schema.define(version: 2019_06_21_215936) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "msg_board_id", null: false
     t.integer "user_id", null: false
     t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.index ["msg_board_id"], name: "index_comments_on_msg_board_id"
+    t.integer "channel_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -38,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_06_21_215936) do
     t.integer "channel_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
   end
 
   create_table "servers", force: :cascade do |t|

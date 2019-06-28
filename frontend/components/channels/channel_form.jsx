@@ -24,6 +24,7 @@ class ChannelForm extends React.Component {
     e.preventDefault();
     let serverId = parseInt(this.props.match.params.serverId);
     this.props.createChannel(this.state, serverId);
+    //
       // .then(data => this.props.history.push(`/servers/${serverId}/channels`));
     this.props.history.push(`/servers/${serverId}/channels`);
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ChannelIndexContainer from './channel_index_container';
 import ChannelShow from './channel_show';
-import MessageBoardContainer from '../msg_board/message_board_container';
+// import MessageBoardContainer from '../msg_board/message_board_container';
 //
 import ChannelFormContainer from './channel_form_container';
 

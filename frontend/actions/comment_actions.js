@@ -27,7 +27,7 @@ export const requestSingleComment = (id) => dispatch => {
   .then(comment => {dispatch(receiveSingleComment(comment))});
 }
 
-export const requestAllComments = (msg_board_id) => dispatch => {
-  APIUtil.fetchAllComments(msg_board_id)
+export const requestAllComments = (channel_id) => dispatch => {
+  APIUtil.fetchAllComments(channel_id)
   .then(comments => {dispatch(receiveAllComments(comments))});
 }

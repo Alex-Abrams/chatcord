@@ -5,6 +5,7 @@ class Api::MessageBoardsController < ApplicationController
 
   def create
     @message_board = MessageBoard.new(message_board_params)
+    # @message_board.channel_id = params[:channel_id]
 
     if @message_board.save
       render :show

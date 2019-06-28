@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import CommentShow from './comment_show';
-
+import CommentForm from './comment_form';
 
 class CommentsIndex extends React.Component {
   constructor(props) {
@@ -11,24 +11,40 @@ class CommentsIndex extends React.Component {
   }// end constructor
 
   componentDidMount() {
-    // this.props.requestAllComments(this.props.messageBoardId);
+    this.props.requestAllComments(this.props.channel_id);
+  }
+
+  componentDidUpdate(prevprops) {
+    if (this.props.channel_id !== prevprops.channel_id) {
+      this.props.requestAllComments(this.props.channel_id);
+    }
   }
 
 
   render() {
-    const { messageBoardId, currentUserName, comments } = this.props;
+    const { currentUserName, comments, channel_id, title, currentUser, createComment } = this.props;
+              /// prolly dont need currentUserName
+    const commentsFilter = comments.filter(comment => {
+      return comment.channel_id === channel_id;
+    });
+
+    // console.log(this.props);
 
 
     return(
       <div class="comments">
+        <header className="put title here">{title}</header>
         <ul>
-          {comments.map(comment =>
+          {commentsFilter.map(comment =>
             <CommentShow
               key={comment.id}
               currentUserName={currentUserName}
               comment={comment}
-              messageBoardId={messageBoardId} />)}
+              channel_id={channel_id} />)}
         </ul>
+        <div className="comments-form">
+          <CommentForm channelId={channel_id} createComment={createComment} />
+        </div>
       </div>
 
     ); // end return

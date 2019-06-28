@@ -3,26 +3,17 @@ import { connect } from 'react-redux';
 
 import { createChannel } from '../../actions/channel_actions';
 import { findActiveServer } from '../../reducers/selectors';
+// import { createMessageBoard } from '../../actions/msg_board_actions';
 
-// const mapStateToProps = (state, {match}) => {
-//   const serverId = parseInt(match.params.serverId);
-//   return {
-//     serverId,
-//   };
-// };
 
 const mapStateToProps = state => ({
   activeId: parseInt(match.params.serverId)
 });
 
 
-// const mapStateToProps = state => ({
-//   activeServer: findActiveServer(state)
-// });
-
-
 const mapDispatchToProps = dispatch => ({
-  createChannel: (channel, server_id) => dispatch(createChannel(channel, server_id))
+  createChannel: (channel, server_id) => dispatch(createChannel(channel, server_id)),
+  // createMessageBoard: (message_board) => dispatch(createMessageBoard(message_board))
 });
 
 export default connect(
