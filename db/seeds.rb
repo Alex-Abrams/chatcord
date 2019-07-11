@@ -10,6 +10,7 @@ Server.delete_all
 Channel.delete_all
 MessageBoard.delete_all
 Comment.delete_all
+Foffline.delete_all
 
 user1 = User.create!(username: 'guest', password: 'password', email: 'guest@guest.com')
 user2 = User.create!(username: 'guest1', password: 'password', email: 'guest1@guest.com')
@@ -33,15 +34,6 @@ channel7 = Channel.create(title: "general", server_id: user4.id)
 channel9 = Channel.create(title: 'user1??', server_id: user1.id)
 channel10 = Channel.create(title: 'should be server1', server_id: server1.id)
 
-# message_board1 = MessageBoard.create(channel_id: channel1.id, title: channel1.title)
-# message_board2 = MessageBoard.create(channel_id: channel2.id, title: channel2.title)
-# message_board3 = MessageBoard.create(channel_id: channel3.id, title: channel3.title)
-# message_board4 = MessageBoard.create(channel_id: channel4.id, title: channel4.title)
-# message_board5 = MessageBoard.create(channel_id: channel5.id, title: channel5.title)
-# message_board6 = MessageBoard.create(channel_id: channel6.id, title: channel6.title)
-# message_board7 = MessageBoard.create(channel_id: channel7.id, title: channel7.title)
-# message_board9 = MessageBoard.create(channel_id: channel9.id, title: channel9.title)
-# message_board10 = MessageBoard.create(channel_id: channel10.id, title: channel10.title)
 
 comment1 = Comment.create(channel_id: channel1.id, user_id: user1.id, username: user1.username, body: 'POGCHAMPS')
 comment1 = Comment.create(channel_id: channel1.id, user_id: user1.id, username: user1.username, body: 'chardie')

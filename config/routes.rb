@@ -21,6 +21,8 @@ namespace :api, defaults: {format: :json} do
 
   resources :comments, only: [:new, :show, :create]
 
+  resources :fofflines, only: [:index]
+
 end
 
 

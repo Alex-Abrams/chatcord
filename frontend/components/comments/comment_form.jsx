@@ -1,6 +1,7 @@
 import React from 'react';
 // import { withRouter, Link } from 'react-router-dom';
 
+
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
@@ -33,14 +34,14 @@ class CommentForm extends React.Component {
     return(
       <div>
         <form className="commentForm" id="reset" onSubmit={this.handleSubmit}>
-          <input
+          <textArea
             className="commentForm-input"
             type="text"
             value={this.state.body}
             placeholder='Message#'
             onChange={this.update('body')}>
-          </input>
-          <button>Submit</button>
+          </textArea>
+          <button id="comment-Button"type="submit">Submit</button>
         </form>
       </div>
     );

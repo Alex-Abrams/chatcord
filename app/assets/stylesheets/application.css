@@ -127,22 +127,7 @@
   visibility: visible;
 }
 
-/* Server list and icons */
-.servers {
-  width: 50px;
-  justify-content: flex-start;
-  position: absolute;
-  position: fixed;
-  display: inline-block;
-}
 
-
-.server {
-  /* display: flex;
-  flex-direction: column; */
-  list-style-type: none;
-  /* list-style-position: inside; */
-}
 
 
 .discord-server-icon {

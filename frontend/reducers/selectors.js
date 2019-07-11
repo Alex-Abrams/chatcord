@@ -17,7 +17,7 @@ export const selectServerId = ({ server }, serverId) => {
 };
 
 
-/// fuuuuuuuu cant get this to work
+/// cant get this to work
 export const findChannelTitle = (state, channelId) => {
   let title = state.entities.messageBoards[channelId] === undefined ? null : state.entities.messageBoards[channelId].title;
   return title;
@@ -29,7 +29,9 @@ export const findChannelTitle = (state, channelId) => {
 // }
 
 export const selectTitle = (state, channel_id) => {
-  return state.entities.channels[channel_id].title;
+  // works!!
+  let title = state.entities.channels[channel_id] === undefined ? null : state.entities.channels[channel_id].title;
+  return title;
 };
 
 export const asArray = ({ messageBoards }) => (

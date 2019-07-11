@@ -13,16 +13,17 @@ import CommentsIndexContainer from './comments/comments_index_container';
 //
 
 const App = () => (
-  <div>
+  <div className="wrapper">
 
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
-      <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
+      <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
 
       <Route path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
 
+    <div className="friends">hello</div>
 
   </div>
 );
