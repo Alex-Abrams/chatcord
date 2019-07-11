@@ -51,3 +51,9 @@ comment1 = Comment.create(channel_id: channel6.id, user_id: user4.id, username: 
 comment1 = Comment.create(channel_id: channel6.id, user_id: user4.id, username: user4.username, body: 'fire the thrusters to get me the hell out of here')
 comment1 = Comment.create(channel_id: channel6.id, user_id: user4.id, username: user4.username, body: 'wankers')
 comment1 = Comment.create(channel_id: channel6.id, user_id: user4.id, username: user4.username, body: 'POGCHAMPS')
+
+Foffline.create(name: 'Ted')
+Foffline.create(name: Faker::Games::Dota.hero)
+
+8.times { Foffline.create(name: Faker::Games::Dota.unique.player) }
+8.times { Foffline.create(name: Faker::Games::Dota.unique.hero) }

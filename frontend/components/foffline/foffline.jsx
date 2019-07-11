@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FriendsList extends React.Component {
+class FofflineList extends React.Component {
 
   render() {
 
@@ -12,4 +12,4 @@ class FriendsList extends React.Component {
   }
 }
 
-export default FriendsList;
+export default FofflineList;

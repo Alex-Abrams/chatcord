@@ -26,3 +26,11 @@ export const deleteServer = (id) => {
     url: `api/servers/${id}`
   })
 };
+
+
+export const fetchFofflines = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/fofflines'
+  })
+);
