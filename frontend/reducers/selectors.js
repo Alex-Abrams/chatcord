@@ -16,17 +16,21 @@ export const selectServerId = ({ server }, serverId) => {
   return server[serverId].id;
 };
 
-
-/// cant get this to work
-export const findChannelTitle = (state, channelId) => {
-  let title = state.entities.messageBoards[channelId] === undefined ? null : state.entities.messageBoards[channelId].title;
-  return title;
+export const offlineList = (state) => {
+  const array = Object.values(state.entities.offline);
+  let result = [];
+  array.forEach(el => {
+    result.push(el.name);
+  })
+  return result
 };
 
-// export const findMessageBoard = ({ messageBoards }, id) => {
-//   let x = messageBoards[id] === undefined ? null : messageBoard[id];
-//   return x;
-// }
+/// cant get this to work
+// export const findChannelTitle = (state, channelId) => {
+//   let title = state.entities.messageBoards[channelId] === undefined ? null : state.entities.messageBoards[channelId].title;
+//   return title;
+// };
+
 
 export const selectTitle = (state, channel_id) => {
   // works!!
@@ -34,6 +38,6 @@ export const selectTitle = (state, channel_id) => {
   return title;
 };
 
-export const asArray = ({ messageBoards }) => (
-  Object.keys(messageBoards).map(key => messageBoards[key])
-);
+// export const asArray = ({ messageBoards }) => (
+//   Object.keys(messageBoards).map(key => messageBoards[key])
+// );

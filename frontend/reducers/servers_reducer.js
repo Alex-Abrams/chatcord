@@ -18,13 +18,13 @@ const serversReducer = (state = {}, action) => {
       const newServer = { [action.server.id]: action.server };
       return merge({}, state, newServer);
 
-    case RECEIVE_SERVER_CHANNELS:
-      const { channels } = action;
-      const nextState = merge({}, state);
-      Object.values(action.channels).forEach(channel => {
-        nextState[channel.server_id].channelIds.push(channel.id);
-      });
-      return nextState;
+    // case RECEIVE_SERVER_CHANNELS:
+    //   const { channels } = action;
+    //   const nextState = merge({}, state);
+    //   Object.values(action.channels).forEach(channel => {
+    //     nextState[channel.server_id].channelIds.push(channel.id);
+    //   });
+    //   return nextState;
     case RECEIVE_SINGLE_CHANNEL:
       const { channel } = action;
       const newState = merge({}, state);

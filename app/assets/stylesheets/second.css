@@ -100,6 +100,14 @@ body, html{
   /* .footer  { order: 4; } */
 }
 
+.friends {
+  /* display: flex; */
+  border: 1px solid black;
+  right: 1000px;
+  bottom: 0px;
+  position: fixed;
+}
+
 
 .channels {
   display: inline;

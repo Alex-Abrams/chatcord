@@ -23,6 +23,12 @@ class ChannelIndex extends React.Component {
     }
   }
 
+  componentDidUpdate(prevprops) {
+    if (this.props.serverId !== prevprops.serverId) {
+      this.props.requestServerChannels(this.props.serverId);
+    }
+  }
+
 
   handleNew() {
     const fullApp = document.getElementById('fullApp');
@@ -39,6 +45,9 @@ class ChannelIndex extends React.Component {
 
   render() {
     const { channels, serverId, channelIds, activeServerId } = this.props;
+
+    console.log(serverId);
+
 
     const channelFilter = channels.filter(channel => {
       return channel.server_id === serverId;

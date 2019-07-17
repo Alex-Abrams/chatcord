@@ -51,8 +51,6 @@ class ServerIndexItem extends React.Component {
             </div>
 
 
-              <Route path="/servers/:serverId/channels"
-                render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
           </li>
         </span>
       </div>

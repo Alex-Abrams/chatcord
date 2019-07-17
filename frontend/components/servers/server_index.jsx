@@ -13,20 +13,23 @@ class ServerIndex extends React.Component {
     super(props);
   } // end constructor
 
+
   componentDidMount() {
     this.props.requestAllServers();
-
+    this.props.requestFofflines();
   }
 
 
   render() {
-    const { servers, logout, currentUser, serverId, requestServerChannels, channelIds, toggleServer, unToggleServer } = this.props;
+    const { servers, logout, currentUser, requestServerChannels, toggleServer, unToggleServer } = this.props;
+
 
     const profileBar = currentUser ? (
       <ProfileBar logout={logout} currentUser={currentUser} />
     ) : (
       <div>Not logged in</div>
     );
+
 
 
     // <Route exact path="/servers/:serverId/channels"
@@ -45,8 +48,6 @@ class ServerIndex extends React.Component {
             <ServerIndexItem
             key={server.id}
             server={server}
-            serverId={server.id}
-            channelIds={channelIds}
             requestServerChannels={requestServerChannels}
             toggleServer={toggleServer}
             unToggleServer={unToggleServer} />)}
