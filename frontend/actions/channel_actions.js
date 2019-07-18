@@ -21,9 +21,10 @@ export const createChannel = (channel, server_id) => dispatch => {
   APIUtil.createChannel(channel, server_id)
   .then(channel => {dispatch(receiveSingleChannel(channel))});
 }
+
 //
 
-export const receiveSingleChannel = channel => ({
+export const receiveSingleChannel = ({channel}) => ({
   type: RECEIVE_SINGLE_CHANNEL,
   channel
 });

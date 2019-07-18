@@ -30,17 +30,6 @@ class ServerIndex extends React.Component {
       <div>Not logged in</div>
     );
 
-
-
-    // <Route exact path="/servers/:serverId/channels"
-    //   render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
-
-
-    // <span>
-    //   <Route path="/servers/:serverId/channels/new" component={ChannelFormContainer} />
-    // </span>
-
-
     return (
       <div class="servers">
         <ul id="serversPosition">
@@ -54,13 +43,10 @@ class ServerIndex extends React.Component {
         </ul>
         <br />
 
-
         <div className="new-server-widget">
           <Link className="plus" to="/servers/new">+</Link>
           <span className="new-server-widget-tooltip">Add a Server</span>
         </div>
-
-
 
           <div className="profile-bar">
           {profileBar}

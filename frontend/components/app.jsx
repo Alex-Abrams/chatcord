@@ -8,10 +8,10 @@ import ServerFormContainer from './servers/server_form_container';
 //
 import ChannelIndexContainer from './channels/channel_index_container';
 import MessageBoard from './msg_board/message_board';
-// import MessageBoardContainer from './msg_board/message_board_container';
 import CommentsIndexContainer from './comments/comments_index_container';
 //
 import FofflineContainer from './foffline/foffline_container';
+
 
 const App = () => (
   <div className="wrapper">
@@ -22,9 +22,11 @@ const App = () => (
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
 
-      <Route path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
-      <ProtectedRoute path="/servers" component={FofflineContainer} />
+      <Route exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
       <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+      <ProtectedRoute path="/servers" component={FofflineContainer} />
+
+
 
   </div>
 );

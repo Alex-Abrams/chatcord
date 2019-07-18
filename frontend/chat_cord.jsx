@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 //
 import { receiveFofflines, requestFofflines } from './actions/fofflines_actions';
+import {createChannel} from './actions/channel_actions';
 //
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+
+  window.createChannel = createChannel;
 
   window.receiveFofflines = receiveFofflines;
   window.requestFofflines = requestFofflines;

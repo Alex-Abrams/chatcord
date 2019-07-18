@@ -13,7 +13,7 @@ const entitiesReducer = combineReducers({
   users: usersReducer,
   servers: serversReducer,
   channels: channelsReducer,
-  activeServer: toggleReducer,
+  // activeServer: toggleReducer,
   comments: commentsReducer,
   offline: fofflinesReducer
 });

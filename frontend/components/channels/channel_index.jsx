@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import ChannelIndexContainer from './channel_index_container';
 import ChannelShow from './channel_show';
-// import MessageBoardContainer from '../msg_board/message_board_container';
 //
 import ChannelFormContainer from './channel_form_container';
 
@@ -18,13 +17,14 @@ class ChannelIndex extends React.Component {
 
 
   componentDidMount() {
-    if (this.props.serverId !== undefined) {
+    // if (this.props.serverId !== undefined) {
       this.props.requestServerChannels(this.props.serverId);
-    }
+    // }
   }
 
-  componentDidUpdate(prevprops) {
-    if (this.props.serverId !== prevprops.serverId) {
+  componentDidUpdate(prevprops) {   //also problem here
+    console.log(prevprops);
+    if ((this.props.serverId !== prevprops.serverId) || (this.props.channels.length !== prevprops.channels.length)) {
       this.props.requestServerChannels(this.props.serverId);
     }
   }
@@ -39,36 +39,28 @@ class ChannelIndex extends React.Component {
     fullApp.style.zIndex = "1";
   }
 
-  // <Route path="/servers/:serverId/channels/:channel_id"
-  //   render={(props) => <MessageBoardContainer {...props} />}></Route>
-
-
   render() {
-    const { channels, serverId, channelIds, activeServerId } = this.props;
-
-    console.log(serverId);
+    const { channels, serverId } = this.props;
 
 
     const channelFilter = channels.filter(channel => {
       return channel.server_id === serverId;
     });
 
-    const channelFormDisplay = (activeServerId === this.props.serverId) ? (
+
+    const channelFormDisplay = (
       <div className="textChannel">
         <div id="textChannelLabel">TEXT CHANNEL</div>
 
         <div className="newChannel-widget">
           <Link
             className="textChannel-plus"
-            to={`/servers/${activeServerId}/channels/new`}
+            to={`/servers/${serverId}/channels/new`}
             id="newChannel"
             onClick={this.handleNew}>+</Link>
           <span className="newChannel-widget-tooltip">Create Channel</span>
         </div>
-
-        </div>
-    ) : (
-      <div></div>
+      </div>
     );
 
     return(
@@ -79,8 +71,7 @@ class ChannelIndex extends React.Component {
             <ChannelShow
               key={channel.id}
               channel={channel}
-              serverId={serverId}
-              activeServerId={activeServerId} />)}
+              serverId={serverId} />)}
         </ul>
 
 

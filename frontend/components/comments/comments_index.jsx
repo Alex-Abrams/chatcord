@@ -11,11 +11,15 @@ class CommentsIndex extends React.Component {
   }// end constructor
 
   componentDidMount() {
-    this.props.requestAllComments(this.props.channel_id);
+    if (isNaN(this.props.channel_id) === false) {
+      console.log('tits');
+      this.props.requestAllComments(this.props.channel_id);
+    };
   }
 
+
   componentDidUpdate(prevprops) {
-    if (this.props.channel_id !== prevprops.channel_id) {
+    if ((this.props.channel_id !== prevprops.channel_id) && (isNaN(this.props.channel_id) === false))  {
       this.props.requestAllComments(this.props.channel_id);
     }
   }

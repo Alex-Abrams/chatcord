@@ -19,16 +19,12 @@ class ServerIndexItem extends React.Component {
       this.props.toggleServer(server_id);
     }
 
+    // componentDidMount() {
+    //   this.props.requestServerChannels(this.props.server.id);
+    //   // console.log(this.props.server.id);
+    // }
 
-    // <Route path="/servers/:serverId/channels"
-    //   render={(props) => <ChannelIndexContainer {...props} serverId={serverId} channelIds={channelIds} />}></Route>
 
-
-    // <Link to={`/servers/${server.id}/channels`}>TestLink</Link>
-    // <button onClick={this.toggleHidden.bind(this)}>testyboy</button>
-    // {!this.state.isHidden && <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />}
-
-    // <ChannelIndexContainer serverId={serverId} channelIds={channelIds} />
   render() {
     const { server, serverId, channelIds } = this.props;
 

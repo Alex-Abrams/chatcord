@@ -29,6 +29,7 @@ class ChannelForm extends React.Component {
     this.props.history.push(`/servers/${serverId}/channels`);
   }
 
+
   handleClick() {
     const fullApp = document.getElementById('fullApp');
     // fullApp.classList.toggle('active');

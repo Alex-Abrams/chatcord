@@ -2,7 +2,6 @@ class Api::CommentsController < ApplicationController
 
   def index
     @comments = Comment.where("channel_id = ?", params[:channel_id])
-
   end
 
   def new

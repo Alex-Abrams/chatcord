@@ -1,7 +1,7 @@
 import ChannelForm from './channel_form';
 import { connect } from 'react-redux';
 
-import { createChannel } from '../../actions/channel_actions';
+import { createChannel, requestServerChannels } from '../../actions/channel_actions';
 import { findActiveServer } from '../../reducers/selectors';
 // import { createMessageBoard } from '../../actions/msg_board_actions';
 
@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createChannel: (channel, server_id) => dispatch(createChannel(channel, server_id)),
-  // createMessageBoard: (message_board) => dispatch(createMessageBoard(message_board))
+  requestServerChannels: (channel, server_id) => dispatch(requestServerChannels(channel, server_id)),
 });
 
 export default connect(

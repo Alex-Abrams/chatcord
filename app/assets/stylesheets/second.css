@@ -83,7 +83,7 @@ body, html{
   z-index: 1;
 }
 
-.commentForm textarea[type=text] {
+.commentForm input[type=text] {
   width: 1800px;
 }
 
