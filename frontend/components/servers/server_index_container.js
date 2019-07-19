@@ -10,13 +10,10 @@ import { toggleServer, unToggleServer } from '../../actions/toggle_actions';
 import { requestFofflines } from '../../actions/fofflines_actions'; //// temp for offline simulation
 
 
-const mapStateToProps = (state, { match }) => ({     //there was an (   and before the last } there was another )
+const mapStateToProps = (state, { match }) => ({ 
   servers: selectAllServers(state),
   currentUser: state.entities.users[state.session.id],
-  //////////////////
   serverId: parseInt(match.params.serverId),
-  ////////////////
-  // activeServerId: findActiveServer(state),
 });
 
 

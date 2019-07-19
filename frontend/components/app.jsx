@@ -18,13 +18,15 @@ const App = () => (
 
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
+      <header className="header">REEEEEEEEEEEEEEEEEE</header>
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
+      <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
 
       <Route exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
-      <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
       <ProtectedRoute path="/servers" component={FofflineContainer} />
+      <footer className="footer-1">HELLLLO</footer>
 
 
 

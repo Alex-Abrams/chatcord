@@ -13,12 +13,12 @@ class FofflineList extends React.Component {
     );
 
     return(
-      <div className="friends">
+      <aside className="aside aside-offline">
         <ul>
           {offlineList.map(el =>
           <li>{el}</li>)}
         </ul>
-      </div>
+      </aside>
     );
   }
 }

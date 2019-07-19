@@ -12,7 +12,6 @@ class CommentsIndex extends React.Component {
 
   componentDidMount() {
     if (isNaN(this.props.channel_id) === false) {
-      console.log('tits');
       this.props.requestAllComments(this.props.channel_id);
     };
   }
@@ -36,7 +35,7 @@ class CommentsIndex extends React.Component {
 
 
     return(
-      <div class="comments">
+      <article className="main">
         <header className="put title here">{title}</header>
         <ul>
           {commentsFilter.map(comment =>
@@ -49,7 +48,7 @@ class CommentsIndex extends React.Component {
         <div className="comments-form">
           <CommentForm channelId={channel_id} createComment={createComment} />
         </div>
-      </div>
+      </article>
 
     ); // end return
   } // end render

@@ -17,13 +17,10 @@ class ChannelIndex extends React.Component {
 
 
   componentDidMount() {
-    // if (this.props.serverId !== undefined) {
       this.props.requestServerChannels(this.props.serverId);
-    // }
   }
 
-  componentDidUpdate(prevprops) {   //also problem here
-    console.log(prevprops);
+  componentDidUpdate(prevprops) {
     if ((this.props.serverId !== prevprops.serverId) || (this.props.channels.length !== prevprops.channels.length)) {
       this.props.requestServerChannels(this.props.serverId);
     }
@@ -64,7 +61,7 @@ class ChannelIndex extends React.Component {
     );
 
     return(
-      <div class="channels">
+      <aside class="aside aside-channels">
           {channelFormDisplay}
         <ul>
           {channelFilter.map(channel =>
@@ -73,12 +70,8 @@ class ChannelIndex extends React.Component {
               channel={channel}
               serverId={serverId} />)}
         </ul>
-
-
-      </div>
+      </aside>
     );
-
-
   }
 }
 

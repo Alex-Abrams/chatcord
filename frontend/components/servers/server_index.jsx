@@ -31,7 +31,7 @@ class ServerIndex extends React.Component {
     );
 
     return (
-      <div class="servers">
+      <aside className="aside aside-servers">
         <ul id="serversPosition">
           {servers.map(server =>
             <ServerIndexItem
@@ -52,7 +52,7 @@ class ServerIndex extends React.Component {
           {profileBar}
         </div>
 
-      </div>
+      </aside>
     ); // end return
   }// end render
 }// end class
