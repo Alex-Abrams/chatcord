@@ -11,6 +11,7 @@ import MessageBoard from './msg_board/message_board';
 import CommentsIndexContainer from './comments/comments_index_container';
 //
 import FofflineContainer from './foffline/foffline_container';
+import WelcomeComments from './comments/default';
 
 
 const App = () => (
@@ -24,7 +25,10 @@ const App = () => (
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
 
-      <Route exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
+      <Switch>
+        <Route exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
+        <Route path="/servers/:serverId/channels" component={WelcomeComments} />
+      </Switch>
       <ProtectedRoute path="/servers" component={FofflineContainer} />
       <footer className="footer-1">HELLLLO</footer>
 
