@@ -14,12 +14,8 @@ namespace :api, defaults: {format: :json} do
     resources :comments, only: [:index]
   end
 
-  #getting rid of message_boards....
-  # resources :message_boards, only: [:create, :new, :show] do
-  #     resources :comments, only: [:index]
-  # end
-
   resources :comments, only: [:new, :show, :create]
+  resource :server_members, only: [:create, :destroy]
 
   resources :fofflines, only: [:index]
 

@@ -25,6 +25,15 @@ has_many :comments,
   foreign_key: :user_id,
   class_name: :Comment
 
+############
+
+has_many :server_members
+
+has_many :server_joins,
+  through: :server_members,
+  source: :server
+
+###############
 
 validates :username, :password_digest, :session_token, presence: true
 validates :username, uniqueness: true

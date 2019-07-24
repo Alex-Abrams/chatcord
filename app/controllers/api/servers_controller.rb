@@ -1,6 +1,8 @@
 class Api::ServersController < ApplicationController
   def index
-    @servers = Server.all
+    # @servers = Server.all
+    @servers = (Server.all).includes(:server_memberships)
+    render :index
   end
 
   def show
