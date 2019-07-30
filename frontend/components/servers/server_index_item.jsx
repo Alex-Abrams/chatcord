@@ -28,7 +28,6 @@ class ServerIndexItem extends React.Component {
   render() {
     const { server, serverId, channelIds } = this.props;
 
-
     return (
       <div class="server">
         <span id="s-list">

@@ -23,6 +23,13 @@ class ServerIndex extends React.Component {
   render() {
     const { servers, logout, currentUser, requestServerChannels, toggleServer, unToggleServer } = this.props;
 
+    // console.log(currentUser.id);
+
+    const serversJoined = servers.filter(server => {
+      return server.members.includes(currentUser.id);
+    });
+
+    // console.log(serversJoined);
 
     const profileBar = currentUser ? (
       <ProfileBar logout={logout} currentUser={currentUser} />
@@ -33,7 +40,7 @@ class ServerIndex extends React.Component {
     return (
       <aside className="aside aside-servers">
         <ul id="serversPosition">
-          {servers.map(server =>
+          {serversJoined.map(server =>
             <ServerIndexItem
             key={server.id}
             server={server}

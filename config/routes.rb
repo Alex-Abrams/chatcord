@@ -3,11 +3,14 @@ Rails.application.routes.draw do
 
 
 namespace :api, defaults: {format: :json} do
+
   resource :user, only: [:create]
+
   resource :session, only: [:create, :destroy, :show]
 
   resources :servers do
     resources :channels, only: [:index, :create]
+    resources :server_members, only: [:create, :destroy, :index]
   end
 
   resources :channels, only: [:show, :new] do
@@ -15,7 +18,7 @@ namespace :api, defaults: {format: :json} do
   end
 
   resources :comments, only: [:new, :show, :create]
-  resource :server_members, only: [:create, :destroy]
+
 
   resources :fofflines, only: [:index]
 

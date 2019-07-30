@@ -12,6 +12,7 @@ class Api::ServersController < ApplicationController
   def create
     @server = Server.new(server_params)
     @server.admin_id = current_user.id
+    @server.link = "https://chatcord.gg/" + rand(111...999).to_s
 
     if @server.image_url.length == 0
         @server.image_url = "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"

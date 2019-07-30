@@ -12,6 +12,8 @@ MessageBoard.delete_all
 Comment.delete_all
 Foffline.delete_all
 
+ServerMember.delete_all
+
 user1 = User.create!(username: 'guest', password: 'password', email: 'guest@guest.com')
 user2 = User.create!(username: 'guest1', password: 'password', email: 'guest1@guest.com')
 user3 = User.create!(username: 'guest2', password: 'password', email: 'guest2@guest.com')
@@ -19,10 +21,22 @@ user4 = User.create!(username: 'guest3', password: 'password', email: 'guest3@gu
 user5 = User.create!(username: 'guest4', password: 'password', email: 'guest4@guest.com')
 
 
-server1 = Server.create(title: "server1", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id)
-server2 = Server.create(title: "server2", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id)
-server3 = Server.create(title: "server3", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id)
-server4 = Server.create(title: "server4", image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id)
+server1 = Server.create(title: "server1",
+  image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+server2 = Server.create(title: "server2",
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+server3 = Server.create(title: "server3",
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+server4 = Server.create(title: "server4",
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+
+user1joins1 = ServerMember.create(user_id: user1.id, server_id: server1.id)
+user1joins2 = ServerMember.create(user_id: user1.id, server_id: server2.id)
+user1joins3 = ServerMember.create(user_id: user1.id, server_id: server3.id)
+
+user2joins1 = ServerMember.create(user_id: user2.id, server_id: server1.id)
+user2joins2 = ServerMember.create(user_id: user2.id, server_id: server2.id)
+user2joins4 = ServerMember.create(user_id: user2.id, server_id: server4.id)
 
 channel1 = Channel.create(title: "channel1", server_id: user2.id)
 channel2 = Channel.create(title: "piddle", server_id: user2.id)
