@@ -1,10 +1,11 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import ChannelIndexContainer from './channel_index_container';
 import ChannelShow from './channel_show';
 //
 import ChannelFormContainer from './channel_form_container';
-
+import LinkContainer from '../link/link_container';
+import {RefreshedRoute } from '../../util/refresh_route';
 //
 
 
@@ -70,6 +71,14 @@ class ChannelIndex extends React.Component {
               channel={channel}
               serverId={serverId} />)}
         </ul>
+
+        <span>
+          <Route path="/servers/:serverId/channels/new" component={ChannelFormContainer} />
+        </span>
+
+        <span>
+            <RefreshedRoute path="/servers/:serverId/channels/invite" component={LinkContainer} />
+        </span>
       </aside>
     );
   }

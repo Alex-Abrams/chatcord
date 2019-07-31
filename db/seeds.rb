@@ -22,13 +22,13 @@ user5 = User.create!(username: 'guest4', password: 'password', email: 'guest4@gu
 
 
 server1 = Server.create(title: "server1",
-  image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+  image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id, link: "https://chatcord.gg/" + "1zr" + rand(111...999).to_s)
 server2 = Server.create(title: "server2",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id, link: "https://chatcord.gg/" + "2qa" + rand(111...999).to_s)
 server3 = Server.create(title: "server3",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "3pt" + rand(111...999).to_s)
 server4 = Server.create(title: "server4",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + rand(111...999).to_s)
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "4lk" + rand(111...999).to_s)
 
 user1joins1 = ServerMember.create(user_id: user1.id, server_id: server1.id)
 user1joins2 = ServerMember.create(user_id: user1.id, server_id: server2.id)

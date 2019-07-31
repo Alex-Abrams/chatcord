@@ -22,9 +22,10 @@ class ChannelShow extends React.Component {
         <div>
           {channelDisplay}
         </div>
-        <span>
-            <Route path="/servers/:serverId/channels/new" component={ChannelFormContainer} />
-        </span>
+
+        <div>
+          <Link className="invite" to={`/servers/${serverId}/channels/invite`}>Inv</Link>
+        </div>
 
       </div>
     )

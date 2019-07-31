@@ -12,16 +12,14 @@ class Api::ServersController < ApplicationController
   def create
     @server = Server.new(server_params)
     @server.admin_id = current_user.id
-    @server.link = "https://chatcord.gg/" + rand(111...999).to_s
+    @server.link = "https://chatcord.gg/" + @server.id + rand_chr + rand(111...999).to_s
 
     if @server.image_url.length == 0
         @server.image_url = "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"
     end
 
     if @server.save
-      # create_general_channel(@server.id)
       render :show
-      # redirect_to servers_url
     else
       render json: @server.errors.full_messages, status: 422
     end
@@ -53,6 +51,12 @@ class Api::ServersController < ApplicationController
 
   def server_params
     params.require(:server).permit(:title, :image_url)
+  end
+
+  def rand_chr
+    result = ""
+    2.times { result += rand(97..122).chr }
+    result
   end
 
 end

@@ -26,7 +26,7 @@ class ServerIndex extends React.Component {
     // console.log(currentUser.id);
 
     const serversJoined = servers.filter(server => {
-      return server.members.includes(currentUser.id);
+      return server.memberIds.includes(currentUser.id);
     });
 
     // console.log(serversJoined);
@@ -57,7 +57,7 @@ class ServerIndex extends React.Component {
 
           <div className="profile-bar">
           {profileBar}
-        </div>
+          </div>
 
       </aside>
     ); // end return
