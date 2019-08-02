@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/api_util';
+import * as LINKUtil from '../util/server_link_util';
 
 export const RECEIVE_SINGLE_SERVER = 'RECEIVE_SINGLE_SERVER';
 export const RECEIVE_ALL_SERVERS = 'RECEIVE_ALL_SERVERS';
@@ -8,7 +9,10 @@ export const CREATE_SERVER = 'CREATE_SERVER';
 
 
 //thunk action creators
-
+export const createMembership = (userServerId) => dispatch => {
+  LINKUtil.createServerLink(userServerId)
+  .then(() => {dispatch(requestAllServers())});
+}
 
 export const requestAllServers = () => dispatch => {
   APIUtil.fetchAllServers()

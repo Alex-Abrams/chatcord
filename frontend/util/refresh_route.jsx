@@ -17,6 +17,5 @@ const mapStateToProps = state => {
   return {isDataAvailable: Boolean(Object.values(state.entities.servers).length === 0)};
 };
 
-// console.log(Object.values(state.entities.servers).length === 0);
 
 export const RefreshedRoute = withRouter(connect(mapStateToProps)(Refresh));

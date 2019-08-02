@@ -12,6 +12,7 @@ import CommentsIndexContainer from './comments/comments_index_container';
 //
 import FofflineContainer from './foffline/foffline_container';
 import WelcomeComments from './comments/default';
+import CreateJoin from './servers/create_or_join_server';
 
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
       <header className="header">REEEEEEEEEEEEEEEEEE</header>
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
+      <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
 

@@ -10,6 +10,6 @@
 #
 
 class ServerMember < ApplicationRecord
-  belongs_to :server
-  belongs_to :user
+  belongs_to :server, optional: true
+  belongs_to :user, optional: true
 end

@@ -15,7 +15,12 @@ class Link extends React.Component {
     // needs servertitle as well
 
     return(
-      <div>tities</div>
+      <div>
+        <header>INVITE FRIENDS TO {server.title.toUpperCase()}</header>
+        <div className="leaveButton">X</div>
+        <p>Copy this link with others to grant access to your server!</p>
+        <div>{serverLink}</div>
+      </div>
     );
   }
 }

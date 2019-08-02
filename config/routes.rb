@@ -10,12 +10,14 @@ namespace :api, defaults: {format: :json} do
 
   resources :servers do
     resources :channels, only: [:index, :create]
-    resources :server_members, only: [:create, :destroy, :index]
+    resources :server_members, only: [:index]
   end
 
   resources :channels, only: [:show, :new] do
     resources :comments, only: [:index]
   end
+
+  resources :server_members, only: [:create, :new, :destroy]
 
   resources :comments, only: [:new, :show, :create]
 
