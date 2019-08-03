@@ -5,7 +5,7 @@ import configureStore from './store/store';
 //
 import { receiveFofflines, requestFofflines } from './actions/fofflines_actions';
 import {createChannel} from './actions/channel_actions';
-// import {createMembership} from './actions/server_actions';
+import {createMembership} from './actions/server_actions';
 import {createServerLink} from './util/server_link_util';
 //
 
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
 
   window.createServerLink = createServerLink;
+  window.createMembership = createMembership;
 
   window.createChannel = createChannel;
 

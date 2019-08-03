@@ -9,8 +9,8 @@ export const CREATE_SERVER = 'CREATE_SERVER';
 
 
 //thunk action creators
-export const createMembership = (userServerId) => dispatch => {
-  LINKUtil.createServerLink(userServerId)
+export const createMembership = (user_Id, server_Id) => dispatch => {
+  LINKUtil.createServerLink(user_Id, server_Id)
   .then(() => {dispatch(requestAllServers())});
 }
 

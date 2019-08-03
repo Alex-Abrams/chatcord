@@ -47,7 +47,6 @@ class ServerIndex extends React.Component {
             unToggleServer={unToggleServer} />)}
         </ul>
         <br />
-
         <div className="new-server-widget">
           <Link className="plus" to="/servers/createorjoin">+</Link>
           <span className="new-server-widget-tooltip">Add a Server</span>

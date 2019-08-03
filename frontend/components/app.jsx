@@ -14,6 +14,8 @@ import FofflineContainer from './foffline/foffline_container';
 import WelcomeComments from './comments/default';
 import CreateJoin from './servers/create_or_join_server';
 
+import JoinContainer from './link/join_container';
+
 
 const App = () => (
   <div className="wrapper">
@@ -24,6 +26,9 @@ const App = () => (
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
+
+      <ProtectedRoute path="/servers/join" component={JoinContainer} />
+
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
 

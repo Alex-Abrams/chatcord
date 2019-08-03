@@ -7,14 +7,18 @@ export const selectAllComments = state => Object.values(state.entities.comments)
 export const selectAllChannels = state => Object.values(state.entities.channels);
 
 export const selectServerLink = (state, serverId) => {
-  // console.log(Object.values(state.entities.servers).length === 0);
   return state.entities.servers[serverId].link;
 };
 
-// export const selectServerLink = (state, serverId) => {
-//   let link = state.entities.servers[serverId] === undefined ? null : state.entities.servers[serverId].link;
-//   return link;
-// };
+export const selectServerLinks = (state) => {
+  const serverArray = Object.values(state.entities.servers);
+  let serverLinks = [];
+  serverArray.forEach(server => {
+    serverLinks.push(server.link);
+  })
+  return serverLinks;
+};
+
 
 export const selectServer = (state, serverId) => state.entities.servers[serverId];
 
