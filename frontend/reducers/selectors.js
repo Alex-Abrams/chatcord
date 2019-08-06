@@ -19,6 +19,14 @@ export const selectServerLinks = (state) => {
   return serverLinks;
 };
 
+// export const selectError = state => {
+//   if (typeof(state.errors.form.length) === "undefined") {
+//     return null;
+//   } else {
+//     return state.errors.form;
+//   }
+// }
+
 
 export const selectServer = (state, serverId) => state.entities.servers[serverId];
 

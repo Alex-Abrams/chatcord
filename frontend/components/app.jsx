@@ -27,7 +27,7 @@ const App = () => (
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
 
-      <ProtectedRoute path="/servers/join" component={JoinContainer} />
+      <ProtectedRoute exact path="/servers/join" component={JoinContainer} />
 
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
       <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />

@@ -29,6 +29,8 @@ server3 = Server.create(title: "server3",
    image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "3pt" + rand(111...999).to_s)
 server4 = Server.create(title: "server4",
    image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "4lk" + rand(111...999).to_s)
+server5 = Server.create(title: "server5",
+   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "5zk" + rand(111...999).to_s)
 
 user1joins1 = ServerMember.create(user_id: user1.id, server_id: server1.id)
 user1joins2 = ServerMember.create(user_id: user1.id, server_id: server2.id)
