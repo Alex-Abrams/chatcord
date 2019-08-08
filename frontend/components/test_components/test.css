@@ -66,7 +66,7 @@ THIS IS FOR APPILICATION.CSS below
 }
 
 
-/* Chatcord server Icons and Tool tip  */
+/* server Icons and Tool tip  */
 .server-tooltip {
   display: flex;
   margin-bottom: 8px;
@@ -75,20 +75,18 @@ THIS IS FOR APPILICATION.CSS below
 }
 
 .server-tooltip .server-tooltip-text {
-  visibility: hidden;
-  font-size: 14px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 6px 10px 0px 10px;
   position: relative;
-  /* top: 5px;
-  left: 5px; */
-  z-index: 1;
-  float: left;
-  justify-content: flex-start;
-  height: 30px;
+	background: #88b7d5;
+	border: 4px solid black;
+  border-radius: 6px;
+  padding-bottom: 6px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-left: 4px;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font: Arial;
 
 }
 
@@ -104,16 +102,16 @@ THIS IS FOR APPILICATION.CSS below
 }
 
 .server-tooltip-text:after {
- border-color: rgba(2, 2, 3, 0);
- border-right-color: #020203;
- border-width: 6px;
- margin-top: -6px;
+  border-color: rgba(2, 2, 3, 0);
+  border-right-color: #020203;
+	border-width: 9px;
+	margin-top: -9px;
 }
 .server-tooltip-text:before {
- border-color: rgba(8, 9, 10, 0);
- border-right-color: #08090a;
- border-width: 5px;
- margin-top: -5px;
+  border-color: rgba(8, 9, 10, 0);
+  border-right-color: #08090a;
+	border-width: 5px;
+	margin-top: -5px;
 }
 
 .server-tooltip:hover .server-tooltip-text {

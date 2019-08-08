@@ -15,7 +15,179 @@
  */
 
 
+
+ /* server Icons and Tool tip  */
+ #s-list {
+   list-style-type: none;
+   position: relative; left: -40px;
+ }
+
+ .server-list {
+   display: flex;
+ }
+
+ .server-tooltip {
+   display: flex;
+   margin-bottom: 8px;
+   text-decoration: none;
+   text-align: center;
+ }
+
  .discord-server-icon {
    height: 50px;
    width: 50px;
  }
+
+ .server-tooltip .server-tooltip-text {
+   visibility: hidden;
+   position: relative;
+ 	 background: #88b7d5;
+ 	 border: 4px solid black;
+   border-radius: 6px;
+   padding-bottom: 7px;
+   padding-top: 4px;
+   padding-right: 6px;
+   padding-left: 4px;
+   color: white;
+   background-color: black;
+   font-size: 14px;
+   font: Arial;
+   height: 12px;
+
+   left: 4px;
+   top: 8px;
+ }
+
+ .server-tooltip-text:after, .server-tooltip-text:before {
+   right: 100%;
+   top: 50%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+ }
+
+ .server-tooltip-text:after {
+   border-color: rgba(2, 2, 3, 0);
+   border-right-color: #020203;
+ 	border-width: 9px;
+ 	margin-top: -9px;
+ }
+ .server-tooltip-text:before {
+   border-color: rgba(8, 9, 10, 0);
+   border-right-color: #08090a;
+ 	border-width: 5px;
+ 	margin-top: -5px;
+ }
+
+ .server-tooltip:hover .server-tooltip-text {
+   visibility: visible;
+ }
+ /* end server tooltip CSS */
+
+
+ /* new server widget/tooltip */
+ .new-server-widget .plus {
+
+   height: 46px;
+   width: 46px;
+   font-size: 40px;
+   color: #43b581;
+   text-decoration: none;
+   border-radius: 50%;
+   background-color: #292b2f;
+   padding: 3px;
+
+   position: relative;
+   display: inline-block;
+   text-align: center;
+   position: relative; left: -40px;
+ }
+
+ .new-server-widget:hover .plus {
+   background-color: #43b581;
+   color: white;
+   transition: color .15s ease-out,background-color .15s ease-out;
+   transition: border-radius .15s;
+   border-radius: 16px;
+ }
+
+
+
+/* ////////////////// */
+.new-server-widget .new-server-widget-tooltip {
+  visibility: hidden;
+  position: relative;
+  background: #88b7d5;
+  border: 4px solid black;
+  border-radius: 6px;
+  padding-bottom: 7px;
+  padding-top: 4px;
+  padding-right: 6px;
+  padding-left: 4px;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  font: Arial;
+  height: 12px;
+
+  left: -35px;
+  bottom: 8px;
+}
+
+.new-server-widget:hover .new-server-widget-tooltip  {
+  visibility: visible;
+}
+
+.new-server-widget-tooltip:after, .new-server-widget-tooltip:before {
+  right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+
+ }
+
+.new-server-widget-tooltip:after {
+  border-color: rgba(2, 2, 3, 0);
+  border-right-color: #020203;
+	border-width: 9px;
+	margin-top: -9px;
+}
+
+.new-server-widget-tooltip:before {
+  border-color: rgba(8, 9, 10, 0);
+  border-right-color: #08090a;
+	border-width: 5px;
+	margin-top: -5px;
+}
+
+
+
+
+/* end new server  */
+
+#channels-display {
+   /* width: 232px;
+   height: 30px; */
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+
+ }
+
+/* i guess this will just touch the create channel and text channel */
+.aside-channels {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.invite {
+  text-decoration: none;
+}

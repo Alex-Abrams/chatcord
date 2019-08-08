@@ -30,11 +30,11 @@ const App = () => (
       <ProtectedRoute exact path="/servers/join" component={JoinContainer} />
 
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
-      <Route path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+      <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
 
       <Switch>
-        <Route exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
-        <Route path="/servers/:serverId/channels" component={WelcomeComments} />
+        <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
+        <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
       </Switch>
       <ProtectedRoute path="/servers" component={FofflineContainer} />
       <footer className="footer-1">HELLLLO</footer>

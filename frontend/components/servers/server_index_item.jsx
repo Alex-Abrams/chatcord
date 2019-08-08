@@ -19,11 +19,6 @@ class ServerIndexItem extends React.Component {
       this.props.toggleServer(server_id);
     }
 
-    // componentDidMount() {
-    //   this.props.requestServerChannels(this.props.server.id);
-    //   // console.log(this.props.server.id);
-    // }
-
 
   render() {
     const { server, serverId, channelIds } = this.props;

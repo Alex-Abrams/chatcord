@@ -19,7 +19,7 @@ class ServerForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.createServer(this.state);
-    // .then(() => this.props.history.push('/servers/'));   //this was server instead of servers.. iono `/servers/${data.server.id}`
+    // .then(() => this.props.history.push('/servers/'));
     this.props.history.push('/servers/');
   }
 

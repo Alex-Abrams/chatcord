@@ -25,7 +25,8 @@ class ServerIndex extends React.Component {
 
 
     const serversJoined = servers.filter(server => {
-      return server.memberIds.includes(currentUser.id);
+      // return server.memberIds.includes(currentUser.id);
+      return server.memberIds.includes(currentUser.id) || server.admin_id === currentUser.id;
     });
 
 
@@ -45,12 +46,12 @@ class ServerIndex extends React.Component {
             requestServerChannels={requestServerChannels}
             toggleServer={toggleServer}
             unToggleServer={unToggleServer} />)}
+
+            <span className="new-server-widget">
+              <Link className="plus" to="/servers/createorjoin">+</Link>
+              <span className="new-server-widget-tooltip">Add a Server</span>
+            </span>
         </ul>
-        <br />
-        <div className="new-server-widget">
-          <Link className="plus" to="/servers/createorjoin">+</Link>
-          <span className="new-server-widget-tooltip">Add a Server</span>
-        </div>
 
           <div className="profile-bar">
           {profileBar}
