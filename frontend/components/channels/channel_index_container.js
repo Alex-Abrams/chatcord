@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import ChannelIndex from './channel_index';
 import { requestServerChannels } from '../../actions/channel_actions';
 import { selectServerChannels, selectAllChannels } from '../../reducers/selectors';
-
+import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, { match }) => {
   const currentUser = state.entities.users[state.session.id];
@@ -20,6 +20,7 @@ const mapStateToProps = (state, { match }) => {
 
 const mapDispatchToProps = dispatch => ({
   requestServerChannels: (server_id) => dispatch(requestServerChannels(server_id)),
+  logout: () => dispatch(logout()),
   ///
 });
 

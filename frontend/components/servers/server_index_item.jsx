@@ -14,12 +14,6 @@ class ServerIndexItem extends React.Component {
 
   }
 
-    handleClick(server_id) {
-      this.props.unToggleServer();
-      this.props.toggleServer(server_id);
-    }
-
-
   render() {
     const { server, serverId, channelIds } = this.props;
 
@@ -30,8 +24,8 @@ class ServerIndexItem extends React.Component {
             <div className="server-list">
               <NavLink
                 className="server-tooltip"
-                to={`/servers/${server.id}/channels`}
-                onClick={() => this.handleClick(server.id)}>
+                to={`/servers/${server.id}/channels`}>
+
                 <img className="discord-server-icon"
                   src={server.image_url}
                   alt={server.title}>

@@ -32,10 +32,8 @@ class ChannelForm extends React.Component {
 
   handleClick() {
     const fullApp = document.getElementById('fullApp');
-    // fullApp.classList.toggle('active');
     fullApp.style.transition = "background-color 0.2s ease";
     fullApp.style.backgroundColor = "white";
-    // fullApp.style.opacity = "1";
   }
 
   render() {

@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import usersReducer from './users_reducer';
 import serversReducer from './servers_reducer';
 import channelsReducer from './channels_reducer';
-import toggleReducer from './toggle_reducer';
 import commentsReducer from './comments_reducer';
 
 // temporary and for simlutions purposes
