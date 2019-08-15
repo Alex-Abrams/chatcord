@@ -22,7 +22,6 @@ const App = () => (
 
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
-      <header className="header">REEEEEEEEEEEEEEEEEE</header>
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
@@ -37,7 +36,7 @@ const App = () => (
         <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
       </Switch>
       <ProtectedRoute path="/servers" component={FofflineContainer} />
-      <footer className="footer-1">HELLLLO</footer>
+    
 
 
 

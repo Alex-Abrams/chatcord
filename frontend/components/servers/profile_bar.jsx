@@ -2,11 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProfileBar = ({ currentUser, logout }) => {
+  const name = currentUser.username;
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+
   const display = currentUser ? (
-    <div>
-      <p>{currentUser.username}</p>
-      <button onClick={logout}>Logout</button>
-    </div>
+    <span className="profileBar">
+      <div className="profileBar-name">{capitalizedName}</div>
+      <button className="profileBar-logout" onClick={logout}>Logout</button>
+    </span>
   ) : (
     <div>
       <Link className="btn" to="/signup">works</Link>
