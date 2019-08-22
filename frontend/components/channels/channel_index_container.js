@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import ChannelIndex from './channel_index';
 import { requestServerChannels } from '../../actions/channel_actions';
-import { selectServerChannels, selectAllChannels } from '../../reducers/selectors';
+import { selectAllChannels, selectServerTitle } from '../../reducers/selectors';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, { match }) => {
   const currentUser = state.entities.users[state.session.id];
   const serverId = parseInt(match.params.serverId);
+  const serverTitle = selectServerTitle(state, serverId);
   // const channels = selectServerChannels(state, serverId);
   const channels = selectAllChannels(state);
   // const activeServerId = findActiveServer(state);
@@ -14,7 +15,7 @@ const mapStateToProps = (state, { match }) => {
     currentUser,
     serverId,
     channels,
-    // activeServerId,
+    serverTitle, 
   };
 };
 

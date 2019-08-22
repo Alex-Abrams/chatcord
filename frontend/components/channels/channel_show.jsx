@@ -10,22 +10,25 @@ class ChannelShow extends React.Component {
     const { channel, server, serverId } = this.props;
 
     const channelDisplay = (
-      <Link id="channels-display"
-        to={`/servers/${serverId}/channels/${channel.id}`}
-        className="channelLinks">
-        # {channel.title}
-      </Link>
+      <div>
+        <Link id="channels-display"
+          to={`/servers/${serverId}/channels/${channel.id}`}
+          className="channelLinks">
+          {channel.title}
+        </Link>
+      </div>
     );
 
     return(
       <div className="channelsList">
         <span>
+          <div className="channelsList-hastag">#</div>
           {channelDisplay}
         </span>
 
         <span>
           <Link className="invite" id="invite"
-            to={`/servers/${serverId}/channels/invite`}>Inv</Link>
+            to={`/servers/${serverId}/channels/invite`}>&#9879;</Link>
         </span>
 
       </div>

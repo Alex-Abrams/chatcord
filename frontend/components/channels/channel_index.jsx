@@ -37,7 +37,7 @@ class ChannelIndex extends React.Component {
   }
 
   render() {
-    const { channels, serverId, currentUser, logout } = this.props;
+    const { channels, serverId, currentUser, logout, serverTitle } = this.props;
 
     const profileBar = (
       <ProfileBar logout={logout} currentUser={currentUser} />
@@ -47,18 +47,23 @@ class ChannelIndex extends React.Component {
       return channel.server_id === serverId;
     });
 
+    const capitalTitle = serverTitle.charAt(0).toUpperCase() + serverTitle.slice(1);
 
     const channelFormDisplay = (
       <div className="textChannel">
-        <div id="textChannelLabel">TEXT CHANNEL</div>
+        <header className="channelHeader">{capitalTitle} - Chatcord</header>
 
-        <div className="newChannel-widget">
-          <Link
-            className="textChannel-plus"
-            to={`/servers/${serverId}/channels/new`}
-            id="newChannel"
-            onClick={this.handleNew}>+</Link>
-          <span className="newChannel-widget-tooltip">Create Channel</span>
+        <div className="textChannel-channelarea">
+          <div id="textChannelLabel">TEXT CHANNEL</div>
+
+          <div className="newChannel-widget">
+            <Link
+              className="textChannel-plus"
+              to={`/servers/${serverId}/channels/new`}
+              id="newChannel"
+              onClick={this.handleNew}>+</Link>
+            <span className="newChannel-widget-tooltip">Create Channel</span>
+          </div>
         </div>
       </div>
     );
@@ -66,7 +71,7 @@ class ChannelIndex extends React.Component {
     return(
       <aside class="aside aside-channels">
           {channelFormDisplay}
-        <ul>
+        <ul className="channels-ul">
           {channelFilter.map(channel =>
             <ChannelShow
               key={channel.id}

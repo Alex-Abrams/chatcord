@@ -33,11 +33,16 @@ class CommentsIndex extends React.Component {
 
     // console.log(this.props);
 
+    // <header className="main-header">
+    //   <div className="main-hastag">&#35;</div>
+    //   <span className="main-title">
+    //     {title}
+    //   </span>
+    // </header>
 
     return(
       <article className="main">
-        <header className="put title here">{title}</header>
-        <ul>
+        <ul className="main-list">
           {commentsFilter.map(comment =>
             <CommentShow
               key={comment.id}

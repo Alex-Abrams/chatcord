@@ -15,6 +15,8 @@ import WelcomeComments from './comments/default';
 import CreateJoin from './servers/create_or_join_server';
 
 import JoinContainer from './link/join_container';
+import { RefreshedRoute } from '../util/refresh_route';
+import CommentsHeaderContainer from './comments/comments_header_container';
 
 
 const App = () => (
@@ -29,14 +31,19 @@ const App = () => (
       <ProtectedRoute exact path="/servers/join" component={JoinContainer} />
 
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
-      <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+
+      <Switch>
+        <RefreshedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+        <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+      </Switch>
 
       <Switch>
         <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
         <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
       </Switch>
+      <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
       <ProtectedRoute path="/servers" component={FofflineContainer} />
-    
+
 
 
 

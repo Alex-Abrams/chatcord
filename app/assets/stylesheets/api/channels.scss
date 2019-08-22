@@ -1,3 +1,148 @@
 // Place all the styles related to the api/channels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// server title inside the channels index
+
+.channelHeader {
+  background-color: green;
+  font-size: 16px;
+  font-weight: 500;
+  height: 48px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  width: 241px;
+  color: #fff;
+  font-family: Arial;
+}
+
+#textChannelLabel {
+  position: relative;
+  top: 200px;
+  padding-left: 20px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Arial;
+}
+
+.newChannel-widget {
+  position: relative;
+  top: 196px;
+  left: 70px;
+  z-index: 1;
+}
+
+.textChannel-plus {
+  text-decoration: none;
+  font-size: inherit;
+  font: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5e5d5a;
+  right: 0px;
+}
+
+.newChannel-widget .newChannel-widget-tooltip {
+  visibility: hidden;
+  background-color: black;
+  border: 3px solid black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 11px;
+
+  font-family: Arial;
+
+  white-space: nowrap;
+  font-size: 14px;
+
+  position: absolute;
+  right: 49px;
+  top: -40px;
+  z-index: 1;
+}
+
+.newChannel-widget:hover .newChannel-widget-tooltip {
+  visibility: visible;
+}
+
+/* arrow box for new channel tooltip */
+.newChannel-widget-tooltip:after, .newChannel-widget-tooltip:before {
+  top: 100%;
+ left: 50%;
+ border: solid transparent;
+ content: " ";
+ height: 0;
+ width: 0;
+ position: absolute;
+ pointer-events: none;
+}
+
+
+.newChannel-widget-tooltip:after {
+  border-color: rgba(8, 3, 1, 0);
+ border-top-color: #080301;
+ border-width: 8px;
+ margin-left: -8px;
+}
+
+.newChannel-widget-tooltip:before {
+  border-color: rgba(5, 0, 0, 0);
+ border-top-color: #050000;
+ border-width: 5px;
+ margin-left: -5px;
+}
+
+// the actual Channels
+// the ul for channels that can be created and joined
+
+.channels-ul {
+  position: relative;
+  top: 200px;
+  left: 0px;
+}
+
+.channelsList-hastag {
+  position: relative;
+  left: -20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: gray;
+  // padding-right: 20px;
+}
+
+.channelLinks {
+   list-style-type: none;
+   text-decoration: none;
+   color: black;
+   position: relative;
+   top: -24px;
+ }
+
+/* i guess this will just touch the create channel and text channel */
+.aside-channels {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+  position: absolute;
+
+}
+
+.invite {
+  text-decoration: none;
+  position: relative;
+  left: 155px;
+  top: -42px;
+}
+
+.channelsList {
+  height: 20px;
+  padding-bottom: 10px;
+}

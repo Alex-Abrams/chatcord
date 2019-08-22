@@ -170,23 +170,3 @@
 
 
 /* end new server  */
-
-#channels-display {
-   /* width: 232px;
-   height: 30px; */
-   list-style-type: none;
-   text-decoration: none;
-   color: black;
-
- }
-
-/* i guess this will just touch the create channel and text channel */
-.aside-channels {
-  color: black;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.invite {
-  text-decoration: none;
-}

@@ -21,14 +21,17 @@ body {
   width: 58px;
   position: absolute;
   height: 100%;
+  top: 0px;
+  left: 0px;
 }
 
 .aside-channels {
   background-color: pink;
   position: absolute;
   height: 100%;
-  width: 245px;
-  left: 66px;
+  width: 241px;
+  left: 58px;
+  top: 0px;
 }
 
 /* comments-main */
@@ -36,10 +39,14 @@ body {
   text-align: left;
   background: deepskyblue;
   position: absolute;
-  width: 2929px;
+  width: 1102px;
   height: 100%;
-  left: 300px;
+  left: 299px;
   padding: 10px;
+
+  top: 48px;
+
+  /* border: 0.5px solid black; */
 }
 
 .aside-offline {
@@ -48,6 +55,7 @@ body {
   width: 250px;
   right: 0px;
   height: 100%;
+  top: 48px;
 }
 
 
@@ -65,13 +73,10 @@ body {
 /* profile bar and logout button */
 
 .profileBar {
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  border: 2px solid black;
-  /* position: relative; */
+  /* border: 2px solid black; */
   position: fixed;
   bottom: 0px;
-  width: 230px;
+  width: 241px;
   height: 52px;
   z-index: 1;
   background-color: green;
