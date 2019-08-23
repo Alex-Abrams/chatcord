@@ -6,16 +6,26 @@ class CommentShow extends React.Component {
     super(props);
   } // c
 
+  startNextLine(comment) {
+    let commentSplit = [];
+    for(i = 0; i < comment.length; i ++) {
+      if (comment.length <= 50) {
+        return comment;
+      } else {
+
+      }
+    }
+  }
+
   render() {
-    const { comment, messageBoardId, currentUserName } = this.props;
+    const { comment, currentUserName } = this.props;
+
 
 
     return(
-      <div>
-        <span>{comment.username}</span>
-        <div>${messageBoardId}$</div>
-        <div>{comment.body}--->{comment.msg_board_id}</div>
-        <di>------</di>
+      <div className="comment">
+        <span className="comment-name">{comment.username}</span>
+        <div className="comment-body">{comment.body}</div>
       </div>
     ); //r
   } // render

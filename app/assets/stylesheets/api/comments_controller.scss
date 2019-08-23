@@ -32,7 +32,14 @@
 }
 
 .main {
-  // overflow: scroll;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+// individual comments
+.comment {
+  border-bottom: 1px solid black;
+  margin-right: 20px;
 }
 
 // temp
