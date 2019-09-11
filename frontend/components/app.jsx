@@ -37,12 +37,15 @@ const App = () => (
         <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
       </Switch>
 
-      <Switch>
-        <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
-        <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
-      </Switch>
+      <div className="commentsOfflineBox">
+        <Switch>
+          <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
+          <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
+        </Switch>
+        <ProtectedRoute path="/servers" component={FofflineContainer} />
+      </div>
+
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
-      <ProtectedRoute path="/servers" component={FofflineContainer} />
 
 
 
