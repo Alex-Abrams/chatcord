@@ -21,7 +21,6 @@ import CommentsHeaderContainer from './comments/comments_header_container';
 
 const App = () => (
   <div className="wrapper">
-
       <AuthRoute path="/signup" component={SignUpFormContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
@@ -37,20 +36,23 @@ const App = () => (
         <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
       </Switch>
 
-      <div className="commentsOfflineBox">
         <Switch>
           <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
           <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
         </Switch>
-        <ProtectedRoute path="/servers" component={FofflineContainer} />
-      </div>
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
-
-
 
 
   </div>
 );
 
 export default App;
+
+// <div className="commentsOfflineBox">
+
+
+
+
+//   <ProtectedRoute path="/servers" component={FofflineContainer} />
+// </div>

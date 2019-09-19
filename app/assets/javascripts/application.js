@@ -14,4 +14,5 @@
 //= require activestorage
 //= require_tree .
 //= require jquery
+//= require jquery-ui/widgets/resizable
 //= require jquery_ujs

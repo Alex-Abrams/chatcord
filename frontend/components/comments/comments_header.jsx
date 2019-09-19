@@ -3,12 +3,25 @@ import React from 'react';
 class CommentsHeader extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      smallScreen: false,
+    };
+  }
+
+  componentDidMount() {
+    if (window.innerWidth < 1800) {
+      this.setState({ smallScreen: !this.state.smallScreen });
+    };
   }
 
   render() {
     const { title } = this.props;
+    const smallScreen = (this.state.smallScreen) ? "commentsHeaderSmall" : "commentsHeader";
+
+
     return(
-      <div className="commentsHeader">
+      <div className={smallScreen}>
         <header className="commentsHeader-header">
           <div className="commentsHeader-hastag">&#35;</div>
           <span className="commentsHeader-title">

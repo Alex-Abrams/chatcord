@@ -5,13 +5,12 @@ class CommentShow extends React.Component {
   constructor(props){
     super(props);
 
-    // this.startNextLine = this.startNextLine.bind(this);
   } // c
 
 
 
   render() {
-    const { comment, currentUserName } = this.props;
+    const { comment, currentUserName, screenSize } = this.props;
 
 /////////////////////////////
     const lineStarter = (comment) => {
@@ -35,11 +34,14 @@ class CommentShow extends React.Component {
 
     const correctedCommentLines = lineStarter(comment.body);
 
+    const commentSize = (screenSize) ? 'commentSmall' : 'comment';
+    console.log(screenSize);
+
 /////////////////////////////
 // <div className="comment-body">{comment.body}</div>
 
     return(
-      <div className="comment">
+      <div className={commentSize}>
         <span className="comment-name">{comment.username}</span>
         <ul>
             {correctedCommentLines.map((line, index) => <li key={index}>{line}</li> )}

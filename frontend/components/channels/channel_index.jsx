@@ -70,7 +70,9 @@ class ChannelIndex extends React.Component {
 
     return(
       <aside class="aside aside-channels">
+        <div>
           {channelFormDisplay}
+        </div>
         <ul className="channels-ul">
           {channelFilter.map(channel =>
             <ChannelShow

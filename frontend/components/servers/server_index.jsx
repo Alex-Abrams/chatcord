@@ -42,7 +42,6 @@ class ServerIndex extends React.Component {
               <span className="new-server-widget-tooltip">Add a Server</span>
             </span>
         </ul>
-
       </aside>
     ); // end return
   }// end render

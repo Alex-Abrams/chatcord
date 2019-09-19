@@ -1,24 +1,56 @@
-// line starter stuff
-
-// 'daw-09di-awid-0wiad-0 wodi aw-id -wai d-0a -0widawi d-wai dia-id-awidmawmd'
-
-const lineStarter = (comment) => {
-  let length = comment.length;
-  let lines = comment.length / 50;
-  let round = Math.floor(lines);
-
-  let segments = (lines % 1 === 0) ? round : round + 1;
-  let lineArray = [];
-  let copyComment = comment;
-  let position = 0;
-
-  for (let i = 0; i < segments; i++) {
-    let chunk = copyComment.slice(position, position + 50);
-    lineArray.push(chunk);
-    postion += chunk.length;
-  };
-
-  return lineArray;
-}
-
-// copyComment = copyComment.slice(51, copyComment.length);
+// import React from 'react';
+// import { AuthRoute, ProtectedRoute } from '../util/route_util';
+// import { Route, Switch, Link, HashRouter, Redirect } from 'react-router-dom';
+// import LoginFormContainer from './session_form/login_form_container';
+// import SignUpFormContainer from './session_form/signup_form_container';
+// import ServerIndexContainer from './servers/server_index_container';
+// import ServerFormContainer from './servers/server_form_container';
+// //
+// import ChannelIndexContainer from './channels/channel_index_container';
+// import MessageBoard from './msg_board/message_board';
+// import CommentsIndexContainer from './comments/comments_index_container';
+// //
+// import FofflineContainer from './foffline/foffline_container';
+// import WelcomeComments from './comments/default';
+// import CreateJoin from './servers/create_or_join_server';
+//
+// import JoinContainer from './link/join_container';
+// import { RefreshedRoute } from '../util/refresh_route';
+// import CommentsHeaderContainer from './comments/comments_header_container';
+//
+//
+// const App = () => (
+//   <div className="wrapper">
+//
+//       <AuthRoute path="/signup" component={SignUpFormContainer} />
+//       <AuthRoute path="/login" component={LoginFormContainer} />
+//       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
+//       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
+//       <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
+//
+//       <ProtectedRoute exact path="/servers/join" component={JoinContainer} />
+//
+//       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
+//
+//       <Switch>
+//         <RefreshedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+//         <ProtectedRoute path="/servers/:serverId/channels" component={ChannelIndexContainer} />
+//       </Switch>
+//
+//       <div className="commentsOfflineBox">
+//         <Switch>
+//           <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
+//           <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
+//         </Switch>
+//         <ProtectedRoute path="/servers" component={FofflineContainer} />
+//       </div>
+//
+//       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
+//
+//
+//
+//
+//   </div>
+// );
+//
+// export default App;

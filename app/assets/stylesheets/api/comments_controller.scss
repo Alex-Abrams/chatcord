@@ -6,10 +6,18 @@
 
 .commentsHeader {
   border: 2px solid black;
-  width: 81.8%;
-  // white-space: nowrap;
+  width: 91.5%;
   position: absolute;
-  // width: 1992px;
+  left: 299px;
+  top: 0px;
+  z-index: 1;
+  height: 45px;
+}
+
+.commentsHeaderSmall {
+  border: 2px solid black;
+  width: 81.8%;
+  position: absolute;
   left: 299px;
   top: 0px;
   z-index: 1;
@@ -32,14 +40,23 @@
 }
 
 .main {
-  overflow: scroll;
-  overflow-x: hidden;
+  // overflow: scroll;
+  // overflow-x: hidden;
 }
 
 // individual comments
 .comment {
   border-bottom: 1px solid black;
   margin-right: 20px;
+
+}
+
+// for small comment left screen
+.commentSmall {
+  width: 85%;
+  border-bottom: 1px solid black;
+  margin-right: 20px;
+
 }
 
 // temp
