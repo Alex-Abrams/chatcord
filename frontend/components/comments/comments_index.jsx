@@ -41,10 +41,11 @@ class CommentsIndex extends React.Component {
     });
 
     const screenSize = (this.state.smallScreen) ? 'mainSmall' : 'main';
+    const mainListSize = (this.state.smallScreen) ? 'main-list-small' : 'main-list';
 
     return(
       <article className={screenSize}>
-        <ul className="main-list">
+        <ul className={mainListSize}>
           {commentsFilter.map(comment =>
             <CommentShow
               key={comment.id}
@@ -55,8 +56,8 @@ class CommentsIndex extends React.Component {
         </ul>
 
         <FofflineContainer currentUser={currentUser} />
-          <div className="comments-form">
-            <CommentForm channelId={channel_id} createComment={createComment} />
+          <div className="commentsFormContainer">
+            <CommentForm channelId={channel_id} createComment={createComment} screenSize={this.state.smallScreen} title={title} />
           </div>
       </article>
 

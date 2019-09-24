@@ -84,13 +84,23 @@ body {
   top: 48px;
   left: 299px;
   width: 80.85%;
-  height: 96.4%;
+  height: 92%;
   padding: 10px;
   clear: both;
 }
 
 .main-list {
-  width: 88%;
+  width: 91.1%;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 95%;
+}
+
+.main-list-small {
+  width: 79.5%;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 95%;
 }
 
 .aside-offline {

@@ -39,28 +39,71 @@
   top: 10px;
 }
 
+.comment-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+#timeStamp {
+  font-size: 14px;
+}
+
 .main {
-  // overflow: scroll;
-  // overflow-x: hidden;
+
+}
+
+.main-list {
+}
+
+// individual comments
+#comment-line {
+  list-style-type: none;
+  padding: 0;
 }
 
 // individual comments
 .comment {
   border-bottom: 1px solid black;
   margin-right: 20px;
-
 }
 
-// for small comment left screen
+// for small comment small screen
 .commentSmall {
-  width: 85%;
+  // width: 85%;
+  width: 95%;
   border-bottom: 1px solid black;
   margin-right: 20px;
-
 }
 
-// temp
+// comment form/input
 .commentForm {
   position: absolute;
-  bottom: 100px;
+  bottom: -5px;
+  margin: 15px;
+  width: 90%;
+}
+
+.commentFormSmall {
+  width: 77%;
+  position: absolute;
+  bottom: -5px;
+  margin: 15px;
+}
+
+.commentForm-input {
+  height: 30px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+#comment-Button {
+  visibility: hidden;
+}
+
+
+
+
+.commentForm-input {
+  width: 100%;
 }

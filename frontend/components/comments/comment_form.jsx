@@ -29,16 +29,20 @@ class CommentForm extends React.Component {
 
 
   render() {
-    const { channelId } = this.props;
+    const { channelId, title, screenSize } = this.props;
+
+    console.log(screenSize);
+
+    const commentFormSize = (screenSize) ? 'commentFormSmall' : 'commentForm';
 
     return(
       <div>
-        <form className="commentForm" id="reset" onSubmit={this.handleSubmit}>
+        <form className={commentFormSize} id="reset" onSubmit={this.handleSubmit}>
           <input
             className="commentForm-input"
             type="input"
             value={this.state.body}
-            placeholder='Message#'
+            placeholder={'Message#' + title}
             onChange={this.update('body')}>
           </input>
           <button id="comment-Button"type="submit">Submit</button>
