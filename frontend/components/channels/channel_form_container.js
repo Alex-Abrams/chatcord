@@ -6,9 +6,12 @@ import { findActiveServer } from '../../reducers/selectors';
 // import { createMessageBoard } from '../../actions/msg_board_actions';
 
 
-const mapStateToProps = state => ({
-  activeId: parseInt(match.params.serverId)
-});
+const mapStateToProps = (state, {match}) => {
+  const serverId = parseInt(match.params.serverId);
+  return {
+    serverId,
+  };
+};
 
 
 const mapDispatchToProps = dispatch => ({
@@ -17,6 +20,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(ChannelForm);

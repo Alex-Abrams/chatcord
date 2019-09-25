@@ -27,11 +27,14 @@ class CommentForm extends React.Component {
     return e => this.setState({ [property]: e.target.value, channel_id: this.props.channelId });
   }
 
+  // fileSelector(event) {
+  //   console.log(event.target.files[0]);
+  // }
+  // <input type="file" onChange={this.fileSelector} />
+  // <img src="https://cdn.discordapp.com/avatars/141372446388256769/f060144e83621326d0868e42add64909.png?size=256"></img>
 
   render() {
     const { channelId, title, screenSize } = this.props;
-
-    console.log(screenSize);
 
     const commentFormSize = (screenSize) ? 'commentFormSmall' : 'commentForm';
 

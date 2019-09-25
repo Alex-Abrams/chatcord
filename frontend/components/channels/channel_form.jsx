@@ -31,13 +31,15 @@ class ChannelForm extends React.Component {
 
 
   handleClick() {
-    const fullApp = document.getElementById('fullApp');
-    fullApp.style.transition = "background-color 0.2s ease";
-    fullApp.style.backgroundColor = "white";
+    const fullApp = document.getElementById('modalBackground');
+    modalBackground.style.transition = "background-color 0.2s ease";
+    // modalBackground.style.backgroundColor = "white";
+    modalBackground.style.visibility = "hidden";
+    // fullApp.style.zIndex = "5";
   }
 
   render() {
-    const {activeId} = this.props; ///meh
+    const {serverId} = this.props;
 
     return(
       <section class="modal" id="channelModal">
@@ -51,7 +53,7 @@ class ChannelForm extends React.Component {
                 onChange={this.update('title')}>
               </input>
               <div class="modal-buttons">
-                <Link class="modal-cancel" to="/servers" id="cancel" onClick={this.handleClick}>Cancel</Link>
+                <Link class="modal-cancel" to="/servers/1/channels" id="cancel" onClick={this.handleClick}>Cancel</Link>
                 <button class="modal-create" id="create" onClick={this.handleClick}>Create Channel</button>
               </div>
           </form>

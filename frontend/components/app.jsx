@@ -43,7 +43,7 @@ const App = () => (
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
 
-
+      <div id="modalBackground"></div>
   </div>
 );
 

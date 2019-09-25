@@ -103,6 +103,10 @@
 // the actual Channels
 // the ul for channels that can be created and joined
 
+#fullApp {
+  // z-index: 5;
+}
+
 .channels-ul {
   position: relative;
   top: 200px;
@@ -145,4 +149,96 @@
 .channelsList {
   height: 20px;
   padding-bottom: 10px;
+}
+
+// teeeeeeeeeeesting old gold before i scapred it
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: rgba(128,128,128,0); */
+}
+
+.modal-content {
+  /* margin: auto; */
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  width: 440px;
+  height: 140px;
+  color: white;
+  background-color: #474545;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+}
+
+#modalBackground {
+  // background: black;
+  z-index: 7;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  // opacity: 0.9;
+}
+
+#modalLabel {
+  font-size: 12px;
+  font: Arial;
+  margin: 10px;
+  width: 400px;
+}
+
+
+.modal-input {
+  border-color: #040405;
+    border-top-color: rgb(4, 4, 5);
+    border-right-color: rgb(4, 4, 5);
+    border-bottom-color: rgb(4, 4, 5);
+    border-left-color: rgb(4, 4, 5);
+  background-color: rgba(0,0,0,.1);
+  font: 400 13.3333px Arial;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  width: 400px;
+  height: 40px;
+  border: 1px #040405;
+  border-radius: 3px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  margin-right: 10px;
+  align-items: flex-end;
+  margin-top: 50px;
+  /* background-color: green; */
+}
+
+.modal-cancel {
+  color: white;
+  margin-right: 24px;
+  margin-bottom: 11px;
+  text-decoration: none;
+}
+
+.modal-cancel:hover {
+  text-decoration: underline;
+}
+
+.modal-create {
+  height: 38px;
+  border-radius: 3px;
+  background-color: #7289da;
+  color: white;
+  border: 1px solid #7289da;
 }
