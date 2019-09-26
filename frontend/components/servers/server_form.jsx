@@ -32,27 +32,32 @@ class ServerForm extends React.Component {
 
 
     return(
-      <section className="server-detail">
-        <form className="server-form" onSubmit={this.handleSubmit}>
-          <label>SERVER NAME
-            <input
-              type="text"
-              value={this.state.title}
-              placeholder="Enter a server name"
-              onChange={this.update('title')}>
-            </input>
-          </label>
-          <br />
-          <label>Picture
-            <input
-              type="text"
-              value={this.state.image_url}
-              onChange={this.update('image_url')}>
-            </input>
-          </label>
-          <button>Create</button>
-
-        </form>
+      <section className="serverForm">
+        <div className="serverForm-content">
+          <header className="serverForm-header">CREATE YOUR SERVER</header>
+          <form className="serverForm-form" onSubmit={this.handleSubmit}>
+            <label>SERVER NAME
+              <input
+                className="serverForm-inputName"
+                type="text"
+                value={this.state.title}
+                placeholder="Enter a server name"
+                onChange={this.update('title')}>
+              </input>
+            </label>
+            <br />
+            <label>Picture url
+              <input
+                className="serverForm-inputPic"
+                type="text"
+                value={this.state.image_url}
+                onChange={this.update('image_url')}>
+              </input>
+            </label>
+            <button>&#8592;Back</button>
+            <button>Create</button>
+          </form>
+        </div>
       </section>
     ); // end return
   } // end render
