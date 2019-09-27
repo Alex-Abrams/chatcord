@@ -1,11 +1,4 @@
-// export const createServerLink = (user) => (
-//   $.ajax({
-//     method: 'POST',
-//     url: 'api/server_members',
-//     data: {user}
-//   })
-// );
-
+// creates a table between user and server 
 export const createServerLink = (user_Id, server_Id) => (
   $.ajax({
     method: 'POST',

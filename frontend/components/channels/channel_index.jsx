@@ -41,8 +41,10 @@ class ChannelIndex extends React.Component {
   render() {
     const { channels, serverId, currentUser, logout, serverTitle } = this.props;
 
-    const profileBar = (
+    const profileBar = currentUser ? (
       <ProfileBar logout={logout} currentUser={currentUser} />
+    ) : (
+      null
     );
 
     const channelFilter = channels.filter(channel => {
