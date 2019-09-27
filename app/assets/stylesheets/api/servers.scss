@@ -13,9 +13,12 @@
   justify-content: flex-end;
 }
 
-// header
-// font-size: 18px;
-// font-weight: 700;
+.createOrJoin-header {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 16px;
+}
 
 .createOrJoin-content {
   padding: 20px;
@@ -25,7 +28,6 @@
   height: 320px;
   color: #7289da; //purpleish
   background-color: #ebebeb; //whiteish gray
-  // margin-bottom: 50px;
   padding-bottom: 100px;
   font-size: 18px;
   font-weight: 500;
@@ -38,6 +40,7 @@
 
 .createOrJoin-create {
   position: fixed;
+  font-family: helvetica;
   top: 25%;
   left: 8%;
   width: 220px;
@@ -47,7 +50,55 @@
   // border: 1px
 }
 
+.createOrJoin-createButton {
+  text-decoration: none;
+  color: white;
+}
+
+.createOrJoin-joinbutton {
+  text-decoration: none;
+}
+
+.createButton {
+  background-color: #7289da;
+}
+
+.createButton:hover {
+  background-color: #6c84d9;
+}
+
+.joinButton {
+  background-color: #369368;
+}
+
+.joinButton:hover {
+  background-color: #31855e;
+}
+
+#createJoinButtons {
+  color: white;
+  font-family: Arial;
+  border: none;
+  width: 90%;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  margin-top: 100px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.create-header {
+  padding-top: 30px;
+}
+
+.join-header {
+  padding-top: 30px;
+}
+
 .createOrJoin-join {
+  font-family: helvetica;
   position: fixed;
   top: 25%;
   right: 8%;
@@ -55,30 +106,145 @@
   height: 288px;
   text-align: center;
   border: 1px solid rgba(0,0,0,.1);
+  color: #369368;
 }
 
+#cOrjIntro {
+  font-size: 14px;
+  color: #99aab5;
+}
 
 //// serverForm, after create is clicked in createOrJoin
-
 .serverForm {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: #f2f3f5;
+}
+
+.serverForm-header {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: bold;
+  color: #7289da;
+  font-family: sans-serif;
+}
+
+#createYourServerIntro {
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 18px;
+  color: #99aab5;
+  // padding-bottom: 15px;
 }
 
 .serverForm-content {
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #888;
-  width: 440px;
-  height: 140px;
-  color: white;
-  background-color: #474545;
+  width: 540px;
+  height: 320px;
+  color: black;
+  background-color: white;
   margin-bottom: 50px;
   padding-bottom: 50px;
-
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.serverForm-label {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #87909c;
+  font-weight: 700;
+}
+
+.serverForm-inputName {
+  position: relative;
+  top: 30px;
+  left: -75px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2f3136;
+  width: 50%;
+}
+
+.serverForm-picLabel {
+  position: relative;
+  top: 50px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #87909c;
+  font-weight: 700;
+}
+
+.serverForm-inputPic {
+  position: relative;
+  top: 30px;
+  left: -75px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2f3136;
+  width: 50%;
+}
+
+
+.backAndCreateButton {
+  width: 86%;
+  background-color: #f6f6f7;
+  border-radius: 0px 0px 5px 5px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  // padding: 18px 40px;
+  padding: 18px 40px;
+}
+
+.serverForm-arrow {
+  font-size: 40px;
+  color: #99aab5;
+}
+
+.serverForm-arrow:hover {
+  text-decoration: underline;
+}
+
+.serverForm-backButton {
+  text-decoration: none;
+  font-size: 14px;
+  color: #99aab5;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.serverForm-backButton:hover {
+  text-decoration: underline;
+}
+
+.serverForm-createButton {
+  background-color: #677bc4;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border: none;
+  align-items: center;
+  position: fixed;
+  right: 35px;
+  bottom: 15px;
+  color: white;
+  cursor: pointer;
 }

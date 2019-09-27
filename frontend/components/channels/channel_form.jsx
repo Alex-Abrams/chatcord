@@ -53,7 +53,7 @@ class ChannelForm extends React.Component {
                 onChange={this.update('title')}>
               </input>
               <div class="modal-buttons">
-                <Link class="modal-cancel" to="/servers/1/channels" id="cancel" onClick={this.handleClick}>Cancel</Link>
+                <Link class="modal-cancel" to={`servers/${serverId}/channels`} id="cancel" onClick={this.handleClick}>Cancel</Link>
                 <button class="modal-create" id="create" onClick={this.handleClick}>Create Channel</button>
               </div>
           </form>

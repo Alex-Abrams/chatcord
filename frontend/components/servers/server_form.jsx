@@ -35,8 +35,9 @@ class ServerForm extends React.Component {
       <section className="serverForm">
         <div className="serverForm-content">
           <header className="serverForm-header">CREATE YOUR SERVER</header>
+          <p id="createYourServerIntro">You may create a server and enter an image url. Image upload coming soon.</p>
           <form className="serverForm-form" onSubmit={this.handleSubmit}>
-            <label>SERVER NAME
+            <label className="serverForm-label">Server name
               <input
                 className="serverForm-inputName"
                 type="text"
@@ -46,16 +47,20 @@ class ServerForm extends React.Component {
               </input>
             </label>
             <br />
-            <label>Picture url
+            <label className="serverForm-picLabel">Picture url
               <input
                 className="serverForm-inputPic"
                 type="text"
                 value={this.state.image_url}
+                placeholder="Copy Paste Img Url"
                 onChange={this.update('image_url')}>
               </input>
             </label>
-            <button>&#8592;Back</button>
-            <button>Create</button>
+            <div className="backAndCreateButton">
+              <span className="serverForm-arrow">&#8592;</span>
+              <Link className="serverForm-backButton" to="/servers/createorjoin">Back</Link>
+              <button className="serverForm-createButton">Create</button>
+            </div>
           </form>
         </div>
       </section>
