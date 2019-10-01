@@ -13,6 +13,7 @@ class ServerForm extends React.Component {
       image_url: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.backgroundClick = this.backgroundClick.bind(this);
   } // end constructor
 
 
@@ -21,6 +22,12 @@ class ServerForm extends React.Component {
     this.props.createServer(this.state);
     // .then(() => this.props.history.push('/servers/'));
     this.props.history.push('/servers/');
+  }
+
+  backgroundClick(e) {
+    if (e.target.id === "allModalBackground") {
+      this.props.history.push("/servers");
+    };
   }
 
 
@@ -32,38 +39,40 @@ class ServerForm extends React.Component {
 
 
     return(
-      <section className="serverForm">
-        <div className="serverForm-content">
-          <header className="serverForm-header">CREATE YOUR SERVER</header>
-          <p id="createYourServerIntro">You may create a server and enter an image url. Image upload coming soon.</p>
-          <form className="serverForm-form" onSubmit={this.handleSubmit}>
-            <label className="serverForm-label">Server name
-              <input
-                className="serverForm-inputName"
-                type="text"
-                value={this.state.title}
-                placeholder="Enter a server name"
-                onChange={this.update('title')}>
-              </input>
-            </label>
-            <br />
-            <label className="serverForm-picLabel">Picture url
-              <input
-                className="serverForm-inputPic"
-                type="text"
-                value={this.state.image_url}
-                placeholder="Copy Paste Img Url"
-                onChange={this.update('image_url')}>
-              </input>
-            </label>
-            <div className="backAndCreateButton">
-              <span className="serverForm-arrow">&#8592;</span>
-              <Link className="serverForm-backButton" to="/servers/createorjoin">Back</Link>
-              <button className="serverForm-createButton">Create</button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <div id="allModalBackground" onClick={this.backgroundClick}>
+        <section className="serverForm">
+          <div className="serverForm-content">
+            <header className="serverForm-header">CREATE YOUR SERVER</header>
+            <p id="createYourServerIntro">You may create a server and enter an image url. Image upload coming soon.</p>
+            <form className="serverForm-form" onSubmit={this.handleSubmit}>
+              <label className="serverForm-label">Server name
+                <input
+                  className="serverForm-inputName"
+                  type="text"
+                  value={this.state.title}
+                  placeholder="Enter a server name"
+                  onChange={this.update('title')}>
+                </input>
+              </label>
+              <br />
+              <label className="serverForm-picLabel">Picture url
+                <input
+                  className="serverForm-inputPic"
+                  type="text"
+                  value={this.state.image_url}
+                  placeholder="Copy Paste Img Url"
+                  onChange={this.update('image_url')}>
+                </input>
+              </label>
+              <div className="backAndCreateButton">
+                <span className="serverForm-arrow">&#8592;</span>
+                <Link className="serverForm-backButton" to="/servers/createorjoin">Back</Link>
+                <button className="serverForm-createButton">Create</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
     ); // end return
   } // end render
 } // end class

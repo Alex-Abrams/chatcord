@@ -31,12 +31,12 @@ class ChannelIndex extends React.Component {
 
   handleNew() {
     const modalBackground = document.getElementById('modalBackground');
-    modalBackground.style.transition = "background-color 0.2s ease";
-    modalBackground.style.backgroundColor = "rgb(0, 0, 0)";
-    modalBackground.style.opacity = "0.9";
+    // modalBackground.style.transition = "background-color 0.2s ease";
+    // modalBackground.style.backgroundColor = "rgb(0, 0, 0)";
+    // modalBackground.style.opacity = "0.9";
     modalBackground.style.visibility = "visible";
-    // fullApp.style.zIndex = "5";
   }
+
 
   render() {
     const { channels, serverId, currentUser, logout, serverTitle } = this.props;

@@ -18,6 +18,8 @@ import JoinContainer from './link/join_container';
 import { RefreshedRoute } from '../util/refresh_route';
 import CommentsHeaderContainer from './comments/comments_header_container';
 
+import ModalBackground from './link/modal_background_container';
+
 
 const App = () => (
   <div className="wrapper">
@@ -43,9 +45,10 @@ const App = () => (
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
 
-      <div id="modalBackground"></div>
+
   </div>
 );
+// <div id="modalBackground"></div>
 
 export default App;
 

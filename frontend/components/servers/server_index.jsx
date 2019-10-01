@@ -4,12 +4,15 @@ import ServerIndexItem from './server_index_item';
 // can possibly have the loading come here
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelFormContainer from '../channels/channel_form_container';
+import ServerFormContainer from './server_form_container';
 //
 import Test from '../test_components/test3_route';
 
 class ServerIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    // this.handleNew = this.handleNew.bind(this);
   } // end constructor
 
 
@@ -17,6 +20,11 @@ class ServerIndex extends React.Component {
     this.props.requestAllServers();
     this.props.requestFofflines();
   }
+
+  // handleNew() {
+  //   const modalBackground = document.getElementById('modalBackground');
+  //   modalBackground.style.visibility = "visible";
+  // }
 
 
   render() {
