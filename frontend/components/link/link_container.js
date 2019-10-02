@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Link from './link';
+import LinkServer from './link';
 import { selectServerLink, selectServer } from '../../reducers/selectors';
 
 const mapStateToProps = (state, {match}) => {
@@ -16,4 +16,4 @@ const mapStateToProps = (state, {match}) => {
 export default connect(
   mapStateToProps,
   null
-)(Link);
+)(LinkServer);

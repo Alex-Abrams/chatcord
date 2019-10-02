@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Link extends React.Component {
+class LinkServer extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,12 +26,15 @@ class Link extends React.Component {
       <div id="allModalBackground">
         <div className="linkModal">
           <header className="linkModal-header">INVITE FRIENDS TO {server.title.toUpperCase()}</header>
-          <div className="leaveButton">X</div>
-          <p>Share this link with others to grant access to your server!</p>
-          <div className="linkmodal-box">
-            <input type="text" value={`${serverLink}`} id="linkInput">
+          <Link to="/servers" className="linkModal-leaveButton">&#215;</Link>
+          <p className="linkModal-para">Share this link with others to grant access to your server!</p>
+          <div className="linkModal-box">
+            <input type="text"
+              value={`${serverLink}`}
+              id="linkInput"
+              className="linkModal-input">
             </input>
-            <button onClick={this.copyInput}>Copy</button>
+            <button className="linkModal-copy" onClick={this.copyInput}>Copy</button>
           </div>
           <div>{serverLink}</div>
         </div>
@@ -40,4 +44,4 @@ class Link extends React.Component {
 }
 
 
-export default Link;
+export default LinkServer;

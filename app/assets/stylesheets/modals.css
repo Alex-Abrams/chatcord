@@ -1,0 +1,76 @@
+/* link server modal */
+.linkModal {
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  height: 110px;
+  color: white;
+  background-color: #474545;
+  padding-bottom: 100px;
+  font-size: 18px;
+  font-weight: 500;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  opacity: 1;
+}
+
+.linkModal-header {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 2px;
+  font-family: sans-serif;
+}
+
+.linkModal-leaveButton {
+  text-decoration: none;
+  color: #b9bbbe;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+}
+
+.linkModal-para {
+  color: #b9bbbe;
+  font-size: 14px;
+}
+
+.linkModal-box {
+  width: 90%;
+  font-size: 16px;
+}
+
+.linkModal-input {
+  height: 40px;
+  position: fixed;
+  width: 380px;
+  left: 20px;
+  border-radius: 3px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.linkModal-copy {
+  z-index: 30;
+  position: fixed;
+  top: 89px;
+  right: 25px;
+  color: #fff;
+  background-color: #7289da;
+  height: 36px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 6px 18px;
+  font-family: Arial;
+}

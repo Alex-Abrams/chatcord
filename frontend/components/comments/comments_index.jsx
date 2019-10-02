@@ -4,6 +4,7 @@ import CommentShow from './comment_show';
 import CommentForm from './comment_form';
 import FofflineContainer from '../foffline/foffline_container';
 
+
 class CommentsIndex extends React.Component {
   constructor(props) {
     super(props);
