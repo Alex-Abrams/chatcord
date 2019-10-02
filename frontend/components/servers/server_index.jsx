@@ -12,7 +12,6 @@ class ServerIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.handleNew = this.handleNew.bind(this);
   } // end constructor
 
 
@@ -21,18 +20,12 @@ class ServerIndex extends React.Component {
     this.props.requestFofflines();
   }
 
-  // handleNew() {
-  //   const modalBackground = document.getElementById('modalBackground');
-  //   modalBackground.style.visibility = "visible";
-  // }
-
 
   render() {
     const { servers, logout, currentUser, requestServerChannels } = this.props;
 
 
     const serversJoined = servers.filter(server => {
-      // return server.memberIds.includes(currentUser.id);
       return server.memberIds.includes(currentUser.id) || server.admin_id === currentUser.id;
     });
 

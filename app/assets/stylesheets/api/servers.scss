@@ -42,10 +42,14 @@
 }
 // this is actually the background for every modal popup (new server, new channel, etc)
 #allModalBackground {
-  position: absolute;
+  // position: absolute;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   height: 100%;
   width: 100%;
-  z-index: 7;
+  // z-index: 7;
+  z-index: 20;
   background-color: black;
   opacity: 0.9;
 }

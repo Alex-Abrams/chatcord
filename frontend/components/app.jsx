@@ -18,7 +18,6 @@ import JoinContainer from './link/join_container';
 import { RefreshedRoute } from '../util/refresh_route';
 import CommentsHeaderContainer from './comments/comments_header_container';
 
-import ModalBackground from './link/modal_background_container';
 
 
 const App = () => (
@@ -48,14 +47,5 @@ const App = () => (
 
   </div>
 );
-// <div id="modalBackground"></div>
 
 export default App;
-
-// <div className="commentsOfflineBox">
-
-
-
-
-//   <ProtectedRoute path="/servers" component={FofflineContainer} />
-// </div>

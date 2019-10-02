@@ -14,7 +14,7 @@ class ChannelIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleNew = this.handleNew.bind(this);
+    // this.handleNew = this.handleNew.bind(this);
   }
 
 
@@ -29,13 +29,13 @@ class ChannelIndex extends React.Component {
   }
 
 
-  handleNew() {
-    const modalBackground = document.getElementById('modalBackground');
-    // modalBackground.style.transition = "background-color 0.2s ease";
-    // modalBackground.style.backgroundColor = "rgb(0, 0, 0)";
-    // modalBackground.style.opacity = "0.9";
-    modalBackground.style.visibility = "visible";
-  }
+  // handleNew() {
+  //   const modalBackground = document.getElementById('modalBackground');
+  //   // modalBackground.style.transition = "background-color 0.2s ease";
+  //   // modalBackground.style.backgroundColor = "rgb(0, 0, 0)";
+  //   // modalBackground.style.opacity = "0.9";
+  //   modalBackground.style.visibility = "visible";
+  // }
 
 
   render() {
@@ -64,8 +64,7 @@ class ChannelIndex extends React.Component {
             <Link
               className="textChannel-plus"
               to={`/servers/${serverId}/channels/new`}
-              id="newChannel"
-              onClick={this.handleNew}>+</Link>
+              id="newChannel">+</Link>
             <span className="newChannel-widget-tooltip">Create Channel</span>
           </div>
         </div>
