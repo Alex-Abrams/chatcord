@@ -6,6 +6,7 @@ class LinkServer extends React.Component {
     super(props);
 
     this.copyInput = this.copyInput.bind(this);
+    this.backgroundClick = this.backgroundClick.bind(this);
   }
 
   copyInput() {
@@ -16,6 +17,11 @@ class LinkServer extends React.Component {
     alert("Copied" + copyText.value);
   }
 
+  backgroundClick(e) {
+    if (e.target.id === "allModalBackground") {
+      this.props.history.push("/servers");
+    };
+  }
 
   render() {
     const { serverId, serverLink, server } = this.props;
@@ -23,7 +29,7 @@ class LinkServer extends React.Component {
     // needs servertitle as well
 
     return(
-      <div id="allModalBackground">
+      <div id="allModalBackground" onClick={this.backgroundClick}>
         <div className="linkModal">
           <header className="linkModal-header">INVITE FRIENDS TO {server.title.toUpperCase()}</header>
           <Link to="/servers" className="linkModal-leaveButton">&#215;</Link>

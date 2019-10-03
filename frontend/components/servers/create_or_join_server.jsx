@@ -21,7 +21,6 @@ class CreateJoin extends React.Component {
   }
 
   backgroundClick(e) {
-    // this.props.history.push("/servers");
     if (e.target.id === "allModalBackground") {
       this.props.history.push("/servers");
     };

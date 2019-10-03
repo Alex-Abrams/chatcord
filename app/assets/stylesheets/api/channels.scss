@@ -64,7 +64,7 @@
   font-size: 14px;
 
   position: absolute;
-  right: 49px;
+  right: 44px;
   top: -40px;
   z-index: 1;
 }
@@ -88,16 +88,67 @@
 
 .newChannel-widget-tooltip:after {
   border-color: rgba(8, 3, 1, 0);
- border-top-color: #080301;
- border-width: 8px;
- margin-left: -8px;
+  border-top-color: #080301;
+  border-width: 8px;
+  margin-left: -8px;
 }
 
 .newChannel-widget-tooltip:before {
   border-color: rgba(5, 0, 0, 0);
- border-top-color: #050000;
- border-width: 5px;
- margin-left: -5px;
+  border-top-color: #050000;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+///////////////////////////////////////////////////
+// for the channel tooltips(create invite)
+.channel-invite-widget .channel-invite-widget-tooltip {
+  visibility: hidden;
+  background-color: black;
+  border: 3px solid black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 11px;
+
+  font-family: Arial;
+
+  white-space: nowrap;
+  font-size: 14px;
+
+  position: relative;
+  left: 95px;
+  top: -80px;
+  z-index: 1;
+}
+
+.channel-invite-widget:hover .channel-invite-widget-tooltip {
+  visibility: visible;
+}
+
+.channel-invite-widget-tooltip:after, .channel-invite-widget-tooltip:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.channel-invite-widget-tooltip:after {
+  border-color: rgba(8, 3, 1, 0);
+  border-top-color: #080301;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.channel-invite-widget-tooltip:before {
+  border-color: rgba(5, 0, 0, 0);
+  border-top-color: #050000;
+  border-width: 5px;
+  margin-left: -5px;
 }
 
 // the actual Channels

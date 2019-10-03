@@ -26,11 +26,11 @@ class ChannelShow extends React.Component {
           {channelDisplay}
         </span>
 
-        <span>
+        <span className="channel-invite-widget">
           <Link className="invite" id="invite"
             to={`/servers/${serverId}/channels/invite`}>&#9879;</Link>
+          <span className="channel-invite-widget-tooltip">Create Invite</span>
         </span>
-
       </div>
     )
   }
