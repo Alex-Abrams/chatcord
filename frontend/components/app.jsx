@@ -17,6 +17,7 @@ import CreateJoin from './servers/create_or_join_server';
 import JoinContainer from './link/join_container';
 import { RefreshedRoute } from '../util/refresh_route';
 import CommentsHeaderContainer from './comments/comments_header_container';
+import LogoutPopupContainer from './servers/logout_popup_container';
 
 
 
@@ -44,6 +45,7 @@ const App = () => (
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
 
+      <ProtectedRoute path="/servers/logout" component={LogoutPopupContainer} />
 
   </div>
 );

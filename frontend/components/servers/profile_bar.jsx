@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const ProfileBar = ({ currentUser, logout }) => {
   const name = currentUser.username;
-  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+  const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1); //could have used CSS for this
 
   const display = currentUser ? (
     <span className="profileBar">
       <div className="profileBar-name">{capitalizedName}</div>
-      <button className="profileBar-logout" onClick={logout}>Logout</button>
+      <Link to="/servers/logout" className="profileBar-logout">Logout</Link>
     </span>
   ) : (
     <div>
