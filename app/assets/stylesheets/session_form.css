@@ -22,11 +22,12 @@
   font-weight: 500;
 
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  left: 20%;
   transform: translate(-50%, -50%);
   z-index: 9;
   opacity: 1;
+  box-shadow: 1px 1px #7d7d7d;
 }
 
 .sessionForm-logSign {
@@ -45,6 +46,7 @@
   bottom: 35px;
   left: 160px;
   text-decoration: none;
+  color: #7289da;
 }
 
 .register:hover {
