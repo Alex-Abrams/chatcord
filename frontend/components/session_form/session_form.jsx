@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     };
     // this'' stuff area
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleLink = this.handleLink.bind(this);
   } //end constructor
   // basically for forms always gunna need a handleInput and handleSubmit
   handleInput(type) {
@@ -25,6 +26,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
+  }
+
+  handleLink() {
+    this.props.history.push('/servers');
   }
 
   renderErrors() {
@@ -44,54 +49,66 @@ class SessionForm extends React.Component {
     let displayForm;
     if (formType === 'login') {
       displayForm = (
-        <div>
-          <h2>Login</h2>
-          <p>Need an account?</p>
-          <Link to="/signup" className="signout-button">Sign up</Link>
+        <div className="sessionForm-logSign">
+          <h2 className="sessionForm-head">Login</h2>
+          <p className="sessionForm-info">Need an account?</p>
+          <Link to="/signup" className="register">Register</Link>
         </div>
       );
     } else {
       displayForm = (
-        <div>
-          <h2>Sign up</h2>
+        <div className="sessionForm-logSign">
+          <h2 className="sessionForm-head">Sign up</h2>
           <Link to="/login" className="login-btn">Login</Link>
         </div>
       )
     };
 
+    // <img className="sessionForm-backGround" width="3324" height="1870" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
+
     return(
-      <div className="formType">
-        { displayForm }
-        <form>
-          <br />
-          {this.renderErrors()}
-          <br />
-          <label>Email
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.handleInput('email')}>
-            </input>
-          </label>
-          <label>Username
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.handleInput('username')}>
-            </input>
-          </label>
-          <label>Password
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.handleInput('password')}>
-            </input>
-          </label>
-            <Link to="/servers" onClick={this.handleSubmit}>Login</Link>
-        </form>
+      <div>
+        <div>
+          <img className="sessionForm-backGround" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
+          </img>
+        </div>
+        <div className="formType">
+          { displayForm }
+          <form className="sessionForm-form">
+            <br />
+            {this.renderErrors()}
+            <br />
+            <label className="session-emailLabel">Email
+              <input
+                type="text"
+                className="session-emailInput"
+                value={this.state.email}
+                onChange={this.handleInput('email')}>
+              </input>
+            </label>
+            <label className="session-usernameLabel">Username
+              <input
+                type="text"
+                className="session-usernameInput"
+                value={this.state.username}
+                onChange={this.handleInput('username')}>
+              </input>
+            </label>
+            <label className="session-passwordLabel">Password
+              <input
+                type="password"
+                className="session-passwordInput"
+                value={this.state.password}
+                onChange={this.handleInput('password')}>
+              </input>
+            </label>
+            <button className="session-submit" onClick={(event) => {this.handleSubmit(event); this.handleLink();}}>Login</button>
+          </form>
+        </div>
       </div>
     );
   };// end return
 };// end class
+// <Link className="session-submit" to="/servers" onClick={this.handleSubmit}>Login</Link>
 
 export default SessionForm;

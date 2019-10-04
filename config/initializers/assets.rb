@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( second.css )
 Rails.application.config.assets.precompile += %w( modals.css )
+Rails.application.config.assets.precompile += %w( session_form.css )

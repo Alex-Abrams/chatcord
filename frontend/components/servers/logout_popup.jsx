@@ -29,7 +29,6 @@ class LogoutPopup extends React.Component {
           </div>
         </div>
       </div>
-
     );
   }
 }
