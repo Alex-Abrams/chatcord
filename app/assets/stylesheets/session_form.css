@@ -158,3 +158,16 @@
 .session-submit:hover {
   background-color: #6579bf;
 }
+
+.login-link {
+  position: fixed;
+  bottom: 35px;
+  color: #7289da;
+  left: 25px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

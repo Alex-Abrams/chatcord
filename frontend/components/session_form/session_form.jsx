@@ -58,8 +58,8 @@ class SessionForm extends React.Component {
     } else {
       displayForm = (
         <div className="sessionForm-logSign">
-          <h2 className="sessionForm-head">Sign up</h2>
-          <Link to="/login" className="login-btn">Login</Link>
+          <h2 className="sessionForm-head">Create an Account</h2>
+          <Link to="/login" className="login-link">Already have an account?</Link>
         </div>
       )
     };

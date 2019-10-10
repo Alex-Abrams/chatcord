@@ -58,6 +58,7 @@
 
    left: 4px;
    top: 8px;
+   white-space: nowrap;
  }
 
  .server-tooltip-text:after, .server-tooltip-text:before {
@@ -99,7 +100,8 @@
    color: #43b581;
    text-decoration: none;
    border-radius: 50%;
-   background-color: #292b2f;
+   /* background-color: #292b2f; */
+   background-color: #313338;
    padding: 3px;
 
    position: relative;

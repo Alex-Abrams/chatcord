@@ -5,6 +5,7 @@ import ServerIndexItem from './server_index_item';
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelFormContainer from '../channels/channel_form_container';
 import ServerFormContainer from './server_form_container';
+import ProfileBar from './profile_bar';
 //
 import Test from '../test_components/test3_route';
 
@@ -23,6 +24,12 @@ class ServerIndex extends React.Component {
 
   render() {
     const { servers, logout, currentUser, requestServerChannels } = this.props;
+
+    const profileBar = currentUser ? (
+      <ProfileBar logout={logout} currentUser={currentUser} />
+    ) : (
+      null
+    );
 
 
     const serversJoined = servers.filter(server => {
@@ -43,6 +50,10 @@ class ServerIndex extends React.Component {
               <span className="new-server-widget-tooltip">Add a Server</span>
             </span>
         </ul>
+
+        <div className="profile-bar">
+        {profileBar}
+        </div>
       </aside>
     ); // end return
   }// end render

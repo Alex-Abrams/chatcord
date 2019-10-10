@@ -29,15 +29,6 @@ class ChannelIndex extends React.Component {
   }
 
 
-  // handleNew() {
-  //   const modalBackground = document.getElementById('modalBackground');
-  //   // modalBackground.style.transition = "background-color 0.2s ease";
-  //   // modalBackground.style.backgroundColor = "rgb(0, 0, 0)";
-  //   // modalBackground.style.opacity = "0.9";
-  //   modalBackground.style.visibility = "visible";
-  // }
-
-
   render() {
     const { channels, serverId, currentUser, logout, serverTitle } = this.props;
 
@@ -92,12 +83,12 @@ class ChannelIndex extends React.Component {
             <RefreshedRoute path="/servers/:serverId/channels/invite" component={LinkContainer} />
         </span>
 
-        <div className="profile-bar">
-        {profileBar}
-        </div>
       </aside>
     );
   }
 }
+// <div className="profile-bar">
+//   {profileBar}
+// </div>
 
 export default ChannelIndex;

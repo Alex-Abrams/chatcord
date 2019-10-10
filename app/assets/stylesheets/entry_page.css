@@ -1,0 +1,59 @@
+.entryPage-leftBar {
+  position: fixed;
+  left: 58px;
+  height: 98%;
+  width: 242px;
+  background-color: #313338;
+  z-index: 3;
+}
+
+.entryPage-dmHeader {
+  position: fixed;
+  top: 250px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: Arial;
+  white-space: nowrap;
+  color: #b9bbbe;
+  margin-left: 10px;
+}
+
+.entryPage-backGround {
+  height: 100%;
+  position: absolute;
+  left: 297px;
+  top: 0;
+  width: 90%;
+  background-color: #36383d;
+}
+
+.entryPage-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.entryPage-buttons:first-child {
+  margin-top: 50px;
+}
+
+.entryPage-buttons > button {
+  color: blue;
+  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 3px;
+  border: none;
+  text-align: left;
+  color: #b9bbbe;
+  background-color: #313338;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.entryPage-buttons > button:hover {
+  background-color: #3e4045;
+  color: white;
+}
