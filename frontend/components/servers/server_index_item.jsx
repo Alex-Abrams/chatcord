@@ -4,7 +4,6 @@ import { withRouter } from 'react-router';
 ///
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelIndex from '../channels/channel_index';
-import TestRoute from '../test_components/test_route';
 import ChannelFormContainer from '../channels/channel_form_container';
 ///
 

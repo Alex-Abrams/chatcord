@@ -7,7 +7,6 @@ import ChannelFormContainer from '../channels/channel_form_container';
 import ServerFormContainer from './server_form_container';
 import ProfileBar from './profile_bar';
 //
-import Test from '../test_components/test3_route';
 
 class ServerIndex extends React.Component {
   constructor(props) {

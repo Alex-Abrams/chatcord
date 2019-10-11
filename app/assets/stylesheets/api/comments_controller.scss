@@ -5,23 +5,23 @@
 // comments CSS
 
 .commentsHeader {
-  border: 2px solid black;
+  border-bottom: 1px solid #202124;
   width: 91.5%;
   position: absolute;
   left: 299px;
   top: 0px;
   z-index: 1;
-  height: 45px;
+  height: 47px;
 }
 
 .commentsHeaderSmall {
-  border: 2px solid black;
+  border: 1px solid #202124;
   width: 81.8%;
   position: absolute;
   left: 299px;
   top: 0px;
   z-index: 1;
-  height: 45px;
+  height: 47px;
 }
 
 .commentsHeader-hastag {
@@ -43,10 +43,12 @@
   font-size: 20px;
   font-weight: 500;
   margin-right: 5px;
+  color: red;
 }
 
 #timeStamp {
-  font-size: 14px;
+  font-size: 11px;
+  color: #999b9e;
 }
 
 .main {
@@ -60,19 +62,19 @@
 #comment-line {
   list-style-type: none;
   padding: 0;
+  color: #b2b4b8;
 }
 
 // individual comments
 .comment {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #434445;
   margin-right: 20px;
 }
 
 // for small comment small screen
 .commentSmall {
-  // width: 85%;
   width: 95%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #434445;
   margin-right: 20px;
 }
 
@@ -100,9 +102,6 @@
 #comment-Button {
   visibility: hidden;
 }
-
-
-
 
 .commentForm-input {
   width: 100%;

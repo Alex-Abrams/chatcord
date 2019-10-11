@@ -4,7 +4,7 @@ html {
 
 body {
   /* min-height: 100%; */
-  background-color: teal;
+  background-color: #36383d;
   min-height: 100vh;
   /* width: 100%; */
   width: 100vw;
@@ -32,7 +32,7 @@ body {
 }
 
 .aside-channels {
-  background-color: pink;
+  background-color: #313338;
   position: absolute;
   height: 100%;
   width: 241px;
@@ -43,7 +43,7 @@ body {
 /* comments-main */
 .default {
   text-align: left;
-  background: deepskyblue;
+  background: #36383d;
   position: absolute;
   top: 48px;
   left: 299px;
@@ -55,7 +55,7 @@ body {
 
 .defaultSmall {
   text-align: left;
-  background: deepskyblue;
+  background: #36383d;
   position: absolute;
   top: 48px;
   left: 299px;
@@ -67,7 +67,7 @@ body {
 
 .main {
   text-align: left;
-  background: deepskyblue;
+  background: #36383d;
   position: absolute;
   top: 48px;
   left: 299px;
@@ -79,7 +79,7 @@ body {
 
 .mainSmall {
   text-align: left;
-  background: deepskyblue;
+  background: #36383d;
   position: absolute;
   top: 48px;
   left: 299px;
@@ -104,17 +104,25 @@ body {
 }
 
 .aside-offline {
-  background: hotpink;
+  background-color: #313338;
   position: absolute;
+  color: red;
 
   /* z-index: 1; */
   width: 250px;
   right: 0px;
   top: 0px;
   height: 100%;
+  font-size: 18px;
 }
 
+.offline-Names {
+  list-style-type: none;
+}
 
+.offline-Names > li {
+  padding-bottom: 20px;
+}
 
 /* end of layout */
 
@@ -129,20 +137,21 @@ body {
 /* profile bar and logout button */
 
 .profileBar {
-  /* border: 2px solid black; */
   position: absolute;
   bottom: 0px;
   left: 58px;
   width: 241px;
   height: 52px;
   z-index: 5;
-  background-color: green;
+  background-color: #313338;
+  border-top: 1px solid #202124;
   text-align: left;
 }
 
 .profileBar-name {
-  /* position: relative; */
+  color: white;
   margin-right: 30px;
+  padding-left: 30px;
   float: left;
   position: relative;
   top: 18px;
@@ -154,4 +163,7 @@ body {
   float: left;
   position: relative;
   bottom: 6px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }

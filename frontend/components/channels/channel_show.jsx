@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, NavLink, Link } from 'react-router-dom';
-// import  MessageBoardContainer from '../msg_board/message_board_container';
 import ChannelFormContainer from './channel_form_container';
 
 class ChannelShow extends React.Component {

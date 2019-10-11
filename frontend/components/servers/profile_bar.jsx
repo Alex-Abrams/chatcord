@@ -8,7 +8,7 @@ const ProfileBar = ({ currentUser, logout }) => {
   const display = currentUser ? (
     <span className="profileBar">
       <div className="profileBar-name">{capitalizedName}</div>
-      <Link to="/servers/logout" className="profileBar-logout">Logout</Link>
+      <Link to="/servers/logout" className="profileBar-logout">&#9733;</Link>
     </span>
   ) : (
     <div>

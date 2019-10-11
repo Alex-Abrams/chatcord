@@ -17,7 +17,7 @@ class FofflineList extends React.Component {
     return(
       <aside className="aside aside-offline" background="hotpink">
         <div className={this.test}></div>
-        <ul>
+        <ul className="offline-Names">
           {offlineList.map(el =>
           <li>{el}</li>)}
         </ul>
