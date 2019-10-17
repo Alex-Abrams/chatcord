@@ -23,12 +23,6 @@ class MessageBoard extends React.PureComponent {
   render() {
     const { channelId, messageBoards } = this.props;
 
-    // console.log(messageBoards[channelId] === undefined ? null : messageBoards[channelId].title);
-
-    // let title = messageBoards[channelId] === undefined ? null : messageBoards[channelId].title;
-    //
-    // console.log(title);
-
     return (
         <div class="messageBoard">
           <header class="messageBoard-header">{channelId}</header>

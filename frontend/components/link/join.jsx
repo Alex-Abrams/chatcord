@@ -22,7 +22,6 @@ class Join extends React.Component {
     e.preventDefault();
     if (this.props.links.includes(this.state.link)) {     // links array of ALL the links(selector)
       this.setState({ joinError: false });
-      // console.log(this.state);
       let server_Id = parseInt((this.state.link)[20]);    // a sorta simple measure, the serverId is imbedded in the link code
       this.props.createMembership(this.props.currentUserId, server_Id); // need user_id and server_id
     } else {
