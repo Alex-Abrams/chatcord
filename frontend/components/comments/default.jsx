@@ -21,9 +21,11 @@ class WelcomeComments extends React.Component {
 
     return(
       <div className={smallScreen}>
-        <header>Welcome!</header>
-        <p>If you are using the default login guest@guest.com, username: guest, password:password
-        then you are the admin for each server and may create new channels and any server as well as delete any server. Enjoy!</p>
+        <div className="default-content">
+          <header>Welcome!</header>
+          <p>If you are using the default login guest@guest.com, username: guest, password:password
+            then you are the admin for each server and may create new channels and any server as well as delete any server. Enjoy!</p>
+        </div>
       </div>
     );
   }

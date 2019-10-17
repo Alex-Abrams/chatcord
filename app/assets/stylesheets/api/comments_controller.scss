@@ -30,6 +30,7 @@
   font-weight: bold;
   font-size: 24px;
   top: 8px;
+  color: #b9bbbe;
 }
 
 .commentsHeader-title {
@@ -37,6 +38,7 @@
   left: 35px;
   font-size: 18px;
   top: 10px;
+  color: white;
 }
 
 .comment-name {
@@ -51,12 +53,6 @@
   color: #999b9e;
 }
 
-.main {
-
-}
-
-.main-list {
-}
 
 // individual comments
 #comment-line {
@@ -105,4 +101,9 @@
 
 .commentForm-input {
   width: 100%;
+}
+
+.default-content {
+  color: red;
+  font-size: 20px;
 }

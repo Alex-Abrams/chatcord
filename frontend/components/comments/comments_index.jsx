@@ -36,7 +36,6 @@ class CommentsIndex extends React.Component {
   render() {
     const { currentUserName, comments, channel_id, title, currentUser, createComment } = this.props;
 
-              /// prolly dont need currentUserName
     const commentsFilter = comments.filter(comment => {
       return comment.channel_id === channel_id;
     });
