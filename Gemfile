@@ -29,6 +29,8 @@ gem 'jquery-ui-rails'
 
 gem 'faker'
 
+gem 'rails_12factor'
+
 # gem 'capybara-webkit'
 
 
