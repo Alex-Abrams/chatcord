@@ -21,6 +21,7 @@
 /yarn-error.log
 
 bundle.js
+bundle.js*
 bundle.js.map
 node_modules/
 
