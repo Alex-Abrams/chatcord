@@ -145,3 +145,56 @@
   cursor: pointer;
   background-color: #f04747;
 }
+
+.demoToolTip {
+  position: relative;
+  background: #0a0d0f;
+  border-radius: 6px;
+  color:  #7289da;
+  width: 450px;
+  height: 300px;
+
+  left: 500px;
+  top: -60px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  font-weight: 600;
+  visibility: hidden;
+}
+
+.demoToolTip:after, .demoToolTip:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.demoToolTip:after {
+	border-color: rgba(10, 13, 15, 0);
+	border-right-color: #0a0d0f;
+	border-width: 30px;
+	margin-top: -30px;
+}
+
+.demoToolTip:before {
+	border-color: rgba(194, 225, 245, 0);
+	/* border-right-color: #c2e1f5; */
+	border-width: 36px;
+	margin-top: -36px;
+}
+
+.demoToolTip > h3 {
+  text-align: center;
+}
+
+.demoToolTip > span {
+  margin-bottom: 40px;
+  margin-left: 20px;
+  font-size: 18px;
+  color: white;
+}

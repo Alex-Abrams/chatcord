@@ -65,6 +65,15 @@ class SessionForm extends React.Component {
     };
 
 
+    const demoToolTip = (
+      <div className="demoToolTip">
+        <h3>For demo purposes it is recommended to use guest credentials:</h3>
+        <span>Email: guest&#64;guest.com</span>
+        <span>Username: guest</span>
+        <span>Password: password</span>
+      </div>
+    );
+
     // <img className="sessionForm-backGround" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
     return(
       <div>
@@ -103,6 +112,9 @@ class SessionForm extends React.Component {
               </input>
             </label>
             <button className="session-submit" onClick={(event) => {this.handleSubmit(event); this.handleLink();}}>Login</button>
+            <div>
+              { demoToolTip }
+            </div>
           </form>
         </div>
       </div>
