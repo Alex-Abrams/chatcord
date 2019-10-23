@@ -64,12 +64,12 @@ class SessionForm extends React.Component {
       )
     };
 
-    // <img className="sessionForm-backGround" width="3324" height="1870" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
 
+    // <img className="sessionForm-backGround" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
     return(
       <div>
         <div>
-          <img className="sessionForm-backGround" src="https:/discordapp.com/assets/fd91131ea693096d6be5e8aa99d18f9e.jpg" alt="">
+            <img className="sessionForm-backGround" src={window.sessionURL} alt="">
           </img>
         </div>
         <div className="formType">

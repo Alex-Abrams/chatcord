@@ -21,16 +21,21 @@ user4 = User.create!(username: 'guest3', password: 'password', email: 'guest3@gu
 user5 = User.create!(username: 'guest4', password: 'password', email: 'guest4@guest.com')
 
 
+# def grab_image(image_file)
+#   File.open(File.join(Rails.root, "/app/assets/images/#{image_file}"))
+# end
+
+
 server1 = Server.create(title: "server1",
   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id, link: "https://chatcord.gg/" + "1zr" + rand(111...999).to_s)
 server2 = Server.create(title: "Fun Times",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user3.id, link: "https://chatcord.gg/" + "2qa" + rand(111...999).to_s)
+   image_url: "https://cdn.pixabay.com/photo/2019/10/17/12/20/turkeys-4556812_960_720.jpg", admin_id: user3.id, link: "https://chatcord.gg/" + "2qa" + rand(111...999).to_s)
 server3 = Server.create(title: "Lets Rock!",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "3pt" + rand(111...999).to_s)
+   image_url: "https://cdn.pixabay.com/photo/2019/10/16/18/52/wild-birds-4555168_960_720.jpg", admin_id: user4.id, link: "https://chatcord.gg/" + "3pt" + rand(111...999).to_s)
 server4 = Server.create(title: "The Guild",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "4lk" + rand(111...999).to_s)
+   image_url: "https://cdn.pixabay.com/photo/2019/10/16/10/12/double-exposure-4554077_960_720.jpg", admin_id: user4.id, link: "https://chatcord.gg/" + "4lk" + rand(111...999).to_s)
 server5 = Server.create(title: "Jam Ultra Mega",
-   image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user4.id, link: "https://chatcord.gg/" + "5zk" + rand(111...999).to_s)
+   image_url: "https://cdn.pixabay.com/photo/2019/10/05/06/04/disc-4527065__340.png", admin_id: user4.id, link: "https://chatcord.gg/" + "5zk" + rand(111...999).to_s)
 
 user1joins1 = ServerMember.create(user_id: user1.id, server_id: server1.id)
 user1joins2 = ServerMember.create(user_id: user1.id, server_id: server2.id)

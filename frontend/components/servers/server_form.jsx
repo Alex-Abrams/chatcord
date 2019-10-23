@@ -14,15 +14,15 @@ class ServerForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.backgroundClick = this.backgroundClick.bind(this);
+    this.randomPicture = this.randomPicture.bind(this);
   } // end constructor
 
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.createServer(this.state);
-    // .then(() => this.props.history.push('/servers/'));
-    this.props.history.push('/servers/');
+  randomPicture() {
+    let pics = [window.carURL, window.crowURL, window.earthURL, window.heartURL, window.orangeURL, window.tigerURL];
+    let randoNum = [Math.floor(Math.random() * 6)];
+    return pics[randoNum];
   }
+
 
   backgroundClick(e) {
     if (e.target.id === "allModalBackground") {
@@ -30,9 +30,22 @@ class ServerForm extends React.Component {
     };
   }
 
-
   update(property) {
     return e => this.setState({ [property]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    if (this.state.image_url.length <= 5) {
+      let defaultPic = this.randomPicture();
+      this.props.createServer({ title: this.state.title, image_url: defaultPic });
+
+    } else {
+      this.props.createServer(this.state);
+    };
+
+    // this.props.createServer(this.state);
+    this.props.history.push('/servers/');
   }
 
   render () {

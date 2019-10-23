@@ -16,6 +16,7 @@ class Api::ServersController < ApplicationController
 
     if @server.image_url.length == 0
         @server.image_url = "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"
+        # @server.image_url = image_path("car.png")
     end
 
     if @server.save
@@ -58,5 +59,9 @@ class Api::ServersController < ApplicationController
     2.times { result += rand(97..122).chr }
     result
   end
+
+  # def random_picture
+  #
+  # end
 
 end

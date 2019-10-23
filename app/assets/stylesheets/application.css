@@ -37,6 +37,7 @@
  .discord-server-icon {
    height: 50px;
    width: 50px;
+   border-radius: 50%;
  }
 
  .server-tooltip .server-tooltip-text {
