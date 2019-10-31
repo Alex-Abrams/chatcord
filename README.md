@@ -4,10 +4,12 @@ Welcome to ChatCord!  Chatcord is an application that allows users to create the
 
 
 Link to Live Application:
+    https://chat-cord.herokuapp.com/#/log
 
 
-MVP????
-
-Schema: 
-++servers++
-++user id
+The project's wiki contains outlines for: 
+  - Database Schema
+  - Backend Routes
+  - Frontend Routes
+  - Sample State
+  - Snippets of code that solved challenging problems
