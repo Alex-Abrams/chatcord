@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import { createChannel, requestServerChannels } from '../../actions/channel_actions';
 import { findActiveServer } from '../../reducers/selectors';
-// import { createMessageBoard } from '../../actions/msg_board_actions';
 
 
 const mapStateToProps = (state, {match}) => {

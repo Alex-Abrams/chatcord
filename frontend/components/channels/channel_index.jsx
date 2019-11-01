@@ -14,7 +14,6 @@ class ChannelIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.handleNew = this.handleNew.bind(this);
   }
 
 

@@ -8,7 +8,7 @@ const Refresh = ({ component: Component, path, isDataAvailable, exact }) => (
      !isDataAvailable ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/servers/1/channels" />
+      <Redirect to="/servers" />
     )
   )} />
 );

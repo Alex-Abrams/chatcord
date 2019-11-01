@@ -14,10 +14,8 @@ class CommentShow extends React.Component {
 
 /////////////////////////////
     const lineStarter = (comment) => {
-      // let length = comment.length;
-      let lines = comment.length / 170;
+      let lines = comment.length / 170;  //determine how many segments of 170
       let round = Math.floor(lines);
-
       let segments = (lines % 1 === 0) ? round : round + 1;
       let lineArray = [];
       let copyComment = comment;

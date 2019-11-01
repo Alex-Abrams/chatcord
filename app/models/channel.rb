@@ -17,10 +17,6 @@ class Channel < ApplicationRecord
     foreign_key: :server_id,
     class_name: :Server
 
-  # has_one :message_board,       #get rid of this
-  #   primary_key: :id,
-  #   foreign_key: :channel_id,
-  #   class_name: :MessageBoard
 
   has_many :comments,
     primary_key: :id,

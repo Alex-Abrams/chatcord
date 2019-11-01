@@ -28,9 +28,7 @@ const App = () => (
       <ProtectedRoute exact path="/" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers" component={ServerIndexContainer} />
       <ProtectedRoute path="/servers/createorjoin" component={CreateJoin} />
-
       <ProtectedRoute exact path="/servers/join" component={JoinContainer} />
-
       <ProtectedRoute exact path="/servers/new" component={ServerFormContainer} />
 
       <Switch>
@@ -44,9 +42,7 @@ const App = () => (
         </Switch>
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />
-
       <ProtectedRoute path="/servers/logout" component={LogoutPopupContainer} />
-
       <ProtectedRoute exact path="/servers" component={EntryPage} />
 
   </div>

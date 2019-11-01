@@ -8,7 +8,7 @@ class ModalBackground extends React.Component {
   }
 
   backgroundClick() {
-    this.props.history.push("/servers");
+    this.props.history.push("/servers");  //These entire page servers as a low opacity redirecting background
   }
 
   render() {

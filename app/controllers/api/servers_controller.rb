@@ -60,8 +60,5 @@ class Api::ServersController < ApplicationController
     result
   end
 
-  # def random_picture
-  #
-  # end
 
 end
