@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to ChatCord!  Chatcord is an application that allows users to create their own servers and channels to use as public forums.  Users can join or create servers, or invite other users to servers using unique server keys links.  Admin of servers can create and manage the channels on their server.  Users can post messages in these channels.  
 
-Things you may want to cover:
 
-* Ruby version
+Link to Live Application:
+    https://chat-cord.herokuapp.com/#/log
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project's wiki contains outlines for: 
+  - Database Schema
+  - Backend Routes
+  - Frontend Routes
+  - Sample State
+  - Snippets of code that solved challenging problems
