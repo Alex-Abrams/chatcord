@@ -16,7 +16,7 @@ Welcome to ChatCord!  Chatcord is an application that allows users to create the
 
 ## A few challenging problems I faced with the solutions I used to solve them:
 
--A problem arosed when I began working on a larger screen than my laptop and was putting on the finishing CSS touches to the app.  The containers were not variable enough for small to large screens and vice versa.  My solution was to take advantage of the React local state and lifecycle changes to recognized a need to resize the variable containers.
+-  A problem arosed when I began working on a larger screen than my laptop and was putting on the finishing CSS touches to the app.  The containers were not variable enough for small to large screens and vice versa.  My solution was to take advantage of the React local state and lifecycle changes to recognized a need to resize the variable containers.
 
   In CommentsIndexContainer, CommentsHeader, and CommentsForm my constructor was as follows:
 
@@ -69,4 +69,4 @@ Then I checked if servers were available in the state:
 
         export const RefreshedRoute = withRouter(connect(mapStateToProps, null)(Refresh));
 
-Now I can export RefreshRoute in order to catch any potential container from crashing.
+Now I can export RefreshRoute for use in any route that might need to catch any potential container from crashing by redirecting to a container does not require pass down props.
