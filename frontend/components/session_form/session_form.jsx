@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleLink = this.handleLink.bind(this);
   } //end constructor
-  // basically for forms always gunna need a handleInput and handleSubmit
+
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value });

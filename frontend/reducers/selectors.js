@@ -1,5 +1,3 @@
-// export const findActiveServer = state => state.entities.activeServer.serverId;
-
 export const selectAllServers = state => Object.values(state.entities.servers);
 
 export const selectAllComments = state => Object.values(state.entities.comments);

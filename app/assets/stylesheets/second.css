@@ -91,14 +91,14 @@ body {
 
 .main-list {
   width: 91.1%;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
   height: 95%;
 }
 
 .main-list-small {
   width: 79.5%;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
   height: 95%;
 }
@@ -118,10 +118,13 @@ body {
 
 .offline-Names {
   list-style-type: none;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .offline-Names > li {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 /* end of layout */

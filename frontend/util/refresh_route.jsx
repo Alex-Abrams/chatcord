@@ -3,9 +3,10 @@ import { connect } from "react-redux";
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 
-const Refresh = ({ component: Component, path, isDataAvailable, exact }) => (
+
+const Refresh = ({ component: Component, path, serversAvailable, exact }) => (
   <Route path={path} exact={exact} render={(props) => (
-     !isDataAvailable ? (
+     !serversAvailable ? (
       <Component {...props} />
     ) : (
       <Redirect to="/servers" />
@@ -13,9 +14,9 @@ const Refresh = ({ component: Component, path, isDataAvailable, exact }) => (
   )} />
 );
 
+
 const mapStateToProps = state => {
-  return {isDataAvailable: Boolean(Object.values(state.entities.servers).length === 0)};
+  return {serversAvailable: Boolean(Object.values(state.entities.servers).length === 0)};
 };
 
-
-export const RefreshedRoute = withRouter(connect(mapStateToProps)(Refresh));
+export const RefreshedRoute = withRouter(connect(mapStateToProps, null)(Refresh));
