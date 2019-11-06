@@ -36,7 +36,7 @@ Run: `bundle install` to install necessary gems.
  I then used the lifecycle method, componentDidMount, to detect a screen change:
 
         componentDidMount() {
-          if (window.innerWidth < 1800) {
+          if (window.innerWidth < 1950) {
             this.setState({ smallScreen: !this.state.smallScreen });
           };
         }

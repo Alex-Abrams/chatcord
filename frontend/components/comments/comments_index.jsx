@@ -20,7 +20,7 @@ class CommentsIndex extends React.Component {
     if (isNaN(this.props.channel_id) === false) {
       this.props.requestAllComments(this.props.channel_id);
     };
-    if (window.innerWidth < 1800) {
+    if (window.innerWidth < 1950) {
       this.setState({ smallScreen: !this.state.smallScreen });
     };
   }

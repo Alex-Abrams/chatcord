@@ -10,7 +10,7 @@ class WelcomeComments extends React.Component {
   }
 
   componentDidMount() {
-    if (window.innerWidth < 1800) {
+    if (window.innerWidth < 1950) {
       this.setState({ smallScreen: !this.state.smallScreen });
     };
   }
