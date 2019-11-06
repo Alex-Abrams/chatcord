@@ -7,7 +7,7 @@ Welcome to ChatCord!  Chatcord is an application that allows users to create the
 
 
 ## Link to Live Application:
-    https://chat-cord.herokuapp.com/#/log
+    https://chat-cord.herokuapp.com/#/login
 
 
 ## The project's wiki contains outlines for:
