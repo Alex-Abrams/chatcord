@@ -17,6 +17,12 @@ Welcome to ChatCord!  Chatcord is an application that allows users to create the
   - Sample State
 
 
+## Installation and usage
+Ruby version: `ruby '2.6.3'`
+
+Run: `bundle install` to install necessary gems.
+
+
 ## A few challenging problems I faced with the solutions I used to solve them:
 
 -  A problem arosed when I began working on a larger screen than my laptop and was putting on the finishing CSS touches to the app.  The containers were not variable enough for small to large screens and vice versa.  My solution was to take advantage of the React local state and lifecycle changes to recognized a need to resize the variable containers.
