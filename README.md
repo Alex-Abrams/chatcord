@@ -3,7 +3,7 @@
 ![Login Example](app/assets/images/login_example.png)
 ![Chat Example](app/assets/images/chat_example.png)
 
-Welcome to ChatCord!  Chatcord is an application that allows users to create their own servers and channels to use as public forums.  Users can join or create servers, or invite other users to servers using unique server keys links.  Admin of servers can create and manage the channels on their server.  Users can post messages in these channels.  
+Welcome to ChatCord!  Chatcord is an application that allows users to create their own servers and channels to use as public forums.  Users can join or create servers, or invite other users to servers using unique server keys links.  Admin of servers can create and manage the channels on their server.  Server Members can post messages in these channels.  
 
 
 ## Link to Live Application:
@@ -25,7 +25,7 @@ Run: `bundle install` to install necessary gems.
 
 ## A few challenging problems I faced with the solutions I used to solve them:
 
--  A problem arosed when I began working on a larger screen than my laptop and was putting on the finishing CSS touches to the app.  The containers were not variable enough for small to large screens and vice versa.  My solution was to take advantage of the React local state and lifecycle changes to recognized a need to resize the variable containers.
+-  A problem arose when I began working on a larger screen than my laptop and was putting on the finishing CSS touches to the app.  The containers were not variable enough for small to large screens and vice versa.  My solution was to take advantage of the React local state and lifecycle changes to recognized a need to resize the variable containers.
 
   In CommentsIndexContainer, CommentsHeader, and CommentsForm my constructor was as follows:
 
