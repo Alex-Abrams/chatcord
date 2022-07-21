@@ -146,28 +146,52 @@ body {
   width: 241px;
   height: 52px;
   z-index: 5;
-  background-color: #313338;
+  background-color: #252526;
   border-top: 1px solid #202124;
-  text-align: center;
-  /* align-content: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  font-weight: bold;
 }
+
+.profileBar-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
 
 .profileBar-name {
   color: white;
-  margin-right: 30px;
-  padding-left: 30px;
-  float: left;
-  position: relative;
+  /* margin-right: 30px;
+  padding-left: 30px; */
+  /* float: left; */
+  /* position: relative; */
   top: 18px;
-  font-size: 24px;
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.mic-icon {
+  margin-top: 13px;
+}
+
+.headphones-icon {
+  margin-top: 13px;
+}
+
+.cog-icon {
+  margin-top: 13px;
 }
 
 .profileBar-logout {
-  margin-left: 150px;
-  float: left;
-  position: relative;
-  bottom: 6px;
+  /* margin-left: 150px; */
+  /* float: left; */
+  /* position: relative; */
+  /* bottom: 6px; */
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
 }

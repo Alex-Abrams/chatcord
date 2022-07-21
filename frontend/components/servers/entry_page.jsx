@@ -27,6 +27,8 @@ class EntryPage extends React.Component {
         <div>
           <img className="entryPage-backGround" src="https://discordapp.com/assets/c486dc65ce2877eeb18e4c39bb49507a.svg"></img>
         </div>
+
+        <ProfileBarContainer />
       </div>
     );
   }
