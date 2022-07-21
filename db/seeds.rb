@@ -5,14 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.delete_all
-Server.delete_all
-Channel.delete_all
-MessageBoard.delete_all
-Comment.delete_all
-Foffline.delete_all
-
-ServerMember.delete_all
+# User.delete_all
+# Server.delete_all
+# Channel.delete_all
+# MessageBoard.delete_all
+# Comment.delete_all
+# Foffline.delete_all
+#
+# ServerMember.delete_all
 
 user1 = User.create!(username: 'guest', password: 'password', email: 'guest@guest.com')
 user2 = User.create!(username: 'guest1', password: 'password', email: 'guest1@guest.com')

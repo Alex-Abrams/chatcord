@@ -17,7 +17,7 @@ class ServerIndexItem extends React.Component {
     const { server, serverId, channelIds } = this.props;
 
     return (
-      <div class="server">
+      <div className="server">
         <span id="s-list">
           <li>
             <div className="server-list">

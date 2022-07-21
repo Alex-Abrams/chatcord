@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
     filename: 'bundle.js'
   },
+  mode: 'development',
   module: {
     rules: [
       {
@@ -28,4 +29,4 @@ module.exports = {
 };
 
 
-////////////////////////
+//////////////////////// query might need to change to options
