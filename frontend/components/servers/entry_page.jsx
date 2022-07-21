@@ -1,6 +1,8 @@
 // this is essentially the home page and is mostly for show
 
 import React from 'react';
+// import ProfileBar from './profile_bar';
+import ProfileBarContainer from './profile_bar_container';
 
 
 class EntryPage extends React.Component {

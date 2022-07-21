@@ -50,9 +50,12 @@ class ServerIndex extends React.Component {
             </span>
         </ul>
 
-        <div className="profile-bar">
-        {profileBar}
-        </div>
+        {/*
+          <div className="profile-bar">
+          {profileBar}
+          </div>
+          */}
+
       </aside>
     ); // end return
   }// end render

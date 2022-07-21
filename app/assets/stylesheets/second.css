@@ -148,7 +148,8 @@ body {
   z-index: 5;
   background-color: #313338;
   border-top: 1px solid #202124;
-  text-align: left;
+  text-align: center;
+  /* align-content: center; */
 }
 
 .profileBar-name {
