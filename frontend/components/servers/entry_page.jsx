@@ -4,7 +4,6 @@ import React from 'react';
 // import ProfileBar from './profile_bar';
 import ProfileBarContainer from './profile_bar_container';
 
-
 class EntryPage extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,10 @@ class EntryPage extends React.Component {
           <img className="entryPage-backGround" src="https://discordapp.com/assets/c486dc65ce2877eeb18e4c39bb49507a.svg"></img>
         </div>
 
-        <ProfileBarContainer />
+        <div>
+          <ProfileBarContainer />
+        </div>
+
       </div>
     );
   }

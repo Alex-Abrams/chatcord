@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone, faHeadphones, faGear } from '@fortawesome/free-solid-svg-icons';
 
 class ProfileBar extends React.Component {
   constructor(props) {
@@ -22,9 +24,9 @@ class ProfileBar extends React.Component {
           {/*
             <Link to="/servers/logout" className="profileBar-logout">V</Link>
             */}
-          <div className="mic-icon">M</div>
-          <div className="headphones-icon">H</div>
-          <div className="cog-icon">C</div>
+          <FontAwesomeIcon icon={faMicrophone} className="mic-icon" />
+          <FontAwesomeIcon icon={faHeadphones} className="headphones-icon" />
+          <FontAwesomeIcon icon={faGear} className="cog-icon" />
       </span>
     ) : (
       <div>

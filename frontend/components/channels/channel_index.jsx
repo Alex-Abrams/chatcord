@@ -6,7 +6,7 @@ import ChannelShow from './channel_show';
 import ChannelFormContainer from './channel_form_container';
 import LinkContainer from '../link/link_container';
 import {RefreshedRoute } from '../../util/refresh_route';
-// import ProfileBar from '../servers/profile_bar';
+
 //
 
 
@@ -31,11 +31,7 @@ class ChannelIndex extends React.Component {
   render() {
     const { channels, serverId, currentUser, logout, serverTitle } = this.props;
 
-    // const profileBar = currentUser ? (
-    //   <ProfileBar logout={logout} currentUser={currentUser} />
-    // ) : (
-    //   null
-    // );
+
 
     const channelFilter = channels.filter(channel => {
       return channel.server_id === serverId;
@@ -82,12 +78,11 @@ class ChannelIndex extends React.Component {
             <RefreshedRoute path="/servers/:serverId/channels/invite" component={LinkContainer} />
         </span>
 
+
       </aside>
     );
   }
 }
-// <div className="profile-bar">
-//   {profileBar}
-// </div>
+
 
 export default ChannelIndex;

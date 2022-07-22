@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
-// can possibly have the loading come here
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelFormContainer from '../channels/channel_form_container';
 import ServerFormContainer from './server_form_container';
-import ProfileBar from './profile_bar';
+import ProfileBarContainer from './profile_bar_container';
 //
 
 class ServerIndex extends React.Component {
@@ -23,12 +22,6 @@ class ServerIndex extends React.Component {
 
   render() {
     const { servers, logout, currentUser, requestServerChannels } = this.props;
-
-    const profileBar = currentUser ? (
-      <ProfileBar logout={logout} currentUser={currentUser} />
-    ) : (
-      null
-    );
 
 
     const serversJoined = servers.filter(server => {
@@ -50,11 +43,8 @@ class ServerIndex extends React.Component {
             </span>
         </ul>
 
-        {/*
-          <div className="profile-bar">
-          {profileBar}
-          </div>
-          */}
+        <ProfileBarContainer />
+
 
       </aside>
     ); // end return
