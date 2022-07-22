@@ -17,16 +17,20 @@ class ProfileBar extends React.Component {
 
     const display = currentUser ? (
       <span className="profileBar">
+        <div className="profileBar-nameImageContainer">
           <img className="profileBar-image"
-            src="https://variety.com/wp-content/uploads/2018/05/discord-logo.jpg"></img>
+            src="https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"></img>
 
-          <div className="profileBar-name">{currentUser.username}56565656</div>
+          <div className="profileBar-name">{currentUser.username}</div>
+        </div>
           {/*
             <Link to="/servers/logout" className="profileBar-logout">V</Link>
             */}
-          <FontAwesomeIcon icon={faMicrophone} className="mic-icon" />
-          <FontAwesomeIcon icon={faHeadphones} className="headphones-icon" />
-          <FontAwesomeIcon icon={faGear} className="cog-icon" />
+          <div className="profileBar-icons">
+            <FontAwesomeIcon icon={faMicrophone} className="mic-icon" />
+            <FontAwesomeIcon icon={faHeadphones} className="headphones-icon" />
+            <FontAwesomeIcon icon={faGear} className="cog-icon" />
+          </div>
       </span>
     ) : (
       <div>

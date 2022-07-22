@@ -150,9 +150,15 @@ body {
   border-top: 1px solid #202124;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   color: white;
   font-weight: bold;
+}
+
+.profileBar-nameImageContainer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 12px
 }
 
 .profileBar-image {
@@ -162,7 +168,6 @@ body {
   margin-top: 10px;
 }
 
-
 .profileBar-name {
   color: white;
   /* margin-right: 30px;
@@ -170,20 +175,31 @@ body {
   /* float: left; */
   /* position: relative; */
   top: 18px;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 13px;
+  margin-left: 3px;
+}
+
+.profileBar-icons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 15px;
 }
 
 .mic-icon {
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  padding-right: 14px;
 }
 
 .headphones-icon {
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  padding-right: 14px;
 }
 
 .cog-icon {
-  margin-top: 13px;
+  /* margin-top: 13px; */
+  padding-right: 11px;
 }
 
 .profileBar-logout {
