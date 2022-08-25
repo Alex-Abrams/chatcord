@@ -7,17 +7,44 @@
   z-index: 3;
 }
 
-.entryPage-dmHeader {
-  position: fixed;
-  top: 250px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
+#entry-page-left-line {
+  border: 0.7px solid #1c1c1c;
+  width: 100%;
+  opacity: 0.5;
+}
+
+#entry-page-right-line {
+  border: 0.7px solid #1c1c1c;
+  width: 100%;
+  margin-top: 21px;
+  opacity: 0.5;
+}
+
+#dm-button {
+  margin-top: 10px;
   text-transform: uppercase;
   font-family: Arial;
   white-space: nowrap;
   color: #b9bbbe;
-  margin-left: 10px;
+  font-size: 12px;
+}
+
+#ep-top-buttons {
+  border: none;
+  color: #b9bbbe;
+  background-color: #36383d;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 14px;
+}
+
+#ep-vertical-right-line {
+  border-left: 0.3px solid #d9d9d9;
+  height: 93%;
+  position: absolute;
+  right: 23%;
+  opacity: 0.2;
+  top: 60px;
 }
 
 .entryPage-backGround {
@@ -34,12 +61,25 @@
   flex-direction: column;
 }
 
+/* .entry-page-top-buttons > button {
+  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 3px;
+  border: none;
+  text-align: left;
+  color: #b9bbbe;
+  background-color: #313338;
+  font-size: 16px;
+  font-weight: 500;
+} */
+
 .entryPage-buttons:first-child {
   margin-top: 50px;
 }
 
 .entryPage-buttons > button {
-  color: blue;
   margin-bottom: 3px;
   margin-left: 5px;
   margin-right: 5px;

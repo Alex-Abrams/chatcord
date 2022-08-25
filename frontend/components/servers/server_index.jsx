@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, Link, withRouter, NavLink } from 'react-router-dom';
 import ServerIndexItem from './server_index_item';
 import ChannelIndexContainer from '../channels/channel_index_container';
 import ChannelFormContainer from '../channels/channel_form_container';
@@ -30,11 +30,15 @@ class ServerIndex extends React.Component {
 
     return (
       <aside className="aside aside-servers">
+      <NavLink
+        to={`/servers`}>
         <img
           id="chatcord-dm-icon"
           src={"https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"}
           alt={'home_dm'}>
         </img>
+      </NavLink>
+
         <hr id="chatcord-dm-icon-line"></hr>
         <ul id="serversPosition">
           {serversJoined.map(server =>

@@ -4,27 +4,39 @@ import React from 'react';
 // import ProfileBar from './profile_bar';
 import ProfileBarContainer from './profile_bar_container';
 
-class EntryPage extends React.Component {
+class DirectMessages extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-// https://discordapp.com/assets/c486dc65ce2877eeb18e4c39bb49507a.svg
     return(
       <div className="entryPage">
         <div className="entryPage-leftBar">
           <div className="entryPage-buttons">
-            <button>Activity</button>
-            <button>Library</button>
-            <button>Nitro</button>
+            <hr id="entry-page-left-line"></hr>
             <button>Friends</button>
+            <button>Nitro</button>
+            <button id="dm-button">direct messages</button>
           </div>
-          <h2 className="entryPage-dmHeader">direct messages</h2>
+
         </div>
 
-        <div>
-          <img className="entryPage-backGround" src="https://discordapp.com/assets/c486dc65ce2877eeb18e4c39bb49507a.svg"></img>
+        <div className="entryPage-backGround">
+          <div classname="entry-page-top-buttons">
+            <button id="ep-top-buttons">Friends</button>
+            <button id="ep-top-buttons">Online</button>
+            <button id="ep-top-buttons">All</button>
+            <button id="ep-top-buttons">Pending</button>
+            <button id="ep-top-buttons">Blocked</button>
+            <button id="ep-top-buttons">Add Friend</button>
+          </div>
+          <hr id="entry-page-right-line"></hr>
+        </div>
+
+        <vr id="ep-vertical-right-line"></vr>
+        
+        <div classname="left-activity-bar">
         </div>
 
         <div>
@@ -36,4 +48,4 @@ class EntryPage extends React.Component {
   }
 }
 
-export default EntryPage;
+export default DirectMessages;
