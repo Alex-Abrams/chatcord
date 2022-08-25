@@ -30,6 +30,12 @@ class ServerIndex extends React.Component {
 
     return (
       <aside className="aside aside-servers">
+        <img
+          id="chatcord-dm-icon"
+          src={"https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png"}
+          alt={'home_dm'}>
+        </img>
+        <hr id="chatcord-dm-icon-line"></hr>
         <ul id="serversPosition">
           {serversJoined.map(server =>
             <ServerIndexItem

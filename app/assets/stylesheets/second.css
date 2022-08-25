@@ -22,6 +22,12 @@ body {
 
 }
 
+.direct-dm-icon: {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
 .aside-servers {
   background: #27292b;
   width: 58px;
