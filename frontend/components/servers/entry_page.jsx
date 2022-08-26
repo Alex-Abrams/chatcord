@@ -23,20 +23,26 @@ class DirectMessages extends React.Component {
         </div>
 
         <div className="entryPage-backGround">
-          <div classname="entry-page-top-buttons">
-            <button id="ep-top-buttons">Friends</button>
-            <button id="ep-top-buttons">Online</button>
-            <button id="ep-top-buttons">All</button>
-            <button id="ep-top-buttons">Pending</button>
-            <button id="ep-top-buttons">Blocked</button>
-            <button id="ep-top-buttons">Add Friend</button>
+          <div className="entry-page-top-buttons">
+            <button>Friends</button>
+            <button>Online</button>
+            <button>All</button>
+            <button>Pending</button>
+            <button>Blocked</button>
+            <button>Add Friend</button>
           </div>
           <hr id="entry-page-right-line"></hr>
         </div>
 
         <vr id="ep-vertical-right-line"></vr>
-        
-        <div classname="left-activity-bar">
+
+        <div className="activity">
+          <p id="activity-a">Active Now</p>
+          <div className="activity-inner">
+            <p id="activity-p">It's quiet for now...</p>
+            <p id="activity-z">When a friend starts an activity-like playing a game or</p>
+            <p id="activity-z">hanging out on voice-we'll show it here!</p>
+          </div>
         </div>
 
         <div>

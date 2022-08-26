@@ -29,7 +29,7 @@
   font-size: 12px;
 }
 
-#ep-top-buttons {
+.entry-page-top-buttons > button {
   border: none;
   color: #b9bbbe;
   background-color: #36383d;
@@ -37,6 +37,15 @@
   margin-top: 16px;
   margin-left: 14px;
 }
+
+/* #ep-top-buttons {
+  border: none;
+  color: #b9bbbe;
+  background-color: #36383d;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 14px;
+} */
 
 #ep-vertical-right-line {
   border-left: 0.3px solid #d9d9d9;
@@ -61,19 +70,6 @@
   flex-direction: column;
 }
 
-/* .entry-page-top-buttons > button {
-  margin-bottom: 3px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 10px 20px 10px 20px;
-  border-radius: 3px;
-  border: none;
-  text-align: left;
-  color: #b9bbbe;
-  background-color: #313338;
-  font-size: 16px;
-  font-weight: 500;
-} */
 
 .entryPage-buttons:first-child {
   margin-top: 50px;
@@ -96,4 +92,37 @@
 .entryPage-buttons > button:hover {
   background-color: #3e4045;
   color: white;
+}
+
+.activity {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+#activity-a {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#activity-p {
+  margin: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#activity-z {
+  margin: 1px;
+  color: #7a7a7a;
+  /* font-size: 10px; */
+}
+
+.activity-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8px;
 }
