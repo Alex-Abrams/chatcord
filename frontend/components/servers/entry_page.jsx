@@ -30,7 +30,7 @@ class DirectMessages extends React.Component {
             <button>All</button>
             <button>Pending</button>
             <button>Blocked</button>
-            <button>Add Friend</button>
+            <button id="ep-p-add-friend">Add Friend</button>
           </div>
 
         </div>

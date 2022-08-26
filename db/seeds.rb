@@ -25,9 +25,8 @@ user5 = User.create!(username: 'guest4', password: 'password', email: 'guest4@gu
 #   File.open(File.join(Rails.root, "/app/assets/images/#{image_file}"))
 # end
 
-
 server1 = Server.create(title: "server1",
-  image_url: "https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/discord-512.png", admin_id: user2.id, link: "https://chatcord.gg/" + "1zr" + rand(111...999).to_s)
+  image_url: "https://dynamix-audio.com/wp-content/uploads/2019/11/Grand-Piano.jpg.webp", admin_id: user2.id, link: "https://chatcord.gg/" + "1zr" + rand(111...999).to_s)
 server2 = Server.create(title: "Fun Times",
    image_url: "https://cdn.pixabay.com/photo/2019/10/17/12/20/turkeys-4556812_960_720.jpg", admin_id: user3.id, link: "https://chatcord.gg/" + "2qa" + rand(111...999).to_s)
 server3 = Server.create(title: "Lets Rock!",

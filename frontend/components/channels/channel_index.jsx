@@ -43,6 +43,22 @@ class ChannelIndex extends React.Component {
       <div className="textChannel">
         <header className="channelHeader">{capitalTitle} - Chatcord</header>
 
+        <div className="nitro">
+          <img
+            id="nitro-ad"
+            src={"https://www.thespruce.com/thmb/7Ji-ofB-Lm9Fqs4Ho3fmFu0vnec=/640x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SPR-HOME-8-best-skateboards-3002842-01-e279e9059d6746118ff4da1971ec4c66.jpg"}
+            alt={'nitro-pic'}>
+          </img>
+          <div className="nitro-p">
+            <p id="nitro-p2">Want this server to feel unique?</p>
+            <p id="nitro-p2">Unlock custom server banners with</p>
+            <p id="nitro-p2">2 more boosts</p>
+          </div>
+
+          <button className="nitro-button">Boost This Server</button>
+          <hr id="nitro-line"></hr>
+        </div>
+
         <div className="textChannel-channelarea">
           <div id="textChannelLabel">TEXT CHANNEL</div>
 
