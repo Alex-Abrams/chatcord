@@ -1,3 +1,7 @@
+.entryPage {
+  width: 70%;
+}
+
 .entryPage-leftBar {
   position: fixed;
   left: 58px;
@@ -9,16 +13,16 @@
 
 #entry-page-left-line {
   border: 0.7px solid #1c1c1c;
-  width: 100%;
+  width: 660%;
   opacity: 0.5;
 }
 
-#entry-page-right-line {
+/* #entry-page-right-line {
   border: 0.7px solid #1c1c1c;
   width: 100%;
-  margin-top: 21px;
+  margin-top: 27px;   /* this changes when things are added below */
   opacity: 0.5;
-}
+} */
 
 #dm-button {
   margin-top: 10px;
@@ -38,26 +42,17 @@
   margin-left: 14px;
 }
 
-/* #ep-top-buttons {
-  border: none;
-  color: #b9bbbe;
-  background-color: #36383d;
-  font-size: 16px;
-  margin-top: 16px;
-  margin-left: 14px;
-} */
-
 #ep-vertical-right-line {
   border-left: 0.3px solid #d9d9d9;
   height: 93%;
   position: absolute;
   right: 23%;
   opacity: 0.2;
-  top: 60px;
+  top: 65px;
 }
 
 .entryPage-backGround {
-  height: 100%;
+  height: 93%;
   position: absolute;
   left: 297px;
   top: 0;
@@ -125,4 +120,45 @@
   flex-direction: column;
   align-items: center;
   margin-right: 8px;
+}
+
+.ep-add-friend {
+  position: absolute;
+  left: 20%;
+  top: 60px;
+}
+
+#add-friend-text {
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#add-friend-below {
+  color: #7a7a7a;
+}
+
+.add-friend-input-bar {
+  width: 913px;
+  height: 40px;
+  background-color: #292727;
+  border-radius: 5px;
+  border: 1px solid rgb(41, 39, 39);
+  color: #7a7a7a;
+}
+
+#ep-send-req-button {
+  position: absolute;
+  left: 83%;
+  top: 72%;
+  height: 28px;
+  background-color: #1a0278;
+  color: #7a7a7a;
+  font-size: 12px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 9px;
+  padding-bottom: 17px;
 }

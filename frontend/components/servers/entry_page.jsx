@@ -31,7 +31,7 @@ class DirectMessages extends React.Component {
             <button>Blocked</button>
             <button>Add Friend</button>
           </div>
-          <hr id="entry-page-right-line"></hr>
+          
         </div>
 
         <vr id="ep-vertical-right-line"></vr>
@@ -44,6 +44,17 @@ class DirectMessages extends React.Component {
             <p id="activity-z">hanging out on voice-we'll show it here!</p>
           </div>
         </div>
+
+      <div className="ep-add-friend">
+        <p id='add-friend-text'>ADD FRIEND</p>
+        <p id='add-friend-below'>You can add a friend with their Discord Tag. Its cAsE sEnSiTiVe!</p>
+
+          <input type="text"
+            value={"    Enter a Username#0000"}
+            className="add-friend-input-bar">
+          </input>
+          <button id="ep-send-req-button">Send Friend Request</button>
+      </div>
 
         <div>
           <ProfileBarContainer />
