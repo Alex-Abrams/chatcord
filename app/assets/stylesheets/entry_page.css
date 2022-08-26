@@ -21,7 +21,7 @@
   border: 0.7px solid #1c1c1c;
   width: 100%;
   margin-top: 27px;   /* this changes when things are added below */
-  opacity: 0.5;
+  /* opacity: 0.5;
 } */
 
 #dm-button {
@@ -40,6 +40,15 @@
   font-size: 16px;
   margin-top: 16px;
   margin-left: 14px;
+}
+
+#ep-friends {
+  color: white;
+}
+
+.users-icon {
+  margin-left: 10px;
+  color: white;
 }
 
 #ep-vertical-right-line {
@@ -88,6 +97,7 @@
   background-color: #3e4045;
   color: white;
 }
+
 
 .activity {
   position: absolute;

@@ -1,7 +1,7 @@
-// this is essentially the home page and is mostly for show
-
 import React from 'react';
-// import ProfileBar from './profile_bar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
+
 import ProfileBarContainer from './profile_bar_container';
 
 class DirectMessages extends React.Component {
@@ -24,14 +24,15 @@ class DirectMessages extends React.Component {
 
         <div className="entryPage-backGround">
           <div className="entry-page-top-buttons">
-            <button>Friends</button>
+            <FontAwesomeIcon icon={faUsers} className="users-icon" />
+            <button id="ep-friends">Friends</button>
             <button>Online</button>
             <button>All</button>
             <button>Pending</button>
             <button>Blocked</button>
             <button>Add Friend</button>
           </div>
-          
+
         </div>
 
         <vr id="ep-vertical-right-line"></vr>
