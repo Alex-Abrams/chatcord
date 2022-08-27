@@ -25,7 +25,7 @@
 
 #textChannelLabel { // here101
   position: relative;
-  top: 120px;
+  top: 20px;
   padding-left: 20px;
   float: left;
   font-size: 14px;
@@ -57,28 +57,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 #nitro-p2 {
   margin-bottom: 0px;
   margin-top: 1px;
-  color: white;
+  color: #aeb0ae;
 }
 
 .nitro-button {
   width: 85%;
-  height: 30px;
+  height: 32px;
+  margin-top: 15px;
+  background-color: #7157f7;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
 }
 
 #nitro-line {
-  border-bottom: solid 1px color white;
-  width: 100%
+  // border-bottom: solid 1px color white;
+  // width: 100%
+  border-bottom: 0.1px solid #6b6b6b;
+  width: 100%;
+  opacity: 0.3;
+  margin-top: 16px;
 }
 /////////////
 
 .newChannel-widget { //here102
   position: relative;
-  top: 116px;
+  top: 16px;
   left: 70px;
   z-index: 1;
 }
@@ -209,7 +221,7 @@
 
 .channels-ul { //here103
   position: relative;
-  top: 135px;
+  top: 33px;
   left: 0px;
 }
 

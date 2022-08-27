@@ -7,6 +7,7 @@ class ChannelShow extends React.Component {
 
   render () {
     const { channel, server, serverId } = this.props;
+    // console.log('channel', channel);//  SEEHERE!  do channel[0]
 
     const channelDisplay = (
       <div>
