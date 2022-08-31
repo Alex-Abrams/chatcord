@@ -21,7 +21,7 @@ class ServerIndex extends React.Component {
 
 
   render() {
-    const { servers, logout, currentUser, requestServerChannels } = this.props;
+    const { servers, logout, currentUser, requestServerChannels, resetServerChannels, channels } = this.props;
 
 
     const serversJoined = servers.filter(server => {
@@ -45,6 +45,8 @@ class ServerIndex extends React.Component {
             <ServerIndexItem
             key={server.id}
             server={server}
+            resetServerChannels={resetServerChannels}
+            channels={channels}
             requestServerChannels={requestServerChannels} />)}
 
             <span className="new-server-widget">

@@ -1,6 +1,7 @@
 import {
   RECEIVE_SERVER_CHANNELS,
   RECEIVE_SINGLE_CHANNEL,
+  RESET_SERVER_CHANNELS,
 } from '../actions/channel_actions';
 import { RECEIVE_SINGLE_SERVER } from '../actions/server_actions';
 
@@ -17,6 +18,8 @@ const channelsReducer = (state = {}, action) => {
       return merge({}, state, newChannel);
     case RECEIVE_SINGLE_SERVER:
       return merge({}, state, action.channels);
+    case RESET_SERVER_CHANNELS:
+      return {};
     default:
       return state;
   }

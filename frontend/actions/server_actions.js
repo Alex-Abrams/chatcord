@@ -7,6 +7,11 @@ export const DELETE_SERVER = 'DELETE_SERVER';
 export const RECEIVE_SERVER_ERRORS = 'RECEIVE_SERVER_ERRORS';
 export const CREATE_SERVER = 'CREATE_SERVER';
 
+// export const RESET_SERVER_CHANNELS = 'RESET_SERVER_CHANNELS';
+//
+// export const resetServerChannels = () => ({
+//   type: RESET_SERVER_CHANNELS,
+// });
 
 //thunk action creators
 export const createMembership = (user_Id, server_Id) => dispatch => {

@@ -11,11 +11,29 @@ class ServerIndexItem extends React.Component {
   constructor(props) {
     super(props);
 
+    // this.state = {
+    //   first_channel: null,
+    // };
+
   }
 
   render() {
-    const { server, serverId, channelIds } = this.props;
+    const { server, serverId, channelIds, channels } = this.props;
+// to={`/servers/${serverId}/channels/${channel.id}`}
+  // console.log("serveritemprops", this.props);
+  // console.log('channelIds', channelIds);
+  // console.log('first', channels[0]);
+  // if (typeof channels[0] === "undefined") {
+  //   console.log('pee');
+  // } else {
+  //   // console.log("not undefined", channels[0].id);
+  //   this.setState({first_channel: channels[0].id})
+  // }
 
+  const first_channel = (typeof channels[0] === "undefined") ? null : channels[0].id;
+
+  // console.log(this.state.first_channel);
+  console.log('gipper', first_channel);
     return (
       <div className="server">
         <span id="s-list">
@@ -23,9 +41,10 @@ class ServerIndexItem extends React.Component {
             <div className="server-list">
               <NavLink
                 className="server-tooltip"
-                to={`/servers/${server.id}/channels`}>
+                to={`/servers/${server.id}/channels/${first_channel}`}>
 
                 <img className="discord-server-icon"
+                  onClick={() => this.props.resetServerChannels()}
                   src={server.image_url}
                   alt={server.title}>
                 </img>

@@ -18,6 +18,8 @@ class ChannelIndex extends React.Component {
 
 
   componentDidMount() {
+      // this.props.resetServerChannels();
+      // .then(() => this.props.requestServerChannels(this.props.serverId));
       this.props.requestServerChannels(this.props.serverId);
   }
 
@@ -30,8 +32,6 @@ class ChannelIndex extends React.Component {
 
   render() {
     const { channels, serverId, currentUser, logout, serverTitle } = this.props;
-
-
 
     const channelFilter = channels.filter(channel => {
       return channel.server_id === serverId;
@@ -74,7 +74,7 @@ class ChannelIndex extends React.Component {
     );
 
     return(
-      <aside class="aside aside-channels">
+      <aside className="aside aside-channels">
         <div>
           {channelFormDisplay}
         </div>

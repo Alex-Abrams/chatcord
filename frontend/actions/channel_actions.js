@@ -4,6 +4,7 @@ export const RECEIVE_SINGLE_CHANNEL = 'RECEIVE_SINGLE_CHANNEL';
 export const RECEIVE_SERVER_CHANNELS = 'RECEIVE_SERVER_CHANNELS';
 export const RECEIVE_CHANNEL_ERRORS = 'RECEIVE_CHANNEL_ERRORS';
 export const CREATE_CHANNEL = 'CREATE_CHANNEL';
+export const RESET_SERVER_CHANNELS = 'RESET_SERVER_CHANNELS';
 
 
 // thunk action creators
@@ -37,4 +38,8 @@ export const receiveServerChannels = channels => ({
 export const receiveChannelErrors = errors => ({
   type: RECEIVE_CHANNEL_ERRORS,
   errors
+});
+
+export const resetServerChannels = () => ({
+  type: RESET_SERVER_CHANNELS,
 });
