@@ -1,5 +1,6 @@
 import React from 'react';
 // import black_logo from '../images/chatcord-black.png';
+import {OFFLINE_IMAGES} from './offline_images';
 
 class FofflineList extends React.Component {
   constructor(props) {
@@ -22,11 +23,11 @@ class FofflineList extends React.Component {
       <aside className="aside aside-offline" background="hotpink">
         <div className={this.test}></div>
         <ul className="offline-Names">
-          <img src={test} id="friends-icon"></img>
+          <span id="online-count">ONLINE - 22</span>
           {offlineList.map((el, i) =>
-            <div>
-              <li key={i}>{el}</li>
-              <li key={i + 600}>hello</li>
+            <div className="offline-icons-and-names">
+              <img src={OFFLINE_IMAGES[i]} id="friends-icon" key={i + 700}></img>
+              <li className="offline-li-names" key={i}>{el}</li>
             </div>
           )}
         </ul>
