@@ -15,11 +15,18 @@ module.exports = {
         exclude: /(node_modules)/,      //c
         use: {
           loader: 'babel-loader',   //c
-          query: {
+          options: {
             presets: ['@babel/env', '@babel/react']
           }
         },
-      }
+      },
+      {
+        test: /\.png$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'file-loader',
+        }
+      },
     ]
   },
   devtool: 'source-map',
@@ -28,5 +35,6 @@ module.exports = {
   }
 };
 
-
+//loader: 'babel-loader',
 //////////////////////// query might need to change to options
+// entry: './frontend/chat_cord.jsx',
