@@ -1,5 +1,5 @@
 import React from 'react';
-// import black_logo from '../images/chatcord-black.png';
+
 import {OFFLINE_IMAGES} from './offline_images';
 
 class FofflineList extends React.Component {

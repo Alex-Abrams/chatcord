@@ -75,6 +75,10 @@
 }
 
 // comment form/input
+.commmentForm-container {
+  // display: flex;
+  // flex-direction: row;
+}
 .commentForm {
   position: absolute;
   bottom: -5px;
@@ -90,7 +94,7 @@
 }
 
 .commentForm-input {
-  height: 30px;
+  height: 45px;
   border-radius: 6px;
   font-size: 16px;
 }
@@ -101,6 +105,27 @@
 
 .commentForm-input {
   width: 100%;
+  background-color: #46474a;
+  border: none;
+}
+
+.commentForm-input-icons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 28px;
+  right: 0;
+  z-index: 3;
+  background-color: #46474a;
+  // #36383d
+}
+
+#input-icons {
+  color: black;
+  height: 32px;
+  width: 32px;
+  margin-right: 15px;
+  color: #b2b4b8;
 }
 
 .default-content {

@@ -1,6 +1,7 @@
 import React from 'react';
-// import { withRouter, Link } from 'react-router-dom';
-
+// <FontAwesomeIcon icon={faUsers} className="users-icon" />
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGift, faBox, faFilezipper, faSmile, faPoo, faFile } from '@fortawesome/free-solid-svg-icons';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -35,13 +36,22 @@ class CommentForm extends React.Component {
     return(
       <div>
         <form className={commentFormSize} id="reset" onSubmit={this.handleSubmit}>
-          <input
-            className="commentForm-input"
-            type="input"
-            value={this.state.body}
-            placeholder={'Message#' + title}
-            onChange={this.update('body')}>
-          </input>
+          <div className="commmentForm-container">
+            <input
+              className="commentForm-input"
+              type="input"
+              value={this.state.body}
+              placeholder={'Message#' + title}
+              onChange={this.update('body')}>
+            </input>
+            <div className="commentForm-input-icons">
+              <FontAwesomeIcon icon={faGift} id="input-icons" />
+              <FontAwesomeIcon icon={faBox} id="input-icons" />
+              <FontAwesomeIcon icon={faFile} id="input-icons" />
+              <FontAwesomeIcon icon={faSmile} id="input-icons" />
+            </div>
+          </div>
+
           <button id="comment-Button"type="submit">Submit</button>
         </form>
       </div>
