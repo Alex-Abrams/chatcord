@@ -13,6 +13,17 @@ class ServerIndexItem extends React.Component {
 
   }
 
+  // componentDidMount() {
+  //   // this.props.requestServerChannels(this.props.serverId);
+  //   console.log('serverId', this.props.server.id);
+  // }
+
+  handleImgClick() {
+    this.props.resetServerChannels();
+    this.props.requestServerChannels(this.props.server.id);
+    console.log('hello');
+  }
+
   render() {
     const { server, serverId, channelIds, channels } = this.props;
 
@@ -25,10 +36,10 @@ class ServerIndexItem extends React.Component {
             <div className="server-list">
               <NavLink
                 className="server-tooltip"
-                to={`/servers/${server.id}/channels/${first_channel}`}>
+                to={`/servers/${server.id}/channels`}>
 
                 <img className="discord-server-icon"
-                  onClick={() => this.props.resetServerChannels()}
+                  onClick={() => this.handleImgClick()}
                   src={server.image_url}
                   alt={server.title}>
                 </img>

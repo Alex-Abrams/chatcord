@@ -52,6 +52,7 @@ class DirectMessages extends React.Component {
 
           <input type="text"
             value={"    Enter a Username#0000"}
+            readOnly={true}
             className="add-friend-input-bar">
           </input>
           <button id="ep-send-req-button">Send Friend Request</button>

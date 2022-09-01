@@ -22,7 +22,7 @@ const mapDispatchToProps = dispatch => ({
   requestAllServers: () => dispatch(requestAllServers()),
   requestServerChannels: (server_id) => dispatch(requestServerChannels(server_id)),
   //////////////////
-  fetchServerChannels: (server_id) => dispatch(fetchServerChannels(server_id)),
+  // fetchServerChannels: (server_id) => dispatch(fetchServerChannels(server_id)),
   requestFofflines: () => dispatch(requestFofflines()),
   resetServerChannels: () => dispatch(resetServerChannels()),
   ////////////////////

@@ -12,6 +12,7 @@ import CommentsIndexContainer from './comments/comments_index_container';
 //
 import FofflineContainer from './foffline/foffline_container';
 import WelcomeComments from './comments/default';
+import WelcomeCommentsContainer from './comments/default_container';
 import CreateJoin from './servers/create_or_join_server';
 
 import JoinContainer from './link/join_container';
@@ -38,7 +39,7 @@ const App = () => (
 
         <Switch>
           <ProtectedRoute exact path="/servers/:serverId/channels/:channel_id" component={CommentsIndexContainer} />
-          <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeComments} />
+          <ProtectedRoute path="/servers/:serverId/channels" component={WelcomeCommentsContainer} />
         </Switch>
 
       <ProtectedRoute path="/servers/:serverId/channels/:channel_id" component={CommentsHeaderContainer} />

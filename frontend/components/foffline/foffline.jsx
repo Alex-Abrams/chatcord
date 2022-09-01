@@ -26,7 +26,7 @@ class FofflineList extends React.Component {
           {offlineList.map((el, i) =>
             <div>
               <li key={i}>{el}</li>
-              <li>hello</li>
+              <li key={i + 600}>hello</li>
             </div>
           )}
         </ul>
