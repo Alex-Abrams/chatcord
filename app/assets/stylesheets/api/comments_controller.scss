@@ -41,6 +41,40 @@
   color: white;
 }
 
+.commentsHeader-icons-input {
+  position: absolute;
+  right: 4px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#header-icons {
+  height: 26px;
+  width: 26px;
+  margin-right: 16px;
+  color: #808080;
+}
+
+#search-mag {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 110px;
+  color: #636262;
+  margin-top: 14px;
+}
+
+#header-input-right {
+  margin-right: 15px;
+  border-radius: 6px;
+  border: none;
+  color: #b2b4b8;
+  background-color: #262626;
+  padding-left: 5px;
+  // margin-top: -10px;
+}
+
 .comment-name {
   font-size: 20px;
   font-weight: 500;
