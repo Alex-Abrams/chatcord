@@ -1,7 +1,7 @@
 import React from 'react';
 // <FontAwesomeIcon icon={faUsers} className="users-icon" />
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGift, faBox, faFilezipper, faSmile, faPoo, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faGift, faBox, faCirclePlus, faSmile, faPoo, faFile } from '@fortawesome/free-solid-svg-icons';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -37,6 +37,7 @@ class CommentForm extends React.Component {
       <div>
         <form className={commentFormSize} id="reset" onSubmit={this.handleSubmit}>
           <div className="commmentForm-container">
+            <FontAwesomeIcon icon={faCirclePlus} id="input-plus-circle" />
             <input
               className="commentForm-input"
               type="input"

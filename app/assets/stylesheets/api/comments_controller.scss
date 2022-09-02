@@ -65,15 +65,52 @@
 .comment {
   border-bottom: 1px solid #434445;
   margin-right: 20px;
+  margin-left: 20px;
+  // padding-bottom: 15px;
+  // border: 1px solid yellow;
 }
 
 // for small comment small screen
 .commentSmall {
   width: 95%;
-  border-bottom: 1px solid #434445;
+  // border-bottom: 1px solid #434445;
   margin-right: 20px;
+  margin-left: 20px;
+  // padding-bottom: 15px;
+  // border: 1px solid yellow;
 }
 
+.comments-text {
+  // margin-top: -60px;
+  // padding-left: 20px;
+  // padding-bottom: 20px;
+  // padding-top: -60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comments-name-time {
+  margin-left: 15px;
+  margin-top: -40px;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  // align-self: center;
+}
+
+.comments-body {
+  // margin-left: 60px;
+    margin-left: 15px;
+}
+
+#chat-icon {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-left: -50px;
+  // margin-top: -10px;
+}
 // comment form/input
 .commmentForm-container {
   // display: flex;
@@ -89,7 +126,7 @@
 .commentFormSmall {
   width: 77%;
   position: absolute;
-  bottom: -5px;
+  bottom: -50px;
   margin: 15px;
 }
 
@@ -104,9 +141,10 @@
 }
 
 .commentForm-input {
-  width: 100%;
+  width: 97%;
   background-color: #46474a;
   border: none;
+  padding-left: 50px;
 }
 
 .commentForm-input-icons {
@@ -121,7 +159,6 @@
 }
 
 #input-icons {
-  color: black;
   height: 32px;
   width: 32px;
   margin-right: 15px;
@@ -131,4 +168,15 @@
 .default-content {
   color: red;
   font-size: 20px;
+}
+
+#input-plus-circle {
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+  color: #b2b4b8;
+  position: absolute;
+  bottom: 28px;
+  margin-left: 10px;
+  margin-bottom: 3px;
 }
