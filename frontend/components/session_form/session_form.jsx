@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
     if (formType === 'login') {
       displayForm = (
         <div className="sessionForm-logSign">
-          <h2 className="sessionForm-head">Login</h2>
+          <h2 className="sessionForm-head"> Chatcord - Login</h2>
           <p className="sessionForm-info">Need an account?</p>
           <Link to="/signup" className="register">Register</Link>
         </div>

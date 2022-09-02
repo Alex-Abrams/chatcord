@@ -29,7 +29,7 @@ class ProfileBar extends React.Component {
           <div className="profileBar-icons">
             <FontAwesomeIcon icon={faMicrophone} className="mic-icon" />
             <FontAwesomeIcon icon={faHeadphones} className="headphones-icon" />
-            <FontAwesomeIcon icon={faGear} className="cog-icon" />
+            <FontAwesomeIcon icon={faGear} onClick={() => this.props.logout() } className="cog-icon" />
           </div>
       </span>
     ) : (
