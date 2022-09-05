@@ -9,11 +9,7 @@ class ProfileBar extends React.Component {
   }
 
   render() {
-    // const name = currentUser.username;
     const { currentUser, logout} = this.props;
-    // console.log('currentUser', currentUser);
-    // const capitalizedName = currentUser.username.charAt(0).toUpperCase() + currentUser.username.slice(1); //could have used CSS for this
-
 
     const display = currentUser ? (
       <span className="profileBar">

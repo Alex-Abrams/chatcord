@@ -13,15 +13,10 @@ class ServerIndexItem extends React.Component {
 
   }
 
-  // componentDidMount() {
-  //   // this.props.requestServerChannels(this.props.serverId);
-  //   console.log('serverId', this.props.server.id);
-  // }
 
   handleImgClick() {
     this.props.resetServerChannels();
     this.props.requestServerChannels(this.props.server.id);
-    console.log('hello');
   }
 
   render() {
