@@ -1,9 +1,18 @@
 # README
 
-![Login Example](app/assets/images/login_example.png)
-![Chat Example](app/assets/images/chat_example.png)
 
 Welcome to ChatCord!  Chatcord is an application that allows users to create their own servers and channels to use as public forums.  Users can join or create servers, or invite other users to servers using unique server keys links.  Admin of servers can create and manage the channels on their server.  Users can post messages in these channels.  
+
+## Login Page Example
+<!-- ![Login Example](app/assets/images/login_example.png) -->
+![Login Example](app/assets/images/example_login.png)
+
+## Home Page Example
+<!-- ![Chat Example](app/assets/images/chat_example.png) -->
+![Home Example](app/assets/images/example_home.png)
+
+## Server Page Example
+![Server Example](app/assets/images/example_server.png)
 
 
 ## Link to Live Application:
